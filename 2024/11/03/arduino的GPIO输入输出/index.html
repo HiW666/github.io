@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>arduino的GPIO输入输出 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>arduino的GPIO输入输出</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/3
+        </span>
+        
+        <span class="category">
+            <a href="/categories/arduino/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                arduino
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/arduino/" style="color: #00a596">arduino</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ESP32/" style="color: #ff7d73">ESP32</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="arduino的GPIO输入输出"><a href="#arduino的GPIO输入输出" class="headerlink" title="arduino的GPIO输入输出"></a>arduino的GPIO输入输出</h2><p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1dxKUrDeoobj41xB9lVkXcg?pwd=fdeo">工程下载</a></p>
+<p>我们使用ESP32 wroom32e举例<br>我们先看查自己开发板的IO图<br>ESP32系列的</p>
+<a href="/2024/11/01/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/" title="arduino基于ESP32基本信息">arduino基于ESP32基本信息</a>
+
+
+
+<p>基本arduino入门</p>
+<a href="/2024/11/04/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="arduinoIDE使用教程">arduinoIDE使用教程</a>
+
+<span id="more"></span>
+
+<h2 id="arduino的GPIO初始化"><a href="#arduino的GPIO初始化" class="headerlink" title="arduino的GPIO初始化"></a>arduino的GPIO初始化</h2><p>引脚初始化</p>
+<pre><code>pinMode(引脚号, 选择引脚模式);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引脚号</td>
+<td>int</td>
+<td>指定引脚初始化</td>
+<td>自己查芯片手册</td>
+</tr>
+<tr>
+<td>选择引脚模式</td>
+<td>int</td>
+<td>指定引脚模式</td>
+<td>OUTPUT（0x03）：输出模式<br/>INPUT（0x01）：输入模式<br/>PULLUP（0x04）:上拉<br/>INPUT_PULLUP（0x05）：上拉输入<br/>PULLDOWN（0x08）：下拉<br/>INPUT_PULLDOWN（0x09）：下拉输入<br/>OPEN_DRAIN（0x10）：开漏<br/>OUTPUT_OPEN_DRAIN（0x13）：开漏输出<br/>ANALOG（0xC0）：模拟输入</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>引脚模式：</p>
+<h2 id="arduino的GPIO输出"><a href="#arduino的GPIO输出" class="headerlink" title="arduino的GPIO输出"></a>arduino的GPIO输出</h2><pre><code>digitalWrite(引脚号, 模式);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引脚号</td>
+<td>int</td>
+<td>指定引脚初输出</td>
+<td>自己查芯片手册</td>
+</tr>
+<tr>
+<td>引脚模式</td>
+<td>int</td>
+<td>选择输出高低电平</td>
+<td>HIGH（0x1）：输出高电平<br/>LOW（0x0）：输出低电平</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="arduino的GPIO输入"><a href="#arduino的GPIO输入" class="headerlink" title="arduino的GPIO输入"></a>arduino的GPIO输入</h2><pre><code>digitalRead(引脚号); 
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引脚号</td>
+<td>int</td>
+<td>指定引脚初输出</td>
+<td>自己查芯片手册</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>int</td>
+<td>读取的电平结果</td>
+<td>0x1就是高<br/>0x0就是低</td>
+</tr>
+</tbody></table>
+<h2 id="延迟毫秒"><a href="#延迟毫秒" class="headerlink" title="延迟毫秒"></a>延迟毫秒</h2><pre><code>delay(数值);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数值</td>
+<td>unsigned long</td>
+<td>输入一个大于0的整数是延迟多少毫米(1秒&#x3D;1000毫秒)</td>
+<td>unsigned long</td>
+</tr>
+</tbody></table>
+<h2 id="延迟微秒"><a href="#延迟微秒" class="headerlink" title="延迟微秒"></a>延迟微秒</h2><pre><code>delayMicroseconds();
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数值</td>
+<td>unsigned long</td>
+<td>输入一个大于0的整数是延迟多少微秒(1秒&#x3D;1000微秒)</td>
+<td>unsigned long</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>GPIO使用方法：<br>1，我们先初始化引脚<br>2，输出或者输入引脚</p>
+<p>参考代码：</p>
+<pre><code>int LED = 2;//led引脚2号
+int key = 13;//按键13号脚
+
+void setup() &#123;
+pinMode(LED, OUTPUT);//初始化
+pinMode(key, INPUT_PULLUP);//初始化
+digitalWrite(LED, LOW); //2脚低电平
+&#125;
+
+void loop()
+&#123;
+if(digitalRead(key)==0)//读取电平
+&#123;
+digitalWrite(LED, HIGH); //电平拉高灯亮
+delay(50);//延迟
+&#125;
+digitalWrite(LED, LOW); //低电平
+
+&#125;
+//13脚接按键，按键连接低电平
+//按下按键灯会亮
+</code></pre>
+<p>效果图：<br><img src="/img/arduino%E7%9A%84GPIO%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/1.jpg"></p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

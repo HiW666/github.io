@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>arduino的中断 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>arduino的中断</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/5
+        </span>
+        
+        <span class="category">
+            <a href="/categories/arduino/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                arduino
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/arduino/" style="color: #00a596">arduino</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ESP32/" style="color: #03a9f4">ESP32</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="arduino的中断"><a href="#arduino的中断" class="headerlink" title="arduino的中断"></a>arduino的中断</h2><p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1dxKUrDeoobj41xB9lVkXcg?pwd=fdeo">工程下载</a></p>
+<p>arduino是支持中断的<br>但是缺点的目前的arduino是不支持设置中断优先级<br>（目前记录为2.3.3版本）<br>而且在中断函数中<br>delay()函数是不工作的，而且millis()函数返回值也不再增长。<br>(delayMicroseconds()函数除外)<br>运行期间Arduino开发板接收到的串口数据也可能丢失</p>
+<span id="more"></span>
+
+
+
+<h2 id="arduino的中断函数初始化"><a href="#arduino的中断函数初始化" class="headerlink" title="arduino的中断函数初始化"></a>arduino的中断函数初始化</h2><pre><code>attachInterrupt(中断号,中断函数, 中断模式);
+</code></pre>
+<p>中断号：<br>中断号不是引脚号，要具体查arduino开发板哪些引脚支持中断<br>在ESP32中除了34-39都可以支持中断</p>
+<p>中断函数：<br>使用void xxx创建函数<br>函数不能有返回值，所以应尽量在中断服务程序中使用全局变量<br>这里写函数名即可<br>（比如函数xxx()只用写xxx即可）</p>
+<p>中断模式：<br>arduino通用提供了5种模式选择<br>LOW     （0x0）： 当引脚为低电平时触发中断服务程序<br>DISABLED（0x00）：失能模式,禁用中断<br>CHANGE  （0x03）： 当引脚电平发生变化时触发中断服务程序，边沿触发<br>RISING  （0x01）： 当引脚电平由低电平变为高电平时触发中断服务程序，上升沿触发<br>FALLING （0x02）： 当引脚电平由高电平变为低电平时触发中断服务程序，下降沿触发<br>arduino之外的中断模式少部分芯片支持比如esp32</p>
+<p>ONLOW     （0x04）：低电平触发<br>ONHIGH    （0x05）：高电平触发<br>ONLOW_WE  （0x0C）：带消抖低电平触发<br>ONHIGH_WE （0x0D）：带消抖高电平触发</p>
+<h2 id="禁用中断"><a href="#禁用中断" class="headerlink" title="禁用中断"></a>禁用中断</h2><pre><code>detachInterrupt(中断号);
+</code></pre>
+<p>中断号：<br>中断号不全是引脚号，要具体查arduino开发板哪些引脚支持中断<br>在ESP32中除了34-39都可以支持中断</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>1、先初始化IO为输入（具体什么输入模式看情况）<br>2、初始化中断<br>3、写中断函数</p>
+<p>代码参考：</p>
+<pre><code>int  state=LOW;
+
+void setup() &#123;
+pinMode(2, OUTPUT);//初始化led
+pinMode(13, INPUT_PULLUP); //初始化中断io
+attachInterrupt(13, abc, FALLING);//初始化中断
+&#125;
+
+void loop() &#123;
+digitalWrite(2, state);//显示led
+&#125;
+
+void abc()//中断函数
+&#123;
+delayMicroseconds(50000);//延迟50ms消抖
+if (digitalRead(13)==0)
+&#123;
+    state = !state;//翻转led
+&#125;
+
+&#125;
+//2脚输出接led
+//13脚按键接地
+</code></pre>
+<p>按键按键就会翻转led</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

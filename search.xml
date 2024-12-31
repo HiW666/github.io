@@ -1,0 +1,3625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>hexo写作开发手册</title>
+    <url>/2023/07/26/hexo%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<p>欢迎观看hexo文章写作手册 此处直接写文章</p>
+<span id="more"></span>
+
+<p>手册参考<a href="https://gitee.com/KSweb/Markdown/tree/master">https://gitee.com/KSweb/Markdown/tree/master</a></p>
+<h2 id="此处为大号字体可做为标题"><a href="#此处为大号字体可做为标题" class="headerlink" title="此处为大号字体可做为标题"></a>此处为大号字体可做为标题</h2><h3 id="此处为小标题"><a href="#此处为小标题" class="headerlink" title="此处为小标题"></a>此处为小标题</h3><p><a href="https://binging.top/">代码跳转</a></p>
+<p>标记<br><code> $ 重点</code></p>
+<!-- (已经弃用，因为会导致不知名的gcc编译错误)-->
+<p>代码生成(已经弃用，因为会导致不知名的gcc编译错误)</p>
+<pre class="cpp" style="font-family:monospace;"><span style="color: #339900;">#include &lt;stdio.h&gt;</span>
+        <span style="color: #0000ff;">int</span> main<span style="color: #008000;">&#40;</span><span style="color: #008000;">&#41;</span>
+         <span style="color: #008000;">&#123;</span>
+           <span style="color: #0000dd;">printf</span><span style="color: #008000;">&#40;</span><span style="color: #FF0000;">&quot;Hello, World!&quot;</span><span style="color: #008000;">&#41;</span><span style="color: #008080;">;</span>
+           <span style="color: #0000ff;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span>
+         <span style="color: #008000;">&#125;</span>
+&nbsp;</pre>
+<!-- 这里生成代码https://c.runoob.com/front-end/5536/ 选择cpp-->
+<!-- (已经弃用，因为会导致不知名的gcc编译错误)-->
+
+
+<!-- 回车-->
+<pre><code>#include &lt;stdio.h&gt;
+int main()
+&#123;
+       printf(&quot;Hello, World!&quot;);
+       return 0;
+&#125;
+</code></pre>
+<!-- 回车-->
+<!-- 这里是手动生成代码，先回车首行开头4个空格，末行开头4个空格再回车-->
+
+<p>图片<br><img src="/img/hexo%E5%86%99%E4%BD%9C%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C/1.jpg"></p>
+<!-- 注释掉img/hexo写作开发手册/1.jpg -->
+
+<a href="/2023/11/07/hexo%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="hexo搭建教程">hexo搭建教程</a>
+<!-- 本地跳转文章 -->
+
+
+<p>外链音乐</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=4010201&auto=1&height=66"></iframe>
+
+
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你说的队但我可以嘎嘎乱杀</title>
+    <url>/2023/07/27/%E5%B5%8C%E5%85%A5%E5%BC%8F%E4%BD%A0%E8%AF%B4%E7%9A%84%E9%98%9F%E4%BD%86%E6%88%91%E5%8F%AF%E4%BB%A5%E5%98%8E%E5%98%8E%E4%B9%B1%E6%9D%80/</url>
+    <content><![CDATA[<p><img src="/img/%E7%94%B5%E8%B5%9B/R-C.png"><br><a href="https://7gz7xs-my.sharepoint.com/:f:/g/personal/admin_orillais_tech/EmGaWjNI_k9Jk6SAFDIXM3ABQqY_fLtCDZsa_8Ofq5oiIg?e=sFnXMY">stm开发工具打包</a></p>
+<p><a href="https://wwwe.lanzouq.com/i0Tu513mmo4h">各类开发板原理图</a></p>
+<span id="more"></span>
+<p>欣柯易电子 天问Block软件下载链接：ww<br>w.twen51.com<br>欣柯易电子 ASR-PRO官方资料汇总以及上<br>手视频：<a href="https://www.haohaodada.com/new/bbs/forum.ph">https://www.haohaodada.com/new/bbs/forum.ph</a><br>p?mod&#x3D;viewthread&amp;tid&#x3D;592&amp;page&#x3D;1&amp;extra&#x3D;#pid1355<br>注意：我们的ASR PRO开发板已经板载CH340芯片，Type-C数据线可以一键下载！核心板<br>和官方一致！<br>成柯易电子 ASR-PRO语音模块资料：<br><a href="https://pan.baidu.com/s/1G7Cmq">https://pan.baidu.com/s/1G7Cmq</a><br>wLbJxLbFuk1nH6miQ<br>提取码：1234<br><a href="https://wwwe.lanzouq.com/iYeJb13mxkwh">https://wwwe.lanzouq.com/iYeJb13mxkwh</a></p>
+<p>esp 32cam<br> <a href="https://wwwe.lanzouq.com/itssF13morwf">https://wwwe.lanzouq.com/itssF13morwf</a></p>
+<p> 433频段<br> <a href="https://wwwe.lanzouq.com/iXv6m13my2tc">https://wwwe.lanzouq.com/iXv6m13my2tc</a></p>
+<p><a href="https://wwwe.lanzouq.com/ivDFN13n0yfc">stm32开发库</a></p>
+<p><a href="https://blog.csdn.net/qq_41262681/article/details/95940707">超声波模块</a><br><a href="https://blog.csdn.net/weixin_44895651/article/details/98039047">寻迹小车</a></p>
+<p>7z解压缩<br><a href="https://wwwe.lanzouq.com/ibbgw13nq0la">https://wwwe.lanzouq.com/ibbgw13nq0la</a><br>密码:g6k2</p>
+<p><a href="https://wwwe.lanzouq.com/iJ8fx13nqdob">电赛参考论文</a><br>密码:fg60</p>
+]]></content>
+      <categories>
+        <category>嵌入式</category>
+      </categories>
+      <tags>
+        <tag>stm32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cadence教程操作1</title>
+    <url>/2023/11/06/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/</url>
+    <content><![CDATA[<h2 id="关于cadence软件的一些基本的操作"><a href="#关于cadence软件的一些基本的操作" class="headerlink" title="关于cadence软件的一些基本的操作"></a>关于cadence软件的一些基本的操作</h2><p>本篇文章只是说明软件的一些启动，不包括软件安装与linux系统的安装<br>（vm虚拟机配置也不在这里了啦！）</p>
+<p>关于软件的基本使用逻辑<br>1建立库<br>2关联库<br>3打开图层</p>
+<span id="more"></span>
+
+
+<p>1，安装软件成功以后在终端里面输入<br><code>icfb</code><br> 或者<br> <code> virtuoso </code><br> 启动软件</p>
+<p>等待一会直到出现下面的页面为止<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%871.png"></p>
+<p>2，关于软件的基本页面<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%872.png"></p>
+<p>（关于软件的设置启动设置，5.1版本默认只有一步撤销动作，可以设置最大10步撤销动作，6.1版本有128步撤销动作）<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%873.png"><br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%874.png"></p>
+<p>3软件的使用<br>开始建立软件库<br>首先主页打开库管理<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%875.png"><br>开始新建库<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%876.png"><br>选择保存库的路径  然后点ok<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%877.png"><br>然后选择第三个    然后点ok<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%878.png"><br>选择常用单元     然后点ok<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%879.png"><br>到此为止已经建立了库<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8710.png"><br>然后开始新建图层<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8717.png"><br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8718.png"><br>但是建立完库后发现，库的右边全部都是空白的。<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8719.png"><br>这个时候，我们要进行关联库。</p>
+<p>4关联库<br>我们先导入库这里用中芯国际的库来举例子<br><a href="https://wwwe.lanzouq.com/iGWxZ1e1q41i">中芯国际库的下载链接</a><br>密码:btxs</p>
+<p>我们把中芯国际的库和其他的库的库统一放在一起<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8711.png"></p>
+<p>（提醒一下这里是查看库的保存路径）<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8712.png"><br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8713.png"></p>
+<p>然后我们返回到软件的主页<br>点击这里关联库<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8714.png"><br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8715.png"></p>
+<p>然后开始关联库<br>上面是自己的库<br>下面选择要关联的<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8716.png"><br>这样我们就和中芯国际的库关联好了<br>然后我们重新打开刚刚的图层就会发现图层已经有了<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8720.png"><br>下篇我们教大家如何绘制元器件</p>
+<p><a href="https://7gz7xs-my.sharepoint.com/:w:/g/personal/admin_orillais_tech/EWSyGi14FVRKoRilUVj3rCkBIyPevZSzpMRO6B2KpDVAHQ?e=Sc7v0X">参考的文档</a></p>
+]]></content>
+      <categories>
+        <category>cadence</category>
+      </categories>
+      <tags>
+        <tag>cadence</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cadence教程操作2</title>
+    <url>/2023/11/07/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/</url>
+    <content><![CDATA[<h2 id="cadence教程操作2"><a href="#cadence教程操作2" class="headerlink" title="cadence教程操作2"></a>cadence教程操作2</h2><p>这里没例子只是单纯的软件的功能介绍</p>
+<h1 id="图层的绘制"><a href="#图层的绘制" class="headerlink" title="图层的绘制"></a>图层的绘制</h1><p>这是材料名称<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%871.png"><br>这些是快捷键</p>
+<span id="more"></span>
+<p><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%872.png"><br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%873.png"><br>我们先点击左侧的图层栏<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%874.png"><br>选择我们要的材料<br>二极管我们先选择co<br>然后在主页面<br>看鼠标<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%875.png"><br>然后按下键盘上面的r按键<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%876.png"><br>然后就可以开始绘画了<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%877.png"><br>然后画完成之后<br>按下esc就可以退出绘画模式<br>鼠标又会变成这样<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%875.png"><br>然后再用鼠标选中<br>再按下q按键就可以设置图层的大小了<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%878.png"></p>
+<h1 id="图层的关系"><a href="#图层的关系" class="headerlink" title="图层的关系"></a>图层的关系</h1><p>这样是全部的图层<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%879.png"><br>这个是已经使用的图层<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%8710.png"><br>然后这个位置可以修改图层是否可见<br>（也就是隐藏图层）<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%8711.png"></p>
+<h1 id="标记图层"><a href="#标记图层" class="headerlink" title="标记图层"></a>标记图层</h1><p>打开这里选择pin<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%8712.png"><br>然后就可以给图层定义<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C2/%E5%9B%BE%E7%89%8713.png"></p>
+<p>然后关于电阻，电容，电感的绘制的教程<br><a href="https://7gz7xs-my.sharepoint.com/:p:/g/personal/admin_orillais_tech/EeA88wIScgJJvKU6NIawvQsBfc3YUz3nGoiEcHkNca2E0w?e=KTTNhc">文档</a></p>
+]]></content>
+      <categories>
+        <category>cadence</category>
+      </categories>
+      <tags>
+        <tag>cadence</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo搭建教程</title>
+    <url>/2023/11/07/hexo%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="搭建使用hexo静态博客"><a href="#搭建使用hexo静态博客" class="headerlink" title="搭建使用hexo静态博客"></a>搭建使用hexo静态博客</h2><p>静态网站相较于动态网站更加安全，响应速度更快<br>（应该是吧，不是的话当我在放屁）<br>最重要的是github允许使用静态网站<br>这不就是直接白嫖一台服务器了<br>然后我们可以使用hexo白嫖github<br>下面教程教大家如何配置hexo</p>
+<span id="more"></span>
+<p>教程<br>1 配置环境<br>2 hexo安装  （如果已经建过网站的可以跳过这个）<br>3 hexo运行<br>4 hexo目录介绍<br>5 如何开发</p>
+<h1 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h1><p>（以上只适用于window，其他系统请参考官网文档）<br>首先我们来安装git<br><a href="https://git-scm.com/download/win">git官网下载</a></p>
+<p>然后我们来安装Node.js的框架<br><a href="https://nodejs.org/zh-cn/download">官网下载</a><br>如果打开不了可以用淘宝镜像<br><a href="https://registry.npmmirror.com/binary.html?path=node/">淘宝镜像</a><br>实在不行用我的链接（不保证是最新版本）<br><a href="https://wwwe.lanzouq.com/iAJHF1e1tvyb">蓝奏云</a><br>密码:aiza</p>
+<p>安装完成环境之后<br>我们win＋r按键<br>打开cmd<br>输入下面的命令<br><code>$ npm install -g hexo-cli</code></p>
+<p>之后就完成了环境的安装了</p>
+<h1 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h1><p>首先我们可以用</p>
+<p>命令行<br><code>cd XXX</code><br>来修改路径，XXX填路径<br>切换路径之后<br>命令行<br><code>hexo init &lt;folder&gt;</code></p>
+<p>hexo会生成网站的源码<br><code>&lt;folder&gt;</code>是网站的文件夹名称</p>
+<h1 id="4-运行"><a href="#4-运行" class="headerlink" title="4 运行"></a>4 运行</h1><p>我们可以用<br><code>hexo generate</code>来编译生成网站代码<br>简写<code>hexo g</code><br>有代码后我们可以用（其实直接 hexo s也就能同时编译和启动服务器）<br><code>hexo server</code>来启动服务器<br>简写<code>hexo s</code><br>如果要修改端口XXX为端口<br><code>hexo server -p XXX</code><br>简写<code>hexo s -p XXX</code><br>自定义ip<br><code>hexo server -i 192.168.1.1</code><br>简写<code>hexo s -i 192.168.1.1</code></p>
+<h1 id="hexo目录介绍"><a href="#hexo目录介绍" class="headerlink" title="hexo目录介绍"></a>hexo目录介绍</h1><p>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── public<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes</p>
+<h2 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h2><p>是站点配置</p>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>应用程序的信息。EJS, Stylus 和 Markdown 渲染引擎 已默认安装，您可以自由移除。</p>
+<h2 id="scaffolds"><a href="#scaffolds" class="headerlink" title="scaffolds"></a>scaffolds</h2><p>是hexo本体文件</p>
+<h2 id="public"><a href="#public" class="headerlink" title="public"></a>public</h2><p>是hexo编译出来的网站代码</p>
+<h2 id="source"><a href="#source" class="headerlink" title="source"></a>source</h2><p>是写文章<br>其中里面的_posts是文章的地方<br>你也可以新建tags（标签），about（网站介绍）<br>categories（分类），img（网站文件）等等</p>
+<h2 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h2><p>是放主题的地方<br>刚刚初始化的网站可能没有 tags，about，cetegories文件</p>
+<p><code>hexo new page xxx</code><br>可以进行生成tags，about，cetegories等文件（xxx为要填写生成的标题）</p>
+<h1 id="5-如何开发"><a href="#5-如何开发" class="headerlink" title="5 如何开发"></a>5 如何开发</h1><p>_config.yml是站点配置</p>
+<p>关于配置<br>参数	描述<br>title	网站标题<br>subtitle	网站副标题<br>description	网站描述<br>keywords	网站的关键词。支持多个关键词。<br>author	您的名字<br>language	网站使用的语言。<br>对于简体中文用户来说常见的有 zh-Hans和 zh-CN。<br>timezone	<br>网站时区。Hexo 默认使用您电脑的时区。<br>请参考 时区列表 进行设置，<br>如 America&#x2F;New_York, Japan, 和 UTC 。<br>一般的，对于中国大陆地区可以使用 Asia&#x2F;Shanghai。<br>值得一提的是你可以在文件末尾处找到一个theme:的配置<br>这里面用于设置你的主题</p>
+<p>source的新建教程</p>
+<p>除了在_posts里面写文章外（文章可以用md开发）<br>你还可以在里面新建tags（标签），about（网站介绍）<br>categories（分类），img（网站文件）等文件夹<br><img src="/img/hexo%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/%E5%9B%BE%E7%89%871.png"><br>然后创建index.md的文件<br><img src="/img/hexo%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/%E5%9B%BE%E7%89%872.png"><br>index.md文件参考<br>title是新建的文件夹的名称<br>date:是日期<br><img src="/img/hexo%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/%E5%9B%BE%E7%89%873.png"></p>
+<p>文章编写以及主题修改请看下篇<br>关于如何部署到github请看如何提交项目到github也不在此处</p>
+<a href="/2023/11/08/github%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/" title="github入门到入土">github入门到入土</a>
+<p><a href="https://hexo.io/zh-cn/docs/">官方教程</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>树莓派入门到入坟教程1</title>
+    <url>/2023/11/07/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B1/</url>
+    <content><![CDATA[<h2 id="树莓派入门到入坟教程1"><a href="#树莓派入门到入坟教程1" class="headerlink" title="树莓派入门到入坟教程1"></a>树莓派入门到入坟教程1</h2><p>写这玩意，绝对不是因为树莓派是理财产品<br>也不是为了让他死灰复燃，让他发挥出更大的意义。<br>问我他有什么用，我也不知道，反正是花了好大功夫，<br>才勉强从老师的手里里面借出来的。<br>（www，真没钱买这东西）</p>
+<span id="more"></span>
+<p>关于树莓派这东西，可以说是一个小主机吧，比起单片机来说<br>更多是要一个操作系统来控制他。<br>首先，我们需要一张tf卡来安装系统。<br>我们在安装操作系统之前先要把tf来进行格式化<br><a href="https://wwwe.lanzouq.com/ia7DR1e43rfa/">sd卡格式化工具</a></p>
+<p>然后有两种安装方法</p>
+<h1 id="树莓派官方安装工具"><a href="#树莓派官方安装工具" class="headerlink" title="树莓派官方安装工具"></a>树莓派官方安装工具</h1><p><a href="https://www.raspberrypi.com/software/">官方工具</a><br><a href="https://wwwe.lanzouq.com/i2lV91e44n0h">蓝奏云</a><br>密码:6btj<br><code>Raspberry Pi OS with desktop版本的特点是有电脑桌面，对于普通用户来说，这个就够用了。</code><br><code>Raspberry Pi OS Lite版本特点是没有电脑桌面，进入系统所有操作都要用命令行，</code><br><code>由于没有UI界面，适合TF卡容量小和熟练掌握Linux操作使用，如果您没有</code><br><code>linux基础，使用起来会非常艰难，入门还是建议选择带桌面的镜像。</code></p>
+<p>将TF卡连接电脑。<br>打开 Raspberry Pi Imager选择所需的操作系统。<br>选择要写入图像的 TF 卡(注意：最好移除其它U盘设备，以防将U盘文件擦除)。<br>预先配置系统，按住 CTRL+SHIFT+X(或点击右下角小齿轮)，设置完成点击保存即可。<br>单击烧录按钮，将数据写入TF卡。<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B1/%E5%9B%BE%E7%89%871.gif"></p>
+<h1 id="其他系统"><a href="#其他系统" class="headerlink" title="其他系统"></a>其他系统</h1><p>烧录镜像可以使用其它方法，使用镜像写入工具将下载好镜像写入树莓派，例如：balenaEtcher或Win32DiskImager 。<br>首先去树莓派官网下载镜像，推荐使用Raspberry Pi OS with desktop。<br><a href="https://www.raspberrypi.com/software/operating-systems/">树莓派官方系统下载</a></p>
+<p>打开对应的烧录工具<a href="https://wwwe.lanzouq.com/iQ10X1e43sgh">Win32DiskImager</a><br>将TF卡插入读卡器，将读卡器插入电脑。<br>选择下载好的树莓派镜像文件。<br>单击“写入”并等待写入完成。<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B1/%E5%9B%BE%E7%89%872.gif"></p>
+<h1 id="树莓派开机"><a href="#树莓派开机" class="headerlink" title="树莓派开机"></a>树莓派开机</h1><p>然后完成上面的步骤树莓派就可以开机了<br>但是要注意，树莓派要先连接好外设之后再启动主机，而且强调供电要5v3a的电源</p>
+<p><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B1/%E5%9B%BE%E7%89%873.gif"></p>
+<p>下面的教程适用于没有hdmi或者键盘，鼠标外设的人使用的</p>
+<h1 id="树莓派ssh配置"><a href="#树莓派ssh配置" class="headerlink" title="树莓派ssh配置"></a>树莓派ssh配置</h1><p>开启ssh<br>boot盘符下新建一个名为ssh的文件，不要任何扩展名<br><code>不要任何扩展名，不要任何扩展名，不要任何扩展名</code><br>你可以新建一个ssh.txt,确保文件夹选项中的设置是显示扩展名的，<br>然后将.txt删除，这样你就获得了一个没有任何扩展名的名为ssh的文件。</p>
+<p>然后我们要给树莓派连接wifi<br>我们继续在boot新建一个记事本重命名为<br><code>wpa_supplicant.conf</code><br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B1/%E5%9B%BE%E7%89%874.png"></p>
+<p>记事本里面内容<br>打开并输入对应内容（’假设我在中国，无线名称test，无线密码密码为12345678）</p>
+<p>&#96;<br>country&#x3D;CN<br>update_config&#x3D;1<br>ctrl_interface&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant</p>
+<p>network&#x3D;{<br>ssid&#x3D;”test”<br>psk&#x3D;”12345678”<br>key_mgmt&#x3D;WPA-PSK<br>}<br>&#96;</p>
+<p>然后我们要获取树莓派的ip<br>我们可以登录路由器的后台查看<br>或者自己百度如何获取局域网设备的ip这里不细说</p>
+<h1 id="树莓派ssh配置-1"><a href="#树莓派ssh配置-1" class="headerlink" title="树莓派ssh配置"></a>树莓派ssh配置</h1><p>去看树莓派ssh连接教程<br>本人就先不放在本篇里面了</p>
+<a href="/2023/11/08/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/" title="树莓派如何进行ssh连接">树莓派如何进行ssh连接</a>]]></content>
+      <categories>
+        <category>树莓派</category>
+      </categories>
+      <tags>
+        <tag>树莓派</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>树莓派如何进行ssh连接</title>
+    <url>/2023/11/08/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/</url>
+    <content><![CDATA[<h2 id="ssh连接"><a href="#ssh连接" class="headerlink" title="ssh连接"></a>ssh连接</h2><p>关于我为什么要把树莓派的ssh连接分开来说<br>因为我个人感觉，树莓派运行的系统是Linux的系统，所以也就相当于是介绍<br>Linux的系统的ssh的远程连接，所以我就新开了一个章节来介绍树莓派如何ssh远程连接<br>（其实是Linux系统的远程连接了啦）</p>
+<span id="more"></span>
+<p>我这边推荐的是远程登录软件MobaXterm（当然如果你会，你也可以用自己上手的）</p>
+<p><a href="https://wwwe.lanzouq.com/iwKIf1ea4asd">MobaXterm</a></p>
+<p>打开远程登录软件MobaXterm：<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%871.png"><br>点击session，点击ssh，在Remote host输入树莓派的IP地址：<br>（如果不会的话看上一期，或者自行百度同一局域网如何查询设备ip<a href="/2023/11/07/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B1/" title="树莓派入门到入坟教程1">树莓派入门到入坟教程1</a>）<br>Specify usemame输入用户名pi<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%872.png"><br>登录名为pi，密码是raspberry（注意输入密码过程不会有显示，所以要注意输入法）<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%873.png"></p>
+<h1 id="下面使用vnc进行远程桌面"><a href="#下面使用vnc进行远程桌面" class="headerlink" title="下面使用vnc进行远程桌面"></a>下面使用vnc进行远程桌面</h1><p>首先在终端<br><code>sudo raspi-config</code><br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%874.jpg"><br>依次操作：Interfacing Options -&gt; VNC -&gt; Yes。之后系统会提示你是否要安装 VNC 服务，<br>输入 y 之后回车，<br>等待系统自动下载安装完成，一切顺利的话 VNC 服务就启动了！<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%875.jpg"><br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%876.jpg"><br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%877.jpg"><br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%878.jpg"><br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%879.jpg"><br>完成之后</p>
+<p><a href="https://wwwe.lanzouq.com/iKIta1ea4izi">VNC下载</a></p>
+<p>打开VNC输入树莓派的IP地址：<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%8710.png"><br>选择Continue：<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%8711.png"><br>Username：pi Password：raspberry ：<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%8712.png"><br>这里就登录成功了：<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%8713.png"></p>
+<p>到此树莓派ssh就完成连接了</p>
+<h1 id="补充关于文件传输"><a href="#补充关于文件传输" class="headerlink" title="补充关于文件传输"></a>补充关于文件传输</h1><p>我们可以使用MobaXterm进行文件传输<br>当我们连接完成之后，右边这里会显示树莓派的文件路径<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/%E5%9B%BE%E7%89%8714.png"><br>我们只需要把文件拖入进去就可以传输文件了<br>同理，我们把文件拖出来，可以把文件传出来</p>
+]]></content>
+      <categories>
+        <category>树莓派</category>
+      </categories>
+      <tags>
+        <tag>树莓派</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>github入门到入土</title>
+    <url>/2023/11/08/github%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/</url>
+    <content><![CDATA[<h2 id="github通过ssh连接上传项目到库"><a href="#github通过ssh连接上传项目到库" class="headerlink" title="github通过ssh连接上传项目到库"></a>github通过ssh连接上传项目到库</h2><p>首先我们先在电脑里面下载一个git</p>
+<p><a href="https://git-scm.com/download/win">git</a></p>
+<p>git用于项目管理。<br>然后我们在github上面注册github账号<br>还有创建一个仓库。如果要用github去托管静态网站的话，需要github开启为公开库<br>一般都是默认公开库</p>
+<p>我们安装完成git之后<br>打开你要上传的项目位置<br><img src="/img/github%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/%E5%9B%BE%E7%89%871.png"></p>
+<span id="more"></span>
+<p>然后我们输入初始化仓库</p>
+<pre><code>git init
+</code></pre>
+<p>然后我们登录自己的邮箱与名字</p>
+<pre><code>git config --global user.email&quot;邮箱&quot; 
+
+
+git config --global user.name&quot;名字&quot; 
+</code></pre>
+<p>之后再把文件给添加到本地库</p>
+<pre><code>git add . 
+git commit -m &quot;first commit&quot;
+</code></pre>
+<p>完成之后，如果查看隐藏文件夹，那么可以看到.git的隐藏文件</p>
+<h1 id="然后将本地的仓库关联到github上"><a href="#然后将本地的仓库关联到github上" class="headerlink" title="然后将本地的仓库关联到github上"></a>然后将本地的仓库关联到github上</h1><p>第一步：创建SSH KEY 先看一下C盘用户目录下有没有.ssh目录，有的话看下里面有没有id_rsa和id_rsa.pub这两个文件，有就跳到下一步，</p>
+<p>没有就通过下面命令创建：<br>先创建.ssh目录在C盘用户目录</p>
+<pre><code>ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
+</code></pre>
+<p>输入完后不要输入任何命令直接回车<br>直到出来奇怪的字符就是完成了<br>然后应该会有.ssh目录里是有id_rsa和id_rsa.pub这两个文件的<br><img src="/img/github%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/%E5%9B%BE%E7%89%872.png"></p>
+<p>第二步：登录Github,找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容复制到Title下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密。<br><img src="/img/github%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/%E5%9B%BE%E7%89%873.png"><br><img src="/img/github%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/%E5%9B%BE%E7%89%874.png"><br><img src="/img/github%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/%E5%9B%BE%E7%89%875.png"><br>第三步： 找到自己的仓库地址，然后可以连接了！<br>下图是没有readme文件的时候👇<br><img src="/img/github%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/%E5%9B%BE%E7%89%876.png"><br>有readme文件时是这样👇<br><img src="/img/github%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/%E5%9B%BE%E7%89%877.png"></p>
+<pre><code>git remote add origin https://github.com/HiW666/HiW666.github.io.git
+</code></pre>
+<p>origin 后面是自己的仓库url地址</p>
+<p>代码上传到GitHub仓库</p>
+<pre><code>git push -u origin master
+</code></pre>
+<p>由于新建的远程仓库是空的，所以要加上-u这个参数，等远程仓库里面有了内容之后，下次再从本地库上传内容的时候只需下面这样就可以了：</p>
+<pre><code>git push origin master
+</code></pre>
+<p><img src="/img/github%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/%E5%9B%BE%E7%89%878.png"></p>
+<p>在上面创建远程仓库的时候，如果你勾选了Initialize this repository with a README（就是创建仓库的时候自动给你创建一个README文件），那么到了第8 将本地仓库内容推送到远程仓库的时候就会报一个failed to push some refs to <a href="https://github.com/%E2%80%A6git%E7%9A%84%E9%94%99%E3%80%82">https://github.com/…git的错。</a><br>这是由于你新创建的那个仓库里面的README文件不在本地仓库目录中，这时我们可以通过以下命令先将内容合并一下：</p>
+<pre><code>git pull --rebase origin master
+</code></pre>
+<p>最后如果你真的没办法就用这个吧</p>
+<pre><code>git push -f origin master
+</code></pre>
+<p>（这个会强制覆盖，如果经常这样搞迟早会出事）</p>
+<p>再最后提一嘴<br>如果你是打算拿github搭建静态服务器的。每次上传完成之后，域名都要重新解析<br>这个以后有机会再出一期吧</p>
+]]></content>
+      <categories>
+        <category>github</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>树莓派入门到入坟教程3</title>
+    <url>/2023/11/10/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B3/</url>
+    <content><![CDATA[<p>上一期安排了树莓派的gpio的环境安装<br>这次看看树莓派的gpio的开发。<br>gpio可以使用shell，c，python。<br>我个人使用的是python开发<br>（为什么，没有理由你管我？）</p>
+<span id="more"></span>
+
+<p>我们检查python环境（一般来说都是默认安装的）<br><code>python</code><br>这个命令可以检查python版本号</p>
+<p>这里面有参考代码<br><a href="https://wwwe.lanzouq.com/ik7J71esdn6b">https://wwwe.lanzouq.com/ik7J71esdn6b</a><br>密码:bybd<br>我们直接把代码文件拖到树莓派的桌面（这里不过是用桌面来举例子）<br>切换路径<br><code>cd Desktop</code><br>这个命令运行桌面里面xxx.py文件<br><code>python xxx.py</code><br>当然你也可以直接双击打开<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B3/%E5%9B%BE%E7%89%871.png"></p>
+<p>python代码建议看菜鸟教程</p>
+]]></content>
+      <categories>
+        <category>树莓派</category>
+      </categories>
+      <tags>
+        <tag>树莓派</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>树莓派入门到入坟教程2</title>
+    <url>/2023/11/10/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B2/</url>
+    <content><![CDATA[<p>这里我们介绍一下树莓派的gpio的开发<br>首先我们来安装git<br><code>sudo apt install git-core</code><br>输入以下命令，将 WiringPi 文件下载到树莓派系统的当前目录。<br><code>sudo git clone https://github.com/WiringPi/WiringPi</code><br>输入以下命令进入 WiringPi 文件夹目录。<br><code>cd WiringPi/</code><br>输入以下命令安装 WiringPi。<br><code>sudo ./build</code></p>
+<p>到处我们完成了gpio的安装<br>我们可以用命令查看gpio版本<br><code>gpio -v</code><br>这个命令可以查看gpio的引脚<br><code>gpio readall</code><br>然后环境就完成了安装</p>
+]]></content>
+      <categories>
+        <category>树莓派</category>
+      </categories>
+      <tags>
+        <tag>树莓派</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>STM32奇怪的文档目录</title>
+    <url>/2024/03/26/STM32%E5%A5%87%E6%80%AA%E7%9A%84%E6%96%87%E6%A1%A3%E7%9B%AE%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="本教程为STM32的教程"><a href="#本教程为STM32的教程" class="headerlink" title="本教程为STM32的教程"></a>本教程为STM32的教程</h2><p>目录：</p>
+<a href="/2024/03/26/STM32%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" title="STM32开发环境">STM32开发环境</a>
+
+<p>STM32F103c8t6标准库开发教程：</p>
+<p>io输出<a href="/2024/03/27/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/" title="STM32标准库GPIO">STM32标准库GPIO</a></p>
+<p>IO读取<a href="/2024/03/27/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/" title="STM32标准库GPIO">STM32标准库GPIO</a></p>
+<p>中断</p>
+<p>定时</p>
+<p>PWM</p>
+<p>AD</p>
+]]></content>
+      <categories>
+        <category>STM32</category>
+      </categories>
+      <tags>
+        <tag>STM32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>STM32开发环境</title>
+    <url>/2024/03/26/STM32%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</url>
+    <content><![CDATA[<h2 id="STM32开发环境"><a href="#STM32开发环境" class="headerlink" title="STM32开发环境"></a>STM32开发环境</h2><p>stm32开发有标准库开发，hal库，还有寄存器开发。<br>因为stm32主要是32位单片机，32位单片机也就导致了stm32的寄存器不好配置<br>所以，我也就不暂时不想介绍stm32的寄存器开发。</p>
+<p>现在，先说一下最常见的标准库开发。<br>（标准库目前官方已经停更，未来主要还是hal库的开发方式）<br>标准库只支持 ：F0，F1，F2，F3，F4，L1<br>官方网站：<a href="https://www.st.com/zh/embedded-software/stm32-standard-peripheral-libraries/products.html?querycriteria=productId=LN1939">跳转</a><br>开发软件使用的keil mdk版本</p>
+<span id="more"></span>
+<a href="/2024/03/26/Keil%E4%BB%8B%E7%BB%8D/" title="Keil介绍">Keil介绍</a>
+
+<p>在完成keil软件的安装以后。<br>还要安装stm32专用的芯片库，只有对应库才能正常的编译。</p>
+<p>STM32库：<a href="https://www.123pan.com/s/siA6Vv-859uA.html">https://www.123pan.com/s/siA6Vv-859uA.html</a></p>
+<h1 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h1><p>下载之后，一般可以双击直接安装<br><img src="/img/STM32%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/1.png"></p>
+<h1 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h1><p>如果不行，可以用第二种安装方式<br>点这个小方块<br><img src="/img/STM32%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/2.png"></p>
+<p>在左上角，点这个位置，选择库的包然后就可以安装了。<br><img src="/img/STM32%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/3.png"></p>
+]]></content>
+      <categories>
+        <category>STM32</category>
+      </categories>
+      <tags>
+        <tag>STM32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Keil介绍</title>
+    <url>/2024/03/26/Keil%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[<p>Keil介绍：<br>keil是一款主流的单片机开发工具，目前已经被arm收购。<br>官网下载:<a href="http://www2.keil.com/mdk5">http://www2.keil.com/mdk5</a><br>我提供的下载：<a href="https://www.123pan.com/s/siA6Vv-D59uA.html">https://www.123pan.com/s/siA6Vv-D59uA.html</a><br>51版本：<a href="https://www.123pan.com/s/siA6Vv-r59uA.html">https://www.123pan.com/s/siA6Vv-r59uA.html</a><br>我提供的版本不是最新版本，但是有较为完整的汉化，虽然不知道是谁汉化的，但是能够汉化的如此完整我觉得也是够牛逼的。<br>同时，说一下keil如果不破解的话，只能编译少量的代码。<br>只有破解了才能完整的编译。</p>
+<span id="more"></span>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>keil分arm版本和c51版本。<br>ARM版本可以向下兼容C51，C51不兼容ARM。所以建议ARM版本。</p>
+<p>首先是正常的安装流程。<br>点击Next&gt;&gt;<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/1.jpg"><br>打勾，然后Next&gt;&gt;<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/2.jpg"><br>选择安装路径，建议默认即可。Next&gt;&gt;<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/3.jpg"><br>随便写点什么。Next&gt;&gt;<br>什么都可以填自己马马也行<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/4.jpg"><br>反正就是安装完成了。<br>要中文版本，就要在你的安装软件目录里面找到Keil_v5\UV4<br>找到uv4.exe直接覆盖就好了</p>
+<p>安装兼容51版本<br>前面的安装流程是一样的<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/10.png"><br>不要修改安装路径<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/11.png"></p>
+<p>直到遇到这个页面，然后一直点skip跳过就可以，要按无数次。<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/12.png"></p>
+<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><p>下面是破解教程只是提供学习目的，如果需要支持正版，请到ARM官网购买，或者到ARM注册社区版。<br>如果你真心是要社区版请到下面。</p>
+<p>正常破解流程。安装完毕之后，请右键管理员运行keil软件。</p>
+<h2 id="请右键管理员运行keil软件。"><a href="#请右键管理员运行keil软件。" class="headerlink" title="请右键管理员运行keil软件。"></a>请右键管理员运行keil软件。</h2><h2 id="请右键管理员运行keil软件。-1"><a href="#请右键管理员运行keil软件。-1" class="headerlink" title="请右键管理员运行keil软件。"></a>请右键管理员运行keil软件。</h2><h2 id="请右键管理员运行keil软件。-2"><a href="#请右键管理员运行keil软件。-2" class="headerlink" title="请右键管理员运行keil软件。"></a>请右键管理员运行keil软件。</h2><p>不管理员打开破解不成功别找老子</p>
+<p>打开软件这个页面<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/5.jpg"></p>
+<p>复制好你的Cid<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/6.jpg"><br>然后放入破解软件里面。<br>如果你是ARM版本就选择ARM，是C51就选择C51。我提供的版本是ARM版本，选择ARM。<br>如果你还安装了我的C51兼容keil。那么C51，ARM都要激活要输入两次激活码。</p>
+<p>点击Generate，将生成的代码复制。<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/7.jpg"><br>粘贴到如图所示，点击Add LIC。出现如图所示表示破解完成。到这KEIL5的安装算是完成了。<br>如果破解不成功，就是没管理员打开keil<br>破解到2035年。有人担心过去咋办，其实不用担心，就算到了2035年以后，软件还是能用，只是会提醒你要续费。只是ARM官网目前最长<br>到2035年，2035年以后肯定还有新的破解的。<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/8.jpg"></p>
+<p>如果你的ARM和51版本破解过后应该是这样的<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/9.png"></p>
+<p>到此软件已经安装完成</p>
+]]></content>
+      <categories>
+        <category>STM32</category>
+      </categories>
+      <tags>
+        <tag>STM32</tag>
+        <tag>51</tag>
+        <tag>MDK</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>STM32标准库GPIO</title>
+    <url>/2024/03/27/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/</url>
+    <content><![CDATA[<h2 id="STM32标准库GPIO"><a href="#STM32标准库GPIO" class="headerlink" title="STM32标准库GPIO"></a>STM32标准库GPIO</h2><p>作为STM32最基本的外设，GPIO最基本的输出功能是由STM32控制 引脚输出高低电平，比如可以把GPIO接LED灯来控制其亮灭，<br>也可以接继电器或者三极管，通过继电器或三极管来控制外部大功率电路的通断。</p>
+<p>这是大概到结构图，看的懂就看，看不懂就算了。<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/1.png"></p>
+<p>STM32一共是有8种模式<br>输入模式：<br>（1）GPIO_Mode_IN_FLOATING 浮空输入<br>（2）GPIO_Mode_IPU 上拉输入<br>（3）GPIO_Mode_IPD 下拉输入<br>（4）GPIO_Mode_AIN 模拟输入<br>输出模式：<br>（5）GPIO_Mode_Out_OD 开漏输出（带上拉或者下拉）<br>（6）GPIO_Mode_AF_OD 复用开漏输出（带上拉或者下拉）<br>（7）GPIO_Mode_Out_PP 推挽输出（带上拉或者下拉）<br>（8）GPIO_Mode_AF_PP 复用推挽输出（带上拉或者下拉）</p>
+<span id="more"></span>
+<p>先来介绍输出模式</p>
+<p>在开漏输出模式时，只有N-MOS管工作，如果我们控制输出为0，低电平，则P-MOS管关闭，N-MOS管导通，使输出低电平，<br>I&#x2F;O端口的电平就是低电平，若控制输出为1时，高电平，则P-MOS管和N-MOS管都关闭，输出指令就不会起到作用，<br>此时I&#x2F;O端口的电平就不会由输出的高电平决定，而是由I&#x2F;O端口外部的上拉或者下拉决定   如果没有上拉或者下拉 IO口就处于悬空状态<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/2.png"><br>（省流，能输出大电流，但是可能会短路）</p>
+<p>在推挽输出模式时，N-MOS管和P-MOS管都工作，如果我们控制输出为0，低电平，则P-MOS管关闭，N-MOS管导通，使输出低电平，<br>I&#x2F;O端口的电平就是低电平，若控制输出为1 高电平，则P-MOS管导通N-MOS管关闭，使输出高电平，I&#x2F;O端口的电平就是高电平，<br>外部上拉和下拉的作用是控制在没有输出时IO口电平<br>（省流，只能输入弱电流，需要上拉可以保护避免短路）<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/3.png"></p>
+<p>输入模式<br>上拉就是悬空就是高电平<br>下拉就是悬空就是低电平<br>浮空输入就是不上拉不下拉，容易干扰</p>
+<p>下面内容建议配合代码查看（stm32f103c8t6）<br>配置GPIO步骤</p>
+<p>1 开启gpio时钟<br>2 配置GPIO初始化<br>3 调用</p>
+<h1 id="开启gpio时钟"><a href="#开启gpio时钟" class="headerlink" title="开启gpio时钟"></a>开启gpio时钟</h1><p>而相对应的外设功能所使用的时钟 在stm32f4xx.h 中即可查看到</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RCC_AHB1PeriphClockCmd ( RCC_AHB1Periph_GPIOX, ENABLE);     /*开启 AHB1时钟*/</span><br></pre></td></tr></table></figure>
+<p>X是选择引脚组<br>ENABLE开<br>DISABLE 关</p>
+<p>RCC_AHB1<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/4.png"></p>
+<p>RCC_APB1<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/5.png"></p>
+<h1 id="配置GPIO初始化"><a href="#配置GPIO初始化" class="headerlink" title="配置GPIO初始化"></a>配置GPIO初始化</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPIO_Init(GPIOX, &amp;GPIO_InitStructure);    //初始化所设置的引脚</span><br></pre></td></tr></table></figure>
+<p>X是初始化引脚组为ABCD等组<br>GPIO_InitStructure 是结构体<br>用于初始化</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPIO_InitTypeDef GPIO_InitStruct;                    //定义初始化结构体</span><br></pre></td></tr></table></figure>
+<p>定义完结构体后就可以对结构体进行配置</p>
+<p>GPIO_InitStruct.GPIO_Mode    &#x3D; x;     &#x2F;&#x2F;配置模式模式上面有<br>GPIO_InitStruct.GPIO_Pin     &#x3D; GPIO_Pin_X;           &#x2F;&#x2F;配置哪个IO口一共有1到16个引脚<br>GPIO_InitStruct.GPIO_Speed   &#x3D; GPIO_Speed_xMHz;     &#x2F;&#x2F;配置IO口速度,仅输出有效</p>
+<p>gpio的速度<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/6.png"></p>
+<h1 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h1><p>输出</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPIO_ResetBits(GPIOX, GPIO_Pin_X);  //X组，x引脚  gpio引脚低电平</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPIO_SetBits(GPIOX, GPIO_Pin_X);  //X组，x引脚  gpio引脚高电平</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPIO_SetBits(GPIOX, GPIO_Pin_X);  //X组，x引脚  gpio引脚高电平</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPIO_WriteBit(GPIOX, GPIO_Pin_X, Bit_RESET);//X组，x引脚  gpio引脚低电平</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPIO_WriteBit(GPIOX, GPIO_Pin_X,  Bit_SET);//X组，x引脚  gpio引脚高电平</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPIO_WriteBit(GPIOX, GPIO_Pin_X, X);//X组，x引脚 X可以为高低电平</span><br></pre></td></tr></table></figure>
+
+<p>输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">GPIO_ReadInputDataBit(GPIOX, GPIO_Pin_X) //X为组 X为引脚</span><br></pre></td></tr></table></figure>
+<p>这个就可以检测高低电平用if判断上面的函数为1或者0就是高或者低</p>
+<p>参考工程：<br><a href="https://wwm.lanzouq.com/b03lno3za">https://wwm.lanzouq.com/b03lno3za</a><br>密码:6jed</p>
+]]></content>
+      <categories>
+        <category>STM32</category>
+      </categories>
+      <tags>
+        <tag>STM32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino基于stm32环境搭建</title>
+    <url>/2024/09/13/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="arduino基于stm32环境搭建"><a href="#arduino基于stm32环境搭建" class="headerlink" title="arduino基于stm32环境搭建"></a>arduino基于stm32环境搭建</h2><p>Stm32使用arduino开发<br>在线安装:<a href="https://github.com/arduino/Arduino/wiki/">https://github.com/arduino/Arduino/wiki/</a><br>STM32 core (official): <a href="https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json">https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json</a><br>Provide support of the following STM32 series:<br>STM32F0, STM32F1, STM32F2, STM32F3, STM32F4, STM32F7<br>STM32G0, STM32G4<br>STM32H7<br>STM32L0, STM32L1, STM32L4, STM32L5,<br>STM32MP1 (Cortex-M)<br>STM32U5<br>STM32WB, STM32WL</p>
+<span id="more"></span>
+<p>因为其中的某个部件的github链接已经失效，下面介绍离线的安装方法</p>
+<p>打开hfs软件，把软件端口改8080</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1.png"></p>
+<p>把<br>cmsis–5.7<br>Stm32-2.3.0<br>Stm32tools<br>Xpack–arm–none–eabi–gcc<br>Package–stmicroelectronics–index.json等文件拖入hfs软件</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/2.png"><br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/3.png"></p>
+<p>点击Package–stmicroelectronics–index.json文件，复制上面的链接</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/4.png"></p>
+<p>打开arduino ide软件<br>(<a href="https://www.arduino.cc/en/software/">安装链接</a>)</p>
+<p>左上角文件<br>点击首选项</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/5.png"></p>
+<p>在其他开发者管理器地址粘贴刚刚复制的链接</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/6.png"></p>
+<p>点击arduino开发版管理器(在软件的左边菜单处)</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/7.png"></p>
+<p>选择安装stm32 mcu based board<br>(注意版本不要修改，因为没准备其他版本的文件)</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/8.png"></p>
+<p>然后点安装<br>Arduino就会自动安装了<br>到此软件配置完成</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/9.png"></p>
+<p>注：如果新版本出现卡在某一处不动的情况，可以把hfs关掉再重新打开，然后重新安装。<br>按照这个步骤多试几次就可以完成安装。</p>
+<p><a href="https://www.123pan.com/s/siA6Vv-EcEuA">本文工具下载</a></p>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>stm32</tag>
+        <tag>arduino</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu图形化页面快速部署</title>
+    <url>/2024/09/13/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu图形化页面快速部署"><a href="#openharmony用ubuntu图形化页面快速部署" class="headerlink" title="openharmony用ubuntu图形化页面快速部署"></a>openharmony用ubuntu图形化页面快速部署</h2><p>上一期</p>
+<a href="/2024/09/12/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/" title="openharmony用ubuntu源码下载">openharmony用ubuntu源码下载</a>
+
+<p><a href="https://www.123pan.com/s/E3OdTd-g7Nod">镜像下载</a><br><a href="https://www.123pan.com/s/siA6Vv-kcEuA">文章内文件</a></p>
+<p>我们打开Ubuntu</p>
+<p>用火狐打开<br><a href="https://device.harmonyos.com/cn/develop/ide">https://device.harmonyos.com/cn/develop/ide</a></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/1.png"></p>
+<span id="more"></span>
+<p>将下载的文件解压出来</p>
+<p>在解压出来的路径下右键终端打开</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/2.png"></p>
+<p><code>ls -l /bin/sh</code><br>执行如下命令，确认输出结果为bash。如果输出结果不是bash<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/3.png"><br>输入<br><code>sudo dpkg-reconfigure dash</code><br>打开终端工具，执行如下命令，输入密码，然后选择No，将Ubuntu shell由dash修改为bash。</p>
+<p>然后开始安装HUAWEI DevEco Device Tool<br>右键解压出来的文件 点属性 权限 勾选上允许执行文件<br>再右键在终端打开（一定要在安装文件路径下打开）<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/4.png"><br><code>sudo ./devicetool-linux-tool-&#123;这里改为你下载的版本号&#125;.sh -- --install-plugins</code></p>
+<p>比如<br><code>sudo ./devicetool-linux-tool-3.0.0.400.sh -- --install-plugins</code></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/5.png"><br>在用户协议和隐私声明签署界面，请详细阅读用户协议和隐私声明，需签署同意用户协议和隐私声明才能进行下一步的安装.<br>上下键选择<br>左右键是确定和取消<br>按 回车键确定</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/13.png"><br>如果报错有几个包无法下载输入</p>
+<p><code>sudo apt-get update</code><br>然后会安装好带vscode的版本</p>
+<p>打开vscode<br>点击工程<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/6.png"><br>导入工程</p>
+<p>然后点击打开工程<br>我们选择好工具链的位置<br>&#x2F;鸿蒙根目录&#x2F;prebuilts<br>然后选择好版本</p>
+<p>点击安装他会自动补全工具链<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/7.png"></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/14.png"><br>如果出现权限不够终端输入，然后重启vscode<br><code>sudo code --user-data-dir=&quot;~/.vscode-root&quot;</code></p>
+<p>这里选择好芯片<br>以下拿HI3861举例<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/8.png"><br>记下自己的编译芯片名称<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/9.png"></p>
+<p>打开这个和刚刚的编译名称一样<br>点击build就可以编译了<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/10.png"></p>
+<p>已经完成编译，<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/11.png"></p>
+<p>生产的文件在<br>&#x2F;鸿蒙根目录&#x2F;out&#x2F;hispark_pegasus&#x2F;wifiiot_hispark_pegasus&#x2F;Hi3861_wifiiot_app_allinone.bin</p>
+<p>（不同芯片可能不一样）</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/12.png"></p>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编写helloworld</title>
+    <url>/2024/09/13/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu编写helloworld"><a href="#openharmony用ubuntu编写helloworld" class="headerlink" title="openharmony用ubuntu编写helloworld"></a>openharmony用ubuntu编写helloworld</h2><p>上一期环境安装</p>
+<a href="/2024/09/12/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/" title="openharmony用ubuntu源码下载">openharmony用ubuntu源码下载</a>
+<a href="/2024/09/13/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/" title="openharmony用ubuntu图形化页面快速部署">openharmony用ubuntu图形化页面快速部署</a>
+
+<h1 id="第一部分：介绍目录结构"><a href="#第一部分：介绍目录结构" class="headerlink" title="第一部分：介绍目录结构"></a>第一部分：介绍目录结构</h1><p>（看不懂的请直接拉到下面实践部分跟着复刻，这里是理论讲解）</p>
+<p>软件部分目录结构</p>
+<pre><code>app
+├─ BUILD.gn
+└─ 目标文件夹1
+   ├─ BUILD.gn
+   └─ xxxx.c
+└─ 目标文件夹2
+   ├─ BUILD.gn
+   └─ xxxx.c
+.....
+</code></pre>
+<p>首先打开<br>&#x2F;&#x2F;鸿蒙根目录&#x2F;applications&#x2F;sample&#x2F;wifi-iot&#x2F;app&#x2F;</p>
+<p>找到</p>
+<p>BUILD.gn的文件</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/1.png"><br>(不要问我为什么拿window系统演示实际操作要在ubuntu里面)</p>
+<span id="more"></span>
+
+<p>我们打开文件</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/6.png"><br>只有红框里面是函数，其他的#号开头的都是注释</p>
+<p>文件有两个部分组成<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/7.png"></p>
+<p>其中features 的部分可以用 “:” 来增加要参与编译的文件夹<br>介绍完之后打开目标文件夹介绍目标文件夹下的BUILD.gn文件</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/2.png"><br>只有红框里面是函数，其他的#号开头的都是注释</p>
+<p>该函数文件由三部分内容构成，目标、源文件、头文件路径。</p>
+<p>目标：当前BUILD.gn文件所在的文件夹<br>源文件：写C或者CPP代码文件<br>头文件：C或CPP调用的库文件</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/3.png"></p>
+<h1 id="第二部分：实践"><a href="#第二部分：实践" class="headerlink" title="第二部分：实践"></a>第二部分：实践</h1><p>了解之后</p>
+<p>我们在&#x2F;&#x2F;鸿蒙根目录&#x2F;applications&#x2F;sample&#x2F;wifi-iot&#x2F;app&#x2F;</p>
+<h3 id="目录下面创建-hello的文件夹"><a href="#目录下面创建-hello的文件夹" class="headerlink" title="目录下面创建 hello的文件夹"></a>目录下面创建 hello的文件夹</h3><p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/4.png"></p>
+<h3 id="在hello的文件夹下面创建"><a href="#在hello的文件夹下面创建" class="headerlink" title="在hello的文件夹下面创建"></a>在hello的文件夹下面创建</h3><p>hello.c<br>BUILD.gn<br>这两个文件<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/9.png"><br>然后先打开hello.c文件里面编写</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &quot;ohos_init.h&quot;
+
+void Hello_World(void)
+&#123;
+    printf(&quot;this is a test demo \r\n Hello World!\r\n&quot;);
+&#125;
+
+SYS_RUN(Hello_World);
+</code></pre>
+<p> 也可以使用APP_FEATURE_INIT来实现，<br>  APP_FEATURE_INIT是OpenHarmony启动恢复模块接口，该接口用来启动业务。<br> 效果是一样的。（APP_FEATURE_INIT和SYS_RUN定义都在ohos_init.h）文件中。</p>
+<p> 然后保存文件<br> 再编写BUILD.gn文件</p>
+<pre><code>static_library(&quot;hello&quot;) &#123;
+    sources = [
+              &quot;hello.c&quot;]
+    include_dirs = [ 
+             &quot;//utils/native/lite/include&quot;]
+&#125;
+</code></pre>
+<h3 id="然后回到-鸿蒙根目录-applications-sample-wifi-iot-app"><a href="#然后回到-鸿蒙根目录-applications-sample-wifi-iot-app" class="headerlink" title="然后回到&#x2F;&#x2F;鸿蒙根目录&#x2F;applications&#x2F;sample&#x2F;wifi-iot&#x2F;app&#x2F;"></a>然后回到&#x2F;&#x2F;鸿蒙根目录&#x2F;applications&#x2F;sample&#x2F;wifi-iot&#x2F;app&#x2F;</h3><p>修改app目录下面的BUILD.gn文件<br>在features处把startup改成hello</p>
+<p>然后保存<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/8.png"></p>
+<pre><code>import(&quot;//build/lite/config/component/lite_component.gni&quot;)
+
+lite_component(&quot;app&quot;) &#123;
+    features = [
+        &quot;hello&quot;,
+   ]
+&#125;
+</code></pre>
+<p>备注头文件位置：<br>&#x2F;&#x2F;鸿蒙根目录&#x2F;utils&#x2F;native&#x2F;lite&#x2F;include</p>
+<p>到此编译成功<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/5.png"><br>编译输出的文件位置<br>&#x2F;&#x2F;鸿蒙根目录&#x2F;out&#x2F;wifiiot_hispark_pegasus&#x2F;Hi3861_wifiiot_app_allinone.bin<br>(只是拿hi3861芯片举例其他芯片可能不适用)</p>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu源码下载</title>
+    <url>/2024/09/12/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<h1 id="openharmony用ubuntu源码下载"><a href="#openharmony用ubuntu源码下载" class="headerlink" title="openharmony用ubuntu源码下载"></a>openharmony用ubuntu源码下载</h1><h2 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h2><p><a href="https://gitee.com/openharmony/docs">官方文档</a></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/1.png"></p>
+<p>记得拉到下面<br>点击你要下载的版本<br>拿鸿蒙3.0举例<br><a href="https://gitee.com/openharmony/docs/blob/master/zh-cn/release-notes/OpenHarmony-v3.0-LTS.md">https://gitee.com/openharmony/docs/blob/master/zh-cn/release-notes/OpenHarmony-v3.0-LTS.md</a></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/2.png"><br>就可以直接下载了</p>
+<p>直接把源码放到ubuntu里面解压就可以了</p>
+<span id="more"></span>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/3.png"></p>
+<h2 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h2><p>repo加http下载</p>
+<p>执行如下命令，确认输出结果为bash<br><code>ls -l /bin/sh</code><br>如果输出结果不是bash</p>
+<p>打开终端工具，执行如下命令，输入密码，然后选择No，将Ubuntu shell由dash修改为bash。<br><code>sudo dpkg-reconfigure dash</code></p>
+<p>然后切换源镜像为清华源</p>
+<p><a href="https://mirrors.ustc.edu.cn/repogen/">https://mirrors.ustc.edu.cn/repogen/</a></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/4.png"><br>这里记得切换版本</p>
+<p>切换好点下载</p>
+<p>然后备份之前的源文件（文件路径&#x2F;etc&#x2F;apt&#x2F;sources.list）<br><code>sudo cp /etc/apt/sources.list /etc/apt/source.list.bak</code><br>把sources.list文件备份成sources.list.bak路径不变</p>
+<p>把下载的清华源sources.list替换原本的文件<br><code>sudo mv -f (这里修改你下载的sources.list文件的路径) /etc/apt/</code><br>输入下面命令更新源<br><code>sudo apt update</code></p>
+<p>安装环境，有两个命令<br>第一条</p>
+<pre><code>sudo apt-get install binutils binutils-dev git git-lfs gnupg flex bison gperf build-essential zip curl zlib1g-dev   libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip m4 bc gnutls-bin python3.8 python3-pip ruby genext2fs device-tree-compiler make libffi-dev e2fsprogs pkg-config perl openssl libssl-dev libelf-dev libdwarf-dev u-boot-tools mtd-utils cpio doxygen liblz4-tool openjdk-8-jre gcc g++ texinfo dosfstools mtools default-jre default-jdk libncurses5 apt-utils wget scons python3.8-distutils tar rsync git-core libxml2-dev lib32z-dev grsync xxd libglib2.0-dev libpixman-1-dev kmod jfsutils reiserfsprogs xfsprogs squashfs-tools pcmciautils quota ppp libtinfo-dev libtinfo5 libncurses5-dev libncursesw5 libstdc++6 gcc-arm-none-eabi vim ssh locales libxinerama-dev libxcursor-dev libxrandr-dev libxi-dev
+</code></pre>
+<p>第二条</p>
+<pre><code>sudo apt-get install gcc-arm-linux-gnueabi gcc-9-arm-linux-gnueabi
+</code></pre>
+<p>配置Python<br>设置默认Python解释器，python和python3软链接为python3.8：</p>
+<pre><code>sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+python --version
+</code></pre>
+<p>安装python包管理工具（pip3）：</p>
+<pre><code>sudo apt install python3-pip
+</code></pre>
+<p>配置pip软件包更新源：</p>
+<pre><code>mkdir ~/.pip
+pip3 config set global.index-url https://mirrors.huaweicloud.com/repository/pypi/simple
+pip3 config set global.trusted-host mirrors.huaweicloud.com
+pip3 config set global.timeout 120
+</code></pre>
+<p>安装Samba服务<br>用于在开发环境中使用VS Code编写代码。执行下列命令安装samba并打开配置文件：</p>
+<pre><code>sudo apt install samba
+sudo gedit /etc/samba/smb.conf
+</code></pre>
+<p>在配置文件末尾添加以下内容：</p>
+<pre><code>[home]
+comment = User Homes
+path = /home
+guest ok = no
+writable = yes
+browsable = yes
+create mask = 0755
+directory mask = 0755
+</code></pre>
+<p>建立用户并设置密码（请将下面的用户名换成您自己的）：<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/5.png"></p>
+<pre><code>sudo smbpasswd -a  （你自己的用户名）
+</code></pre>
+<p>重启samba：</p>
+<pre><code>sudo service smbd restart
+</code></pre>
+<p>安装git-lfs，会自动安装git：</p>
+<pre><code>sudo apt install git-lfs
+</code></pre>
+<p>安装repo和requests：</p>
+<pre><code>wget https://gitee.com/oschina/repo/raw/fork_flow/repo-py3
+sudo mv repo-py3 /usr/local/bin/repo
+sudo chmod a+x /usr/local/bin/repo
+pip3 install -i https://repo.huaweicloud.com/repository/pypi/simple requests
+</code></pre>
+<p>配置git（请将下面的邮箱和用户名换成您自己的）：</p>
+<pre><code>git config --global user.email &quot;你的邮箱@邮箱域名&quot;
+git config --global user.name &quot;名称&quot;
+git config --global credential.helper store
+git config --global --add safe.directory &quot;*&quot;
+</code></pre>
+<p>然后以上就完成了基本环境安装</p>
+<p>接下来我们进行http源码下载</p>
+<p>   我们先创建目录这样看起来不会太乱</p>
+<pre><code>mkdir -p ~/openharmony
+cd ~/openharmony
+</code></pre>
+<p>然后我们打开官方文档<br><a href="https://gitee.com/openharmony/docs">官方文档</a></p>
+<p>找到你要下载的版本<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/6.png"><br>我们拿3.0lts举例</p>
+<p>我们要复制的是htpp的链接<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/7.png"></p>
+<pre><code>repo init -u （复制的链接）
+repo sync -c
+repo forall -c &#39;git lfs pull&#39;
+</code></pre>
+<p>然后就可以下载源码了</p>
+<h2 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h2><p><a href="https://gitee.com/help/articles/4191">gitee教程</a></p>
+<p>ssh下载<br>上面的环境安装保持不便，如果已经安装环境的话就不用修改了</p>
+<p>首先我们先注册公钥<br>终端输入命令生成密钥</p>
+<p><code> ssh-keygen</code><br>输入完之后一直回车<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/8.png"><br>这样就完成了</p>
+<p>输入命令查看公钥<br><code>cat ~/.ssh/id_rsa.pub</code><br>复制这个一大串的东西<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/9.png"></p>
+<p>然后我们打开gitee登录自己账号<br>点击设置，点SSH公钥，粘贴刚刚复制的一大串东西<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/10.png"><br>终端输入命令测试<br><code>ssh -T git@gitee.com</code><br>如果出现这个页面那就输入yes，再重新输入命令就好了<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/11.png"></p>
+<p>这样就是配置好公钥了<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/12.png"></p>
+<p>然后我们打开官方文档<br><a href="https://gitee.com/openharmony/docs">官方文档</a></p>
+<p>找到你要下载的版本<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/6.png"><br>我们拿3.0lts举例</p>
+<p>这次我们选择复制第一个链接</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/13.png"></p>
+<p>   我们先创建目录</p>
+<pre><code>mkdir -p ~/openharmony
+cd ~/openharmony
+</code></pre>
+<p>然后是在目录下面输入这些命令</p>
+<pre><code>repo init -u 你刚刚复制的链接
+repo sync -c
+repo forall -c &#39;git lfs pull&#39;
+</code></pre>
+<p>这样就可以正常的通过ssh下载了</p>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>unityc#代码入门</title>
+    <url>/2024/09/19/unityc#%E4%BB%A3%E7%A0%81%E5%85%A5%E9%97%A8/</url>
+    <content><![CDATA[<h2 id="debug终端打印"><a href="#debug终端打印" class="headerlink" title="debug终端打印"></a>debug终端打印</h2><p><a href="https://docs.unity.cn/cn/2019.4/ScriptReference/Debug.html">https://docs.unity.cn/cn/2019.4/ScriptReference/Debug.html</a></p>
+<pre><code> Debug.Log(&quot;XXX&quot;);
+</code></pre>
+<p>XXX为输出的文字<br>I</p>
+<h2 id="Input输入"><a href="#Input输入" class="headerlink" title="Input输入"></a>Input输入</h2><p><a href="https://docs.unity.cn/cn/2019.4/ScriptReference/Input.html#:~:text=%E8%AE%BF%E9%97%AE%E8%BE%93%E5%85%A5%E7%B3%BB%E7%BB%9F">https://docs.unity.cn/cn/2019.4/ScriptReference/Input.html#:~:text=%E8%AE%BF%E9%97%AE%E8%BE%93%E5%85%A5%E7%B3%BB%E7%BB%9F</a></p>
+<pre><code>Input.GetKey(KeyCode.X);
+</code></pre>
+<p>X为检查输入的按键其中X要大写</p>
+]]></content>
+      <categories>
+        <category>unity</category>
+      </categories>
+      <tags>
+        <tag>unity</tag>
+        <tag>c#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编写子系统模块</title>
+    <url>/2024/09/24/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu编写子系统模块"><a href="#openharmony用ubuntu编写子系统模块" class="headerlink" title="openharmony用ubuntu编写子系统模块"></a>openharmony用ubuntu编写子系统模块</h2><p>在鸿蒙里面系统由很多的子系统组成<br>子系统里面又可以由很多的模块组成<br>在构建系统的时候可以选择只调用部分的子系统或者部分模块</p>
+<p>（类似C语言里面的函数）<br>我们可以在<br>&#x2F;&#x2F;鸿蒙根目录&#x2F;build&#x2F;subsystem_config.json<br>查看有哪些的子系统</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97/1.png"></p>
+<pre><code> &quot;子系统名&quot;: &#123;
+    &quot;path&quot;: &quot;子系统路径&quot;,
+    &quot;name&quot;: &quot;子系统名&quot;, 
+  &#125;,
+</code></pre>
+<span id="more"></span>
+<h3 id="为子系统添加模块"><a href="#为子系统添加模块" class="headerlink" title="为子系统添加模块"></a>为子系统添加模块</h3><p>假设我们要为applications子系统<br>创建名为abc的模块<br>我们先去<br>&#x2F;&#x2F;鸿蒙根目录&#x2F;build&#x2F;subsystem_config.json<br>找到applications子系统的路径<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97/2.png"></p>
+<p>然后我们打开&#x2F;&#x2F;鸿蒙根目录&#x2F;applications&#x2F;standard<br>在里面创建abc的文件夹<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97/3.png"></p>
+<p>按照<a href="/2024/09/13/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/" title="openharmony用ubuntu编写helloworld">openharmony用ubuntu编写helloworld</a>的方法<br>添加</p>
+<pre><code>abc
+├─ BUILD.gn
+└─ hello
+   ├─ BUILD.gn
+   └─ hello.c
+</code></pre>
+<p>如果不理解直接下载下面的文件拷进adc里面自己理解<br><a href="https://wwwe.lanzouq.com/iSIof2atjf8j">https://wwwe.lanzouq.com/iSIof2atjf8j</a><br>密码:41nt</p>
+<h3 id="然后把模块关联进applications"><a href="#然后把模块关联进applications" class="headerlink" title="然后把模块关联进applications"></a>然后把模块关联进applications</h3><p>我们在<br>&#x2F;&#x2F;鸿蒙根目录&#x2F;build&#x2F;lite&#x2F;components&#x2F;<br>下面可以看到applications.json文件<br>在下一个模块下方添加新的模块代码<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97/5.png"></p>
+<pre><code>&#123;
+  &quot;component&quot;: &quot;hello&quot;,
+  &quot;description&quot;: &quot; &quot;,
+  &quot;optional&quot;: &quot;true&quot;,
+  &quot;dirs&quot;: [
+    &quot;applications/sample/abc&quot;
+  ],
+  &quot;targets&quot;: [
+    &quot;//applications/sample/abc&quot;
+  ],
+  &quot;rom&quot;: &quot;&quot;,
+  &quot;ram&quot;: &quot;&quot;,
+  &quot;output&quot;: [],
+  &quot;adapted_board&quot;: [ &quot;hi3861v100&quot; ],
+  &quot;adapted_kernel&quot;: [ &quot;liteos_m&quot; ],
+  &quot;features&quot;: [],
+  &quot;deps&quot;: &#123;
+      &quot;components&quot;: [
+        &quot;utils_base&quot;
+    ]
+  &#125;
+&#125;
+</code></pre>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97/4.png"><br>如果是最后一个模块前往不要加 “，”</p>
+<h3 id="然后修改编译配置文件"><a href="#然后修改编译配置文件" class="headerlink" title="然后修改编译配置文件"></a>然后修改编译配置文件</h3><pre><code>备注：
+如果芯片不同记得找到自己编译配置文件
+vendor下面是第一个路径芯片品牌，再进去才是芯片编译方案
+编译文件都是config.json
+</code></pre>
+<p>（只是拿hi3861举例）<br>打开&#x2F;&#x2F;鸿蒙根目录&#x2F;vendor&#x2F;hisilicon&#x2F;hispark_pegasus&#x2F;config.json<br>找到applications的子系统<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97/6.png"><br>在下面修改为添加新的模块</p>
+<pre><code> &#123;
+    &quot;subsystem&quot;: &quot;applications&quot;,
+    &quot;components&quot;: [
+      &#123; &quot;component&quot;: &quot;wifi_iot_sample_app&quot;, &quot;features&quot;:[] &#125;,
+      &#123; &quot;component&quot;: &quot;hello&quot;, &quot;features&quot;:[] &#125;
+    ]
+  &#125;,
+</code></pre>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97/7.png"></p>
+<h3 id="最后保存编译即可"><a href="#最后保存编译即可" class="headerlink" title="最后保存编译即可"></a>最后保存编译即可</h3><a href="/2024/09/26/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/" title="openharmony烧录hi3861芯片">openharmony烧录hi3861芯片</a>]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony烧录hi3861芯片</title>
+    <url>/2024/09/26/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/</url>
+    <content><![CDATA[<p>工具下载<br><a href="https://wwwe.lanzouq.com/b007sxt37e">https://wwwe.lanzouq.com/b007sxt37e</a><br>密码:1eis<br>首先导出编译默认输出的文件为Hi3861_wifiiot_app_allinone.bin<br>&#x2F;&#x2F;鸿蒙根目录&#x2F;out&#x2F;wifiiot_hispark_pegasus&#x2F;Hi3861_wifiiot_app_allinone.bin<br>将其拷到windows系统</p>
+<span id="more"></span>
+<p><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/1.png"><br>然后打开HiBurn.exe<br>我们先设置串口速度<br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/2.png"><br>最高可以2000000再高就容易丢包了<br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/3.png"><br>点确定保存<br>记得勾选auto burn<br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/4.png"><br>然后插入开发板，选择串口设备<br>如果没有就安装CH340驱动<br>如果还是不行就重启软件<br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/5.png"><br>点击connect开始烧录<br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/6.png"><br>按下芯片复位键就开始烧录了<br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/7.png"><br>烧录完成后，记得关闭软件，不然再次按复位键会重复烧录<br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/8.png"><br>然后打开MobaXterm<br>点击session<br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/9.png"><br>按照图片设置<br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/10.png"><br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/11.png"><br>按下回车就可以看到芯片通信了<br><img src="/img/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/12.png"></p>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编译产品解决方案.md</title>
+    <url>/2024/10/14/openharmony%E7%94%A8ubuntu%E7%BC%96%E8%AF%91%E4%BA%A7%E5%93%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h1 id="openharmony用ubuntu编译产品解决方案"><a href="#openharmony用ubuntu编译产品解决方案" class="headerlink" title="openharmony用ubuntu编译产品解决方案"></a>openharmony用ubuntu编译产品解决方案</h1><pre><code>    vendor                              
+└── binging                         # 产品解决方案厂商
+    ├── binging                      # 产品名称
+    │   ├── hals                    # 产品解决方案OS适配
+    │   ├── BUILD.gn                # 产品编译脚本
+    │   └── config.json             # 产品配置文件
+    └── ......
+</code></pre>
+<p>产品解决方案处于vendor目录下<br>我们可以自己创建一个文件夹<br>这个文件夹相当是厂商的名字<br>假设我们的厂商是binging<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E8%AF%91%E4%BA%A7%E5%93%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/1.png"></p>
+<span id="more"></span>
+
+<p>然后我们开发了一个产品叫hibinging<br>我们就在binging的文件夹下面创建hibinging<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E8%AF%91%E4%BA%A7%E5%93%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/2.png"></p>
+<p>然后我们在创建两个文件<br>    ├── BUILD.gn                # 产品编译脚本<br>    └── config.json             # 产品配置文件<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E8%AF%91%E4%BA%A7%E5%93%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/3.png"></p>
+<h2 id="BUILD-gn文件编写"><a href="#BUILD-gn文件编写" class="headerlink" title="BUILD.gn文件编写"></a>BUILD.gn文件编写</h2><p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E8%AF%91%E4%BA%A7%E5%93%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/4.png"></p>
+<pre><code>group(&quot;hibinging&quot;) &#123;
+&#125;
+</code></pre>
+<p>因为BUILD.gn文件在hibinging这个文件夹下面所以填hibinging</p>
+<h2 id="config-json文件编写"><a href="#config-json文件编写" class="headerlink" title="config.json文件编写"></a>config.json文件编写</h2><p>我们先分两个部分看<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E8%AF%91%E4%BA%A7%E5%93%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/5.png"></p>
+<pre><code>&quot;product_name&quot;: &quot;产品名称&quot;,
+&quot;ohos_version&quot;: &quot;鸿蒙版本&quot;,
+&quot;device_company&quot;: &quot;芯片厂商&quot;,
+&quot;board&quot;: &quot;开发板名称&quot;,
+&quot;kernel_type&quot;: &quot;选择的内核类型&quot;,
+&quot;kernel_version&quot;: &quot;选择的内核版本&quot;,
+</code></pre>
+<p>鸿蒙的内核有liteos_m,liteos_a,linux等<br>然后下半部分就能编写子系统<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E8%AF%91%E4%BA%A7%E5%93%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/6.png"></p>
+<pre><code>&quot;subsystems&quot;: [
+    &#123;
+        &quot;subsystem&quot;: &quot;子系统名称&quot;,
+        &quot;components&quot;: [
+        &#123; &quot;component&quot;: &quot;子系统模块1&quot;, &quot;features&quot;:[] &#125;,
+        &#123; &quot;component&quot;: &quot;子系统模块2&quot;, &quot;features&quot;:[] &#125;
+        ......
+        ]
+    &#125;
+    ......
+]
+</code></pre>
+<p>不清楚子系统的可以跳转到下方</p>
+<a href="/2024/09/24/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97/" title="openharmony用ubuntu编写子系统模块">openharmony用ubuntu编写子系统模块</a>]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编写键值</title>
+    <url>/2024/10/22/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E9%94%AE%E5%80%BC/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu编写键值"><a href="#openharmony用ubuntu编写键值" class="headerlink" title="openharmony用ubuntu编写键值"></a>openharmony用ubuntu编写键值</h2><p><a href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/kvstore_demo">完整下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>kvstore_demo
+├─ BUILD.gn
+└─ kvstore.c
+</code></pre>
+<p>我们打开文件<br>代码打开kvstore.c</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E9%94%AE%E5%80%BC/1.png"></p>
+<span id="more"></span>
+
+<p>编译后会看到效果<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E9%94%AE%E5%80%BC/2.png"><br>（第一次可能是显示0，第二次复位就好了）</p>
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="注册键值并且能获取状态"><a href="#注册键值并且能获取状态" class="headerlink" title="注册键值并且能获取状态"></a>注册键值并且能获取状态</h2><pre><code>UtilsGetValue(按键名字, 按键内容, 字体长度);
+</code></pre>
+<p>函数为读写函数<br>按键名字用char写<br>按键内容char写<br>字体长度int写<br>可以用int去读<br>读取到操作成功则返回0；参数错误返回-9；其他情况返回-1</p>
+<pre><code>const char *key = &quot;name&quot;;
+char value[32] = &#123;0&#125;;
+int retGet = UtilsGetValue(key, value, 32);//读取键值的运行情况
+//读取到操作成功则返回0；参数错误返回-9；其他情况返回-1
+</code></pre>
+<h2 id="修改键值的内容"><a href="#修改键值的内容" class="headerlink" title="修改键值的内容"></a>修改键值的内容</h2><pre><code>UtilsSetValue(按键名字, 按键内容);
+</code></pre>
+<p>函数为读写函数<br>这两个变量和前面一样<br>可以用int去读<br>读取到操作成功则返回0；参数错误返回-9；其他情况返回-1</p>
+<pre><code>if (retGet &lt; 0)//前面的读取参数情况
+    &#123;
+        // 定义要添加的值
+        const char *valueToWrite = &quot;OpenHarmony&quot;;
+        // UtilsSetValue：在文件系统或cache中添加或更新指定键的值
+        // 操作成功则返回0；参数错误返回-9；其他情况返回-1
+        int retSet = UtilsSetValue(key, valueToWrite);//写入键值
+        printf(&quot;SetValue, result = %d\n&quot;, retSet);//打印键值
+    &#125;
+    else //如果大于0就说明有错误，打印错误代码
+&#123;
+    printf(&quot;GetValue, result = %d, value = %s\n&quot;, retGet, value);
+&#125;
+</code></pre>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编写线程</title>
+    <url>/2024/11/01/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E7%BA%BF%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu编写线程"><a href="#openharmony用ubuntu编写线程" class="headerlink" title="openharmony用ubuntu编写线程"></a>openharmony用ubuntu编写线程</h2><p><a href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/thread_demo">完整代码</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>thread_demo
+├─ BUILD.gn
+├─ thread_basic.c
+└─ thread.c
+</code></pre>
+<p>我们打开文件<br>代码打开thread_basic.c</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E7%BA%BF%E7%A8%8B/1.png"></p>
+<span id="more"></span>
+
+<p>编译后会看到效果<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E7%BA%BF%E7%A8%8B/2.png"><br>可以看到是一直增加的</p>
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><pre><code>// POSIX标准接口
+#include &lt;unistd.h&gt;
+
+// 用于初始化服务(services)和功能(features)
+#include &quot;ohos_init.h&quot;
+
+// CMSIS-RTOS API V2
+// 是OpenHarmony的LiteOS_m内核与应用程序之间的抽象层。（LiteOS_m内核基于Cortex M系列芯片）
+// 提供标准接口，便于应用程序移植来OpenHarmony，或者移植到其他支持CMSIS-RTOS API V2的系统。
+// 头文件：kernel/liteos_m/kal/cmsis/cmsis_os2.h
+// 源文件：kernel/liteos_m/kal/cmsis/cmsis_liteos2.c
+#include &quot;cmsis_os2.h&quot;
+</code></pre>
+<h2 id="创建一个线程，并将其加入活跃线程组中"><a href="#创建一个线程，并将其加入活跃线程组中" class="headerlink" title="创建一个线程，并将其加入活跃线程组中"></a>创建一个线程，并将其加入活跃线程组中</h2><pre><code>osThreadNew((osThreadFunc_t)threadMain, NULL, &amp;attr) 
+osThreadId_t osThreadNew(osThreadFunc_t func, void *argument, const osThreadAttr_t *attr)
+</code></pre>
+<p>&#x2F;&#x2F; func	线程要运行的函数<br>&#x2F;&#x2F; argument	指针，指向传递给线程函数的参数（可以是”xxxx”的形式）<br>&#x2F;&#x2F; attr	线程属性(使用结构体)<br>&#x2F;&#x2F; 注意：不能在中断服务调用该函数</p>
+<pre><code>//关于attr结构体
+// 定义线程属性
+osThreadAttr_t attr;
+// 线程名
+attr.name = &quot;rtosv2_thread_main&quot;;
+// 线程属性位
+attr.attr_bits = 0U;
+// 线程控制块的内存初始地址，默认为系统自动分配
+attr.cb_mem = NULL;
+// 线程控制块的内存大小
+attr.cb_size = 0U;
+// 线程栈的内存初始地址，默认为系统自动分配
+attr.stack_mem = NULL;
+// 线程栈的内存大小
+attr.stack_size = 1024;
+// 线程优先级，9(highest) - 38(lowest priority)，默认为osPriorityNormal
+// 位置：kernel\liteos_m\kal\cmsis\cmsis_os2.h
+attr.priority = osPriorityNormal;
+</code></pre>
+<p>如果osThreadNew((osThreadFunc_t)threadMain, NULL, &amp;attr)&#x3D;&#x3D;NULL说明函数运行失败</p>
+<h2 id="读取当前线程ID"><a href="#读取当前线程ID" class="headerlink" title="读取当前线程ID"></a>读取当前线程ID</h2><pre><code>osThreadGetId();
+</code></pre>
+<p>参考用法</p>
+<pre><code>osThreadId_t tid = osThreadGetId();
+printf(&quot;thread id: %p\r\n&quot;, tid);
+</code></pre>
+<h2 id="读取当前线程名字"><a href="#读取当前线程名字" class="headerlink" title="读取当前线程名字"></a>读取当前线程名字</h2><pre><code>osThreadGetName(tid)
+</code></pre>
+<p>tid为线程ID<br>可以用上面的方法获取ID</p>
+<h2 id="得到线程的状态"><a href="#得到线程的状态" class="headerlink" title="得到线程的状态"></a>得到线程的状态</h2><pre><code>osThreadGetState(tid)
+</code></pre>
+<p>tid为线程ID<br>可以用上面的方法获取ID</p>
+<h2 id="设置线程的优先级"><a href="#设置线程的优先级" class="headerlink" title="设置线程的优先级"></a>设置线程的优先级</h2><pre><code>osThreadSetPriority(tid, osPriorityNormal4);
+</code></pre>
+<p>tid为线程ID<br>可以用上面的方法获取ID<br>osPriorityNormal4为优先级<br>优先级有</p>
+<pre><code>osPriorityNormal        = 24,
+osPriorityNormal1       = 24+1,
+osPriorityNormal2       = 24+2,
+osPriorityNormal3       = 24+3,
+osPriorityNormal4       = 24+4,
+osPriorityNormal5       = 24+5,
+osPriorityNormal6       = 24+6,
+osPriorityNormal7       = 24+7,
+</code></pre>
+<h2 id="读取线程的优先级"><a href="#读取线程的优先级" class="headerlink" title="读取线程的优先级"></a>读取线程的优先级</h2><pre><code>osThreadGetPriority(tid);
+</code></pre>
+<p>tid为线程ID<br>可以用上面的方法获取ID   </p>
+<h2 id="挂起线程"><a href="#挂起线程" class="headerlink" title="挂起线程"></a>挂起线程</h2><pre><code>osThreadSuspend(tid);
+</code></pre>
+<p>也可以读取挂起情况</p>
+<h2 id="恢复线程"><a href="#恢复线程" class="headerlink" title="恢复线程"></a>恢复线程</h2><pre><code>osThreadResume(tid);
+</code></pre>
+<h2 id="得到线程的栈空间大小"><a href="#得到线程的栈空间大小" class="headerlink" title="得到线程的栈空间大小"></a>得到线程的栈空间大小</h2><pre><code>osThreadGetStackSize(tid);
+</code></pre>
+<h2 id="得到线程的未使用的栈空间大小"><a href="#得到线程的未使用的栈空间大小" class="headerlink" title="得到线程的未使用的栈空间大小"></a>得到线程的未使用的栈空间大小</h2><pre><code>osThreadGetStackSpace(tid);
+</code></pre>
+<h2 id="获取活跃线程数"><a href="#获取活跃线程数" class="headerlink" title="获取活跃线程数"></a>获取活跃线程数</h2><pre><code>osThreadGetCount();
+</code></pre>
+<h2 id="终止线程"><a href="#终止线程" class="headerlink" title="终止线程"></a>终止线程</h2><pre><code>osThreadTerminate(tid);
+</code></pre>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino基于ESP32基本信息</title>
+    <url>/2024/11/01/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<h2 id="arduino基于ESP32基本信息"><a href="#arduino基于ESP32基本信息" class="headerlink" title="arduino基于ESP32基本信息"></a>arduino基于ESP32基本信息</h2><p>ESP32 c6 IO图<br><img src="/img/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/1.png"></p>
+<span id="more"></span>
+
+<p>ESP32 wroom 32e IO图<br><img src="/img/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/3.png"></p>
+<p>ESP32 c3 IO图<br><img src="/img/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/2.png"></p>
+<p>合宙ESP32C3-CORE开发板<br><img src="/img/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/5.png"><br><img src="/img/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/6.png"></p>
+<p>ESP32C6 测试代码<br><a href="https://pan.baidu.com/s/19CRvYR2qLSt3g4gYNnBDKw?pwd=35xl">测试代码</a></p>
+<pre><code>#include &lt;Adafruit_NeoPixel.h&gt;
+constexpr uint8_t LED_PIN = 8;
+constexpr uint8_t NUM_LEDS = 1;
+Adafruit_NeoPixel rgbLed(NUM_LEDS, LED_PIN, NEO_GRB + NEO_KHZ800);
+struct RGB &#123;
+    uint8_t r, g, b;
+&#125;;
+
+constexpr RGB COLOR_OFF   = &#123;0, 0, 0&#125;;
+// ...Feel free to add more colors here...
+constexpr RGB CUSTOM_COLOR = &#123;255, 0, 255&#125;; 
+
+void setup() &#123;
+    rgbLed.begin(); 
+    rgbLed.show(); 
+&#125;
+void setColor(const RGB&amp; color) &#123;
+    rgbLed.setPixelColor(0, rgbLed.Color(color.r, color.g, color.b));
+    rgbLed.show();
+&#125;
+void loop() &#123;
+    setColor(CUSTOM_COLOR);
+    delay(500);
+    setColor(COLOR_OFF);
+    delay(500);
+&#125;
+</code></pre>
+<p>效果<br><img src="/img/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/3.jpg"></p>
+<p>ESP32wroom 32e 测试代码</p>
+<pre><code>const int LEDA = 2;
+
+void setup() &#123;
+pinMode(LEDA, OUTPUT);
+&#125;
+
+void loop()
+&#123;
+digitalWrite(LEDA, HIGH); // turn the LED on (HIGH is the voltage level)
+delay(500); //
+digitalWrite(LEDA, LOW); // turn the LED off by making the voltage LOW
+delay(500); //
+&#125;
+</code></pre>
+<p>效果 led闪烁<br><img src="/img/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/4.jpg"></p>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的ESP32的环境搭建</title>
+    <url>/2024/11/02/arduino%E7%9A%84ESP32%E7%9A%84%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="arduino的ESP32的环境搭建"><a href="#arduino的ESP32的环境搭建" class="headerlink" title="arduino的ESP32的环境搭建"></a>arduino的ESP32的环境搭建</h2><p>我们直接下载安装包<br><a href="https://pan.baidu.com/s/1QfFwjYX6dbSNkMam0K433A?pwd=0ehs">完整下载</a></p>
+<p>我们直接点击离线安装包就可以自动安装了</p>
+<p><img src="/img/arduino%E7%9A%84ESP32%E7%9A%84%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1.png"></p>
+<span id="more"></span>
+
+<p>安装动画<br><img src="/img/arduino%E7%9A%84ESP32%E7%9A%84%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/2.png"></p>
+<p>可能有时候可能还要手动补充安装<br>打开arduino ide<br>打开开发板管理面板<br><img src="/img/arduino%E7%9A%84ESP32%E7%9A%84%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/3.png"><br>如果安装过其他版本的esp package，请先删除，再使用本安装包。<br>删除方法：文件管理器地址栏输入<br> %LOCALAPPDATA%&#x2F;Arduino15&#x2F;packages，回车进入，然后删除掉其中的esp32文件夹</p>
+<p>PS：如果要添加多个开发板地址，请点后面的按钮，然后一行一个<br><img src="/img/arduino%E7%9A%84ESP32%E7%9A%84%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/4.png"></p>
+<p>备注：<br>esp32c3 烧录请选择烧录时选择flash模式为DIO，<br>默认是选择QIO模式的，如果是选择QIO模式烧录了程序，板子是无限重启，<br>串口会不断打印系统重启信息。这一点切记！！！</p>
+<p><img src="/img/arduino%E7%9A%84ESP32%E7%9A%84%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/5.png"></p>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的GPIO输入输出</title>
+    <url>/2024/11/03/arduino%E7%9A%84GPIO%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/</url>
+    <content><![CDATA[<h2 id="arduino的GPIO输入输出"><a href="#arduino的GPIO输入输出" class="headerlink" title="arduino的GPIO输入输出"></a>arduino的GPIO输入输出</h2><p><a href="https://pan.baidu.com/s/1dxKUrDeoobj41xB9lVkXcg?pwd=fdeo">工程下载</a></p>
+<p>我们使用ESP32 wroom32e举例<br>我们先看查自己开发板的IO图<br>ESP32系列的</p>
+<a href="/2024/11/01/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/" title="arduino基于ESP32基本信息">arduino基于ESP32基本信息</a>
+
+
+
+<p>基本arduino入门</p>
+<a href="/2024/11/04/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="arduinoIDE使用教程">arduinoIDE使用教程</a>
+
+<span id="more"></span>
+
+<h2 id="arduino的GPIO初始化"><a href="#arduino的GPIO初始化" class="headerlink" title="arduino的GPIO初始化"></a>arduino的GPIO初始化</h2><p>引脚初始化</p>
+<pre><code>pinMode(引脚号, 选择引脚模式);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引脚号</td>
+<td>int</td>
+<td>指定引脚初始化</td>
+<td>自己查芯片手册</td>
+</tr>
+<tr>
+<td>选择引脚模式</td>
+<td>int</td>
+<td>指定引脚模式</td>
+<td>OUTPUT（0x03）：输出模式<br/>INPUT（0x01）：输入模式<br/>PULLUP（0x04）:上拉<br/>INPUT_PULLUP（0x05）：上拉输入<br/>PULLDOWN（0x08）：下拉<br/>INPUT_PULLDOWN（0x09）：下拉输入<br/>OPEN_DRAIN（0x10）：开漏<br/>OUTPUT_OPEN_DRAIN（0x13）：开漏输出<br/>ANALOG（0xC0）：模拟输入</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>引脚模式：</p>
+<h2 id="arduino的GPIO输出"><a href="#arduino的GPIO输出" class="headerlink" title="arduino的GPIO输出"></a>arduino的GPIO输出</h2><pre><code>digitalWrite(引脚号, 模式);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引脚号</td>
+<td>int</td>
+<td>指定引脚初输出</td>
+<td>自己查芯片手册</td>
+</tr>
+<tr>
+<td>引脚模式</td>
+<td>int</td>
+<td>选择输出高低电平</td>
+<td>HIGH（0x1）：输出高电平<br/>LOW（0x0）：输出低电平</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="arduino的GPIO输入"><a href="#arduino的GPIO输入" class="headerlink" title="arduino的GPIO输入"></a>arduino的GPIO输入</h2><pre><code>digitalRead(引脚号); 
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引脚号</td>
+<td>int</td>
+<td>指定引脚初输出</td>
+<td>自己查芯片手册</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>int</td>
+<td>读取的电平结果</td>
+<td>0x1就是高<br/>0x0就是低</td>
+</tr>
+</tbody></table>
+<h2 id="延迟毫秒"><a href="#延迟毫秒" class="headerlink" title="延迟毫秒"></a>延迟毫秒</h2><pre><code>delay(数值);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数值</td>
+<td>unsigned long</td>
+<td>输入一个大于0的整数是延迟多少毫米(1秒&#x3D;1000毫秒)</td>
+<td>unsigned long</td>
+</tr>
+</tbody></table>
+<h2 id="延迟微秒"><a href="#延迟微秒" class="headerlink" title="延迟微秒"></a>延迟微秒</h2><pre><code>delayMicroseconds();
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数值</td>
+<td>unsigned long</td>
+<td>输入一个大于0的整数是延迟多少微秒(1秒&#x3D;1000微秒)</td>
+<td>unsigned long</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>GPIO使用方法：<br>1，我们先初始化引脚<br>2，输出或者输入引脚</p>
+<p>参考代码：</p>
+<pre><code>int LED = 2;//led引脚2号
+int key = 13;//按键13号脚
+
+void setup() &#123;
+pinMode(LED, OUTPUT);//初始化
+pinMode(key, INPUT_PULLUP);//初始化
+digitalWrite(LED, LOW); //2脚低电平
+&#125;
+
+void loop()
+&#123;
+if(digitalRead(key)==0)//读取电平
+&#123;
+digitalWrite(LED, HIGH); //电平拉高灯亮
+delay(50);//延迟
+&#125;
+digitalWrite(LED, LOW); //低电平
+
+&#125;
+//13脚接按键，按键连接低电平
+//按下按键灯会亮
+</code></pre>
+<p>效果图：<br><img src="/img/arduino%E7%9A%84GPIO%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/1.jpg"></p>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduinoIDE使用教程</title>
+    <url>/2024/11/04/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="arduino-IDE使用教程"><a href="#arduino-IDE使用教程" class="headerlink" title="arduino IDE使用教程"></a>arduino IDE使用教程</h2><p>这里为开发板管理器可以搜索官方的开发板</p>
+<p><img src="/img/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/1.png"></p>
+<span id="more"></span>
+<p>点击文件，首选项<br>这里可以添加第三方芯片</p>
+<p><img src="/img/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/2.png"></p>
+<p>这里选择要编译的芯片<br><img src="/img/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/3.png"><br>左边栏为选择芯片<br>右边为选择芯片的串口位置<br>arduino一般为串口烧录芯片<br><img src="/img/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/4.png"><br>白色为代码区主要使用C或者CPP编写<br>相对是main函数位置<br>黑色为监控区，主要查看代码是否烧录成功<br>是否编译通过以及各种重要信息<br><img src="/img/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/5.png"><br>这里为arduino库<br>相对是添加C语言的头文件<br>他是联网下载，不用自己手动添加到代码<br><img src="/img/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/6.png"><br>这里是手动添加库的地方<br><img src="/img/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/7.png"></p>
+<p>arduino代码结构</p>
+<pre><code>//A区
+//arduino库的位置一般为xxx.h
+//还有宏定义
+void setup() &#123;
+    //B区
+    //相对是初始化
+    //就是只执行一次的代码
+&#125;
+
+void loop()
+&#123;
+    //C区
+    //主要运行的代码
+    //这里是重复运行的
+&#125;
+</code></pre>
+<p>相当C语言</p>
+<pre><code>//A区
+void main&#123;
+    //B区
+    while(1)
+    &#123;
+        //C区
+    &#125;
+&#125;
+</code></pre>
+<p>所以arduino的优势相当是让你专注于写main函数部分<br>其他部分交给社区开发者，更容易上手</p>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的中断</title>
+    <url>/2024/11/05/arduino%E7%9A%84%E4%B8%AD%E6%96%AD/</url>
+    <content><![CDATA[<h2 id="arduino的中断"><a href="#arduino的中断" class="headerlink" title="arduino的中断"></a>arduino的中断</h2><p><a href="https://pan.baidu.com/s/1dxKUrDeoobj41xB9lVkXcg?pwd=fdeo">工程下载</a></p>
+<p>arduino是支持中断的<br>但是缺点的目前的arduino是不支持设置中断优先级<br>（目前记录为2.3.3版本）<br>而且在中断函数中<br>delay()函数是不工作的，而且millis()函数返回值也不再增长。<br>(delayMicroseconds()函数除外)<br>运行期间Arduino开发板接收到的串口数据也可能丢失</p>
+<span id="more"></span>
+
+
+
+<h2 id="arduino的中断函数初始化"><a href="#arduino的中断函数初始化" class="headerlink" title="arduino的中断函数初始化"></a>arduino的中断函数初始化</h2><pre><code>attachInterrupt(中断号,中断函数, 中断模式);
+</code></pre>
+<p>中断号：<br>中断号不是引脚号，要具体查arduino开发板哪些引脚支持中断<br>在ESP32中除了34-39都可以支持中断</p>
+<p>中断函数：<br>使用void xxx创建函数<br>函数不能有返回值，所以应尽量在中断服务程序中使用全局变量<br>这里写函数名即可<br>（比如函数xxx()只用写xxx即可）</p>
+<p>中断模式：<br>arduino通用提供了5种模式选择<br>LOW     （0x0）： 当引脚为低电平时触发中断服务程序<br>DISABLED（0x00）：失能模式,禁用中断<br>CHANGE  （0x03）： 当引脚电平发生变化时触发中断服务程序，边沿触发<br>RISING  （0x01）： 当引脚电平由低电平变为高电平时触发中断服务程序，上升沿触发<br>FALLING （0x02）： 当引脚电平由高电平变为低电平时触发中断服务程序，下降沿触发<br>arduino之外的中断模式少部分芯片支持比如esp32</p>
+<p>ONLOW     （0x04）：低电平触发<br>ONHIGH    （0x05）：高电平触发<br>ONLOW_WE  （0x0C）：带消抖低电平触发<br>ONHIGH_WE （0x0D）：带消抖高电平触发</p>
+<h2 id="禁用中断"><a href="#禁用中断" class="headerlink" title="禁用中断"></a>禁用中断</h2><pre><code>detachInterrupt(中断号);
+</code></pre>
+<p>中断号：<br>中断号不全是引脚号，要具体查arduino开发板哪些引脚支持中断<br>在ESP32中除了34-39都可以支持中断</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>1、先初始化IO为输入（具体什么输入模式看情况）<br>2、初始化中断<br>3、写中断函数</p>
+<p>代码参考：</p>
+<pre><code>int  state=LOW;
+
+void setup() &#123;
+pinMode(2, OUTPUT);//初始化led
+pinMode(13, INPUT_PULLUP); //初始化中断io
+attachInterrupt(13, abc, FALLING);//初始化中断
+&#125;
+
+void loop() &#123;
+digitalWrite(2, state);//显示led
+&#125;
+
+void abc()//中断函数
+&#123;
+delayMicroseconds(50000);//延迟50ms消抖
+if (digitalRead(13)==0)
+&#123;
+    state = !state;//翻转led
+&#125;
+
+&#125;
+//2脚输出接led
+//13脚按键接地
+</code></pre>
+<p>按键按键就会翻转led</p>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的定时</title>
+    <url>/2024/11/06/arduino%E7%9A%84%E5%AE%9A%E6%97%B6/</url>
+    <content><![CDATA[<h2 id="arduino的定时"><a href="#arduino的定时" class="headerlink" title="arduino的定时"></a>arduino的定时</h2><p><a href="https://pan.baidu.com/s/1dxKUrDeoobj41xB9lVkXcg?pwd=fdeo">工程下载</a></p>
+<p>关于arduino定时的这里介绍的主要是软件定时的方法<br>和一般单片机的硬件定时不同的是，如果在中断函数里面<br>arduino的定时是无效的</p>
+<span id="more"></span>
+<h2 id="Arduino开机后运行的时间"><a href="#Arduino开机后运行的时间" class="headerlink" title="Arduino开机后运行的时间"></a>Arduino开机后运行的时间</h2><pre><code>millis()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>unsigned long</td>
+<td>读取单片机启动到现在的运行了多少ms</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>该时间长度单位是毫秒,最长可记录接近50天左右的时间。<br>如果超出记录时间上限，记录将从0重新开始。<br>实际读取为unsigned long整数<br>所以最大为4294967295毫秒<br>计算方法：<br>秒&#x3D;millis()&#x2F;1000<br>分钟&#x3D;millis()&#x2F;1000&#x2F;60<br>小时&#x3D;millis()&#x2F;1000&#x2F;60&#x2F;60<br>天&#x3D;millis()&#x2F;1000&#x2F;60&#x2F;60&#x2F;60</p>
+<pre><code>micros()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>unsigned long</td>
+<td>读取单片机启动到现在的运行了多少us</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>和上面函数一样也是unsigned long整数<br>但是这个是微秒<br>所以最大为4294967295毫秒<br>也就是最大记录70分钟左右<br>微秒&#x3D;millis()&#x2F;1000<br>秒&#x3D;millis()&#x2F;1000&#x2F;60<br>分钟&#x3D;millis()&#x2F;1000&#x2F;60&#x2F;60</p>
+<h2 id="函数使用"><a href="#函数使用" class="headerlink" title="函数使用"></a>函数使用</h2><p>1、获取时间</p>
+<pre><code>millis()%时间
+</code></pre>
+<p> 可以获取时，分钟，秒</p>
+<p> 2、可以记录下两次间隔的时间</p>
+<pre><code>unsigned long t1,t2,t3;
+
+void setup() &#123;
+    
+&#125;
+
+void loop()
+&#123;
+t1=millis();//记录第一次时间
+//一段时间后。。。
+t2=millis();//记录第二次
+t3=time(t1,t2);//计算差t3读取差
+&#125;
+
+unsigned long time (unsigned long time1,unsigned long time2)
+&#123;
+unsigned long time3;
+if(time2-time1&gt;=0)
+&#123;
+time3=time2-time1;//两个时间差
+return time3;
+&#125;else if (time2-time1&lt;0)
+&#123;
+time3=4294967295-time1+time2;//防止溢出
+return time3;
+&#125;
+&#125;
+</code></pre>
+<p> 3、定时延迟<br> 可以同时进行其他操作不会影响到其他程序运行</p>
+<pre><code>unsigned long previousBlinkTime;
+int blinkInterval = xxx; //设置延迟xxx执行程序
+
+
+void setup() &#123;
+    
+&#125;
+
+void loop()
+&#123;
+unsigned long currentMillis = millis(); // 获取当前时间
+millisBlink(currentMillis);//调用函数
+&#125;
+
+void millisBlink(unsigned long currentTime) &#123; 
+//检查是否到达时间间隔
+if (currentTime - previousBlinkTime &gt;= blinkInterval) &#123;    //如果时间间隔达到
+//执行代码区
+
+//执行代码区
+    previousBlinkTime = currentTime;  // 将检查时间复位           
+&#125;  else if (currentTime - previousBlinkTime &lt;= 0) &#123;   // 如果millis时间溢出
+    previousBlinkTime = currentTime;
+&#125;
+&#125;
+</code></pre>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的pwm</title>
+    <url>/2024/11/06/arduino%E7%9A%84pwm/</url>
+    <content><![CDATA[<h2 id="arduino的pwm"><a href="#arduino的pwm" class="headerlink" title="arduino的pwm"></a>arduino的pwm</h2><p><a href="https://pan.baidu.com/s/1dxKUrDeoobj41xB9lVkXcg?pwd=fdeo">工程下载</a></p>
+<p>理论来说arduino的pwm输出并不是使用到了内部的定时器<br>所以，某些情况下面还是会发生冲突。<br>而且，最大的问题是不能改变频率和占空比</p>
+<span id="more"></span>
+
+
+
+<h2 id="arduino的pwm函数"><a href="#arduino的pwm函数" class="headerlink" title="arduino的pwm函数"></a>arduino的pwm函数</h2><pre><code>analogWrite(引脚, PWM占空比);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引脚</td>
+<td>int</td>
+<td>单片机支持pwm输出的IO</td>
+<td>单片机io</td>
+</tr>
+<tr>
+<td>PWM占空比</td>
+<td>int</td>
+<td>输出的pwm占空比就是xxx&#x2F;255</td>
+<td>0到255之间</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="arduino的pwm发出特定频率声音"><a href="#arduino的pwm发出特定频率声音" class="headerlink" title="arduino的pwm发出特定频率声音"></a>arduino的pwm发出特定频率声音</h2><pre><code>tone(引脚, 发声频率, 发声时长)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引脚</td>
+<td>int</td>
+<td>单片机支持pwm输出的IO</td>
+<td>单片机io</td>
+</tr>
+<tr>
+<td>发声频率</td>
+<td>int</td>
+<td>单位为赫兹</td>
+<td>int</td>
+</tr>
+<tr>
+<td>发声时长</td>
+<td>int</td>
+<td>单位为微秒</td>
+<td>int</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>备注：<br>1、使用tone()函数时可能会影响引脚3和引脚11的PWM信号输出<br>2、如果你想要使用不同的引脚产生不同的声音音调，每一次更换发声引脚以前<br>都要使用noTone函数停止上一个引脚发声。Arduino是不支持两个引脚同时发声的。<br>3、<a href="/2024/11/06/arduino%E7%9A%84%E9%9F%B3%E8%B0%B1%E6%96%87%E4%BB%B6/" title="arduino的音谱文件">arduino的音谱文件</a></p>
+<h2 id="arduino关闭pwm发出特定频率声音"><a href="#arduino关闭pwm发出特定频率声音" class="headerlink" title="arduino关闭pwm发出特定频率声音"></a>arduino关闭pwm发出特定频率声音</h2><pre><code>noTone(引脚)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引脚</td>
+<td>int</td>
+<td>单片机支持pwm输出的IO</td>
+<td>单片机io</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>1、先初始io为输出模式<br>2、使用pwm函数</p>
+<h2 id="参考代码案例"><a href="#参考代码案例" class="headerlink" title="参考代码案例"></a>参考代码案例</h2><pre><code>int ledPin = 2;//led
+int intvalue,value;
+void setup() &#123;
+    pinMode(ledPin,OUTPUT);//初始化led为输出模式
+&#125;
+
+void loop()&#123;
+for (intvalue = 0 ; value &lt; 255; value=value+1)&#123;//执行亮度增加
+    analogWrite(ledPin, value);//改变占用比
+    delay(5);
+&#125;
+for (intvalue = 255; value &gt;0; value=value-1)&#123;//执行亮度减少
+    analogWrite(ledPin, value);//改变占用比
+    delay(5);
+&#125;  
+&#125;  
+</code></pre>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的音谱文件</title>
+    <url>/2024/11/06/arduino%E7%9A%84%E9%9F%B3%E8%B0%B1%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="arduino的音谱文件"><a href="#arduino的音谱文件" class="headerlink" title="arduino的音谱文件"></a>arduino的音谱文件</h2><span id="more"></span>
+
+<pre><code>//pitches.h
+#define NOTE_B0  31
+#define NOTE_C1  33
+#define NOTE_CS1 35
+#define NOTE_D1  37
+#define NOTE_DS1 39
+#define NOTE_E1  41
+#define NOTE_F1  44
+#define NOTE_FS1 46
+#define NOTE_G1  49
+#define NOTE_GS1 52
+#define NOTE_A1  55
+#define NOTE_AS1 58
+#define NOTE_B1  62
+#define NOTE_C2  65
+#define NOTE_CS2 69
+#define NOTE_D2  73
+#define NOTE_DS2 78
+#define NOTE_E2  82
+#define NOTE_F2  87
+#define NOTE_FS2 93
+#define NOTE_G2  98
+#define NOTE_GS2 104
+#define NOTE_A2  110
+#define NOTE_AS2 117
+#define NOTE_B2  123
+#define NOTE_C3  131
+#define NOTE_CS3 139
+#define NOTE_D3  147
+#define NOTE_DS3 156
+#define NOTE_E3  165
+#define NOTE_F3  175
+#define NOTE_FS3 185
+#define NOTE_G3  196
+#define NOTE_GS3 208
+#define NOTE_A3  220
+#define NOTE_AS3 233
+#define NOTE_B3  247
+#define NOTE_C4  262
+#define NOTE_CS4 277
+#define NOTE_D4  294
+#define NOTE_DS4 311
+#define NOTE_E4  330
+#define NOTE_F4  349
+#define NOTE_FS4 370
+#define NOTE_G4  392
+#define NOTE_GS4 415
+#define NOTE_A4  440
+#define NOTE_AS4 466
+#define NOTE_B4  494
+#define NOTE_C5  523
+#define NOTE_CS5 554
+#define NOTE_D5  587
+#define NOTE_DS5 622
+#define NOTE_E5  659
+#define NOTE_F5  698
+#define NOTE_FS5 740
+#define NOTE_G5  784
+#define NOTE_GS5 831
+#define NOTE_A5  880
+#define NOTE_AS5 932
+#define NOTE_B5  988
+#define NOTE_C6  1047
+#define NOTE_CS6 1109
+#define NOTE_D6  1175
+#define NOTE_DS6 1245
+#define NOTE_E6  1319
+#define NOTE_F6  1397
+#define NOTE_FS6 1480
+#define NOTE_G6  1568
+#define NOTE_GS6 1661
+#define NOTE_A6  1760
+#define NOTE_AS6 1865
+#define NOTE_B6  1976
+#define NOTE_C7  2093
+#define NOTE_CS7 2217
+#define NOTE_D7  2349
+#define NOTE_DS7 2489
+#define NOTE_E7  2637
+#define NOTE_F7  2794
+#define NOTE_FS7 2960
+#define NOTE_G7  3136
+#define NOTE_GS7 3322
+#define NOTE_A7  3520
+#define NOTE_AS7 3729
+#define NOTE_B7  3951
+#define NOTE_C8  4186
+#define NOTE_CS8 4435
+#define NOTE_D8  4699
+#define NOTE_DS8 4978
+</code></pre>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的串口通信</title>
+    <url>/2024/11/07/arduino%E7%9A%84%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/</url>
+    <content><![CDATA[<h2 id="arduino的串口通信"><a href="#arduino的串口通信" class="headerlink" title="arduino的串口通信"></a>arduino的串口通信</h2><p><a href="https://pan.baidu.com/s/1dxKUrDeoobj41xB9lVkXcg?pwd=fdeo">工程下载</a></p>
+<p>arduino提供了非常强大的串口通信函数，这可能是我唯一觉得arduino的优点<br>他可以使用简单的函数配置和使用串口与其他设备进行通信<br>当然串口通信还是要看单片机是否有指定的IO<br>也不是所有的IO都支持串口</p>
+<span id="more"></span>
+<h2 id="arduino的串口是否接收到数据"><a href="#arduino的串口是否接收到数据" class="headerlink" title="arduino的串口是否接收到数据"></a>arduino的串口是否接收到数据</h2><pre><code>Serial.available()
+</code></pre>
+<p>该函数将会返回等待读取的数据字节数<br>等待读取的数据字节数。<br>返回值数据类型：int</p>
+<h2 id="arduino的禁用串口"><a href="#arduino的禁用串口" class="headerlink" title="arduino的禁用串口"></a>arduino的禁用串口</h2><pre><code>Serial.end()    
+</code></pre>
+<p>终止串行通讯，包括rx，tx<br>可调用 Serial.begin()重新打开串行通讯。</p>
+<h2 id="arduino的查找串口是否有指定数据"><a href="#arduino的查找串口是否有指定数据" class="headerlink" title="arduino的查找串口是否有指定数据"></a>arduino的查找串口是否有指定数据</h2><pre><code>Serial.find(数据内容);
+</code></pre>
+<p>数据内容：<br>被查找字符串。<br>允许使用String或char类型。</p>
+<p>返回值：如果接收到的数据内容一致就会返回真（不为0的数）<br>否者就是假（0）bool类型</p>
+<h2 id="arduino的查找串口是否有指定数据带结束"><a href="#arduino的查找串口是否有指定数据带结束" class="headerlink" title="arduino的查找串口是否有指定数据带结束"></a>arduino的查找串口是否有指定数据带结束</h2><pre><code>Serial.findUntil(开始执行数据内容, 终止的数据内容);
+</code></pre>
+<p>开始执行数据内容：<br>允许使用String或char类型。如果串口读取到的和开始执行数据内容一致<br>就会返回真，否者为假</p>
+<p>终止的数据内容：<br>用于设置终止函数执行的字符串信息。<br>设备在读取数据时一旦读取到此终止字符串，将会结束函数执行并返回。<br>可以用于开始和结束函数</p>
+<h2 id="arduino的串口数据提取整形类型的数据"><a href="#arduino的串口数据提取整形类型的数据" class="headerlink" title="arduino的串口数据提取整形类型的数据"></a>arduino的串口数据提取整形类型的数据</h2><pre><code>Serial.parseInt()
+</code></pre>
+<p>返回值：<br>在输入信息中找到的整数数值。类型：long<br>其他数据会丢失</p>
+<h2 id="arduino的串口数据提取浮点型类型的数据"><a href="#arduino的串口数据提取浮点型类型的数据" class="headerlink" title="arduino的串口数据提取浮点型类型的数据"></a>arduino的串口数据提取浮点型类型的数据</h2><pre><code>Serial.parseFloat()
+</code></pre>
+<p>返回值：<br>在输入信息中找到浮点数值。类型：float</p>
+<h2 id="arduino的串口初始化设置波特率"><a href="#arduino的串口初始化设置波特率" class="headerlink" title="arduino的串口初始化设置波特率"></a>arduino的串口初始化设置波特率</h2><pre><code>Serial.begin(波特率);
+</code></pre>
+<p>波特率：<br>设置电脑与Arduino进行串口通讯时的数据传输速率（每秒传输字节数）。<br>可使用以下速率：300, 600, 1200, 2400, 4800, 9600, 14400, 19200, 28800, 38400, 57600,  115200等<br>你也可以根据你所使用的设备而设置其他传输速率。（数据类型： long）</p>
+<h2 id="arduino的串口发送一个字节"><a href="#arduino的串口发送一个字节" class="headerlink" title="arduino的串口发送一个字节"></a>arduino的串口发送一个字节</h2><pre><code>Serial.write(字节)
+Serial.write(字符串)
+Serial.write(字节数组, 长度)
+</code></pre>
+<p>字节：<br>0x（xx）<br>字符串：<br>比如发送123就会变成0x49 0x50 0x51<br>字节数组：<br>创建数组，把字节存里面<br>长度：<br>发送多少的字节<br>返回值：<br>会返回发送的字节数。</p>
+<h2 id="arduino的串口发送数据"><a href="#arduino的串口发送数据" class="headerlink" title="arduino的串口发送数据"></a>arduino的串口发送数据</h2><pre><code>Serial.print(数据, 模式);
+</code></pre>
+<p>数据：<br>如果指定模式的情况下，默认以ASCII码形式发送<br>Serial.print(数据)</p>
+<p>模式：<br>BIN (binary二进制)<br>OCT (octal八进制)<br>DEC (decimal十进制)<br>HEX (hexadecimal十六进制)<br>指定小数点的位数：输入具体的数字来指定多少位<br>Serial.print(78, BIN) 发送 “1001110”<br>Serial.print(78, OCT) 发送 “116”<br>Serial.print(78, DEC) 发送 “78”<br>Serial.print(78, HEX) 发送 “4E”<br>Serial.println(1.23456, 0) 发送 “1”<br>Serial.println(1.23456, 2) 发送 “1.23”<br>Serial.println(1.23456, 4) 发送 “1.2346”</p>
+<p>你可以用F()把待发送的字符串包装到flash存储器。例如：<br>Serial.print(F(“Hello World”))</p>
+<h2 id="arduino的串口发送数据带换行"><a href="#arduino的串口发送数据带换行" class="headerlink" title="arduino的串口发送数据带换行"></a>arduino的串口发送数据带换行</h2><pre><code>Serial.println(数据,  模式)
+</code></pre>
+<p>具体参数不多说和上面的一样，只是多了换行</p>
+<h2 id="arduino的串口读取一个字节（非数据流）"><a href="#arduino的串口读取一个字节（非数据流）" class="headerlink" title="arduino的串口读取一个字节（非数据流）"></a>arduino的串口读取一个字节（非数据流）</h2><pre><code>Serial.peek();
+</code></pre>
+<p>读取一个字节的数据，如果没数据返回值为0，<br>如果是一串数据的话，第一个数据读出后不会消失所以只能读取第一个数据<br>read可以读取一串数据</p>
+<h2 id="arduino的串口读取字符串"><a href="#arduino的串口读取字符串" class="headerlink" title="arduino的串口读取字符串"></a>arduino的串口读取字符串</h2><pre><code>Serial.readString()
+</code></pre>
+<p>返回值：<br>接收到的数据，类型为字符串。</p>
+<h2 id="arduino的串口读取字符串带终止"><a href="#arduino的串口读取字符串带终止" class="headerlink" title="arduino的串口读取字符串带终止"></a>arduino的串口读取字符串带终止</h2><pre><code>Serial.readStringUntil(终止符);
+</code></pre>
+<p>终止符：<br>终止字符。用于设置终止函数执行的字符信息。<br>设备在读取数据时一旦读取到此终止字符，将会结束函数执行。允许使用char类型。<br>返回值：<br>接收到的数据，类型为字符串。</p>
+<h2 id="arduino的串口读取一个字节（数据流）"><a href="#arduino的串口读取一个字节（数据流）" class="headerlink" title="arduino的串口读取一个字节（数据流）"></a>arduino的串口读取一个字节（数据流）</h2><pre><code>Serial.read()
+</code></pre>
+<p>返回值：<br>设备没有接收到数据时，返回值为-1<br>设备接收到数据时，返回值为接收到的数据流中的1个字符<br>函数可用于从设备接收到数据中读取一个字节的数据。<br>读取数据流，数据会放缓存里面，<br>读取一个数据就会丢失一个数据，下一个数据就会替换上去</p>
+<h2 id="arduino的串口读取数据并且存储在数组中"><a href="#arduino的串口读取数据并且存储在数组中" class="headerlink" title="arduino的串口读取数据并且存储在数组中"></a>arduino的串口读取数据并且存储在数组中</h2><pre><code>Serial.readBytes(变量/数组, 读取字节上限);
+</code></pre>
+<p>变量&#x2F;数组：<br>用于存储读取到的信息。允许使用char或者byte类型的变量或数组。<br>读取字节上限：<br>指定的字节数量后就会停止运行。允许使用int类型</p>
+<h2 id="arduino的串口读取数据并且存储在数组中带停止"><a href="#arduino的串口读取数据并且存储在数组中带停止" class="headerlink" title="arduino的串口读取数据并且存储在数组中带停止"></a>arduino的串口读取数据并且存储在数组中带停止</h2><pre><code>Serial.readBytesUntil(终止字符, 变量/数组, 读取字节上限);
+</code></pre>
+<p>终止字符:<br>用于设置终止函数执行的字符信息。设备在读取数据时一旦读取到此终止字符<br>将会结束函数执行。允许使用char类型。<br>变量&#x2F;数组：<br>用于存储读取到的信息。允许使用char或者byte类型的变量或数组。<br>读取字节上限：<br>指定的字节数量后就会停止运行。允许使用int类型</p>
+<h2 id="arduino的查找串口设置缓存区"><a href="#arduino的查找串口设置缓存区" class="headerlink" title="arduino的查找串口设置缓存区"></a>arduino的查找串口设置缓存区</h2><pre><code>Serial.flush()
+</code></pre>
+<p>flush函数不具备清楚缓存效果<br>当我们通过Serial.print或Serial.println来发送数据时，被发送的字符数据将会存储于开发板的“发送缓存”中。<br>这么做的原因是开发板串行通讯速率不是很高，如果发送数据较多，发送时间会比较长。<br>在没有使用flush函数的情况下，开发板不会等待所有“发送缓存”中数据都发送完毕再执行后续的程序内容。<br>也就是说，开发板是在后台发送缓存中的数据。程序运行不受影响。<br>相反的，在使用了flush函数的情况下，开发板是会等待所有“发送缓存”中数据都发送完毕以后，再执行后续的程序内容。</p>
+<p>补充：<br>清除接收缓存</p>
+<pre><code>void setup() &#123;
+Serial.begin(9600);
+&#125;
+
+void loop() &#123;
+ clean ();//清除缓存的函数
+&#125;
+
+void clean ()
+&#123;
+// 以下while循环语句将会清除接收缓存内容。
+// 具体工作原理是这样的。每当有数据输入接收缓存后，
+// 我们可以使用Serial.read()来读取接收缓存中的内容。
+// 这时，如果我们对Serial.read()函数的返回值不加以任何利用
+// 那么读取到的数据，也就是Serial.read()函数的返回值将会在
+// 下一次执行Serial.read时所抛弃。利用while循环语句，我们可以
+// 保证在接收缓存中有数据的时候，反复将串口接收缓存中的信息读取并抛弃。
+// 从而达到清除接收缓存的目的。
+while(Serial.available())&#123;
+    Serial.println(&quot;Clearing Serial Incoming Buffer.&quot;);
+    Serial.read();
+&#125; 
+
+// 当接收缓存为空时，Serial.read返回值为“-1”
+// 通过以下语句我们将看到无论我们是否通过串口监视器
+// 输入信息，开发板的串口监视器会一直输出:
+// &quot;Incoming Buffer is Clear.&quot;
+// 这是因为接收缓存中的信息被以上while语句中的内容给清除掉了。
+if (Serial.read() == -1)&#123;
+    Serial.println(&quot;Incoming Buffer is Clear.&quot;);
+&#125;
+&#125;
+</code></pre>
+<p>使用方法：<br>1、Serial.begin(波特率);先配置波特率<br>2、 Serial.print(数据, 模式);发送<br>3、Serial.read();读取</p>
+<p>如果要使用多个串口<br>Serialx.begin();x不填就是默认UART0，1就是UART1<br>比如<br>Serial1.begin()就是使用UART1<br>Serial2.begin()就是使用UART2</p>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编写GPIO</title>
+    <url>/2024/11/08/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99GPIO/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu编写GPIO"><a href="#openharmony用ubuntu编写GPIO" class="headerlink" title="openharmony用ubuntu编写GPIO"></a>openharmony用ubuntu编写GPIO</h2><p><a href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/gpio_input_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>gpio_input_demo
+├─ BUILD.gn
+└─ gpio_input_get.c
+</code></pre>
+<p>我们打开文件<br>代码打开gpio_input_get.c</p>
+<p>不同SOC芯片由于其GPIO控制器型号、参数、以及控制器驱动的不同，GPIO管脚号的换算方式不一样。</p>
+<p>工作流程<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99GPIO/1.png"></p>
+<span id="more"></span>
+
+
+
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><pre><code>#include &quot;iot_gpio.h&quot;   // OpenHarmony HAL API：IoT硬件设备操作接口-GPIO
+#include &quot;hi_io.h&quot;      // 海思Pegasus SDK API：IoT硬件设备操作接口-IO
+</code></pre>
+<h2 id="初始化GPIO"><a href="#初始化GPIO" class="headerlink" title="初始化GPIO"></a>初始化GPIO</h2><pre><code>IoTGpioInit(引脚);
+</code></pre>
+<p>引脚：<br>开发板上要用的GPIO引脚号<br>返回值：<br>成功：IOT_SUCCESS（0）<br>失败：IOT_FAILURE（-1）</p>
+<h2 id="设置GPIO模式"><a href="#设置GPIO模式" class="headerlink" title="设置GPIO模式"></a>设置GPIO模式</h2><pre><code>IoTGpioSetDir(引脚,GPIO方向);//1-输出 0-输入
+</code></pre>
+<p>引脚：<br>开发板上要用的GPIO引脚号<br>GPIO方向：<br> 输出：IOT_GPIO_DIR_OUT&#x3D;&#x3D;1<br> 输入： IOT_GPIO_DIR_IN &#x3D;&#x3D;0<br>返回值：<br>成功：IOT_SUCCESS（0）<br>失败：IOT_FAILURE（-1）</p>
+<h2 id="GPIO复用"><a href="#GPIO复用" class="headerlink" title="GPIO复用"></a>GPIO复用</h2><pre><code>hi_io_set_func(引脚,模式);
+</code></pre>
+<p>引脚：<br>开发板上要用的GPIO引脚号<br>模式：<br>有些GPIO还需要设置复用功能，可能默认不是普通GPIO模式。<br>具体哪些模式需要查询：<br>&#x2F;&#x2F;鸿蒙路径&#x2F;device&#x2F;hisilicon&#x2F;hispark_pegasus&#x2F;sdk_liteos&#x2F;include&#x2F;hi_io.h<br><a href="https://github.com/HiW666/openharmony-code/blob/main/code/hi_io.h">代码跳转</a><br>返回值：<br>成功：IOT_SUCCESS（0）<br>失败：IOT_FAILURE（-1）</p>
+<h2 id="GPIO输入模式"><a href="#GPIO输入模式" class="headerlink" title="GPIO输入模式"></a>GPIO输入模式</h2><pre><code>hi_io_set_pull(引脚, 输入模式); 
+</code></pre>
+<p>引脚：<br>开发板上要用的GPIO引脚号<br>输入模式：<br>HI_IO_PULL_NONE,    &#x2F;<strong>&lt; Disabled.CNcomment:无拉CNend&#x2F;&#x2F;浮空<br>HI_IO_PULL_UP,      &#x2F;</strong>&lt; Pull-up enabled.CNcomment:上拉CNend *&#x2F;<br>HI_IO_PULL_DOWN,    &#x2F;**&lt; Pull-down enabled.CNcomment:下拉CNend *&#x2F;<br>HI_IO_PULL_MAX,     &#x2F;**&lt; Invalid.CNcomment:无效值CNend *&#x2F;</p>
+<h2 id="GPIO读取电平"><a href="#GPIO读取电平" class="headerlink" title="GPIO读取电平"></a>GPIO读取电平</h2><p>IoTGpioGetInputVal(引脚, &amp;value);</p>
+<p>引脚：<br>开发板上要用的GPIO引脚号<br>value：<br>接收读取电平值的指针，可以设置<br>IotGpioValue value<br>value为1是高电平，0是低电平<br>返回值：<br>成功：IOT_SUCCESS（0）<br>失败：IOT_FAILURE（-1）</p>
+<h2 id="系统延时"><a href="#系统延时" class="headerlink" title="系统延时"></a>系统延时</h2><pre><code>usleep(us); //   delay us
+osDelay(us);//   delay us
+hi_udelay(us);// delay_us int32
+</code></pre>
+<p>us：<br>延迟为微秒</p>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编写中断</title>
+    <url>/2024/11/09/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E4%B8%AD%E6%96%AD/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu编写中断"><a href="#openharmony用ubuntu编写中断" class="headerlink" title="openharmony用ubuntu编写中断"></a>openharmony用ubuntu编写中断</h2><p><a href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/gpio_input_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>gpio_input_demo
+├─ BUILD.gn
+└─gpio_input_int.c
+</code></pre>
+<p>我们打开文件<br>代码打开gpio_input_int.c</p>
+<p>不同SOC芯片由于其GPIO控制器型号、参数、以及控制器驱动的不同，GPIO管脚号的换算方式不一样。</p>
+<span id="more"></span>
+
+
+
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><pre><code>#include &quot;iot_gpio.h&quot;   // OpenHarmony HAL API：IoT硬件设备操作接口-GPIO
+#include &quot;hi_io.h&quot;      // 海思Pegasus SDK API：IoT硬件设备操作接口-IO
+</code></pre>
+<h2 id="注册中断函数"><a href="#注册中断函数" class="headerlink" title="注册中断函数"></a>注册中断函数</h2><pre><code>IoTGpioRegisterIsrFunc(引脚,触发模式,触发方法,中断处理函数,NULL);                         
+</code></pre>
+<p>引脚：<br>开发板上要用的GPIO引脚号</p>
+<p>触发模式：<br>电平触发：IOT_INT_TYPE_LEVEL&#x3D;&#x3D;0<br>边沿触发触发：IOT_INT_TYPE_EDGE</p>
+<p>触发方法：<br>如果是电平触发的情况下：<br>0为低电平触发，1为高电平触发<br>如果是边沿触发的情况下：<br>0为下降沿触发，1为上升沿触发<br>参数IOT_GPIO_EDGE_FALL_LEVEL_LOW&#x3D;&#x3D;0，IOT_GPIO_EDGE_RISE_LEVEL_HIGH&#x3D;&#x3D;1</p>
+<p>中断处理函数：<br>如果创建的函数为 void XXX(){}<br>那么就填XXX<br>那么中断的时候就会执行XXX里面的代码</p>
+<p>NULL：<br>中断处理函数的参数</p>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino基于stm32基本信息</title>
+    <url>/2024/11/21/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<h2 id="arduino基于stm32基本信息"><a href="#arduino基于stm32基本信息" class="headerlink" title="arduino基于stm32基本信息"></a>arduino基于stm32基本信息</h2><p>关于stm32在arduino io图<br>可以选择PAX，PBX keil引脚方式<br>或者直接使用arduino io：1，2，3，4。。。20，21等<br>stm32f103c8t6<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/1.jpg"></p>
+<span id="more"></span>
+
+
+
+<p>arduino工具烧录方式<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/1.png"><br>我们主要使用的工具<br>1，选择芯片型号<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/2.png"><br>2，选择烧录工具<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/3.png"></p>
+<h1 id="stlink烧录"><a href="#stlink烧录" class="headerlink" title="stlink烧录"></a>stlink烧录</h1><p>主要是就是用上面那三种<br>要用stlink需要下载<br>STM32CubeProgrammer<br>注：只有官方正版stlink才行，非st芯片的stlink不行</p>
+<p><a href="https://www.st.com/en/development-tools/stm32cubeprog.html">官网</a><br><a href="https://wwwe.lanzouq.com/iNRiH2fpwwhe">其他网盘</a></p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/4.png"></p>
+<h1 id="串口烧录"><a href="#串口烧录" class="headerlink" title="串口烧录"></a>串口烧录</h1><p>根据上面stm32引脚图<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/5.png"></p>
+<pre><code>PA9  接  RX
+PA10 接  TX
+</code></pre>
+<p>把芯片调整<br>boot0 为1<br>boot1 为0<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/6.jpg"><br>然后按复位resrt按键<br>就可以烧录</p>
+<p>烧录完成后<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/7.png"><br>把芯片调整<br>boot0 为0<br>boot1 为0<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/8.jpg"><br>再按复位程序就能运行了</p>
+<h1 id="usb烧录"><a href="#usb烧录" class="headerlink" title="usb烧录"></a>usb烧录</h1><p>首先我们要给stm32刷入特定固件<br>固件下载：<a href="https://wwwe.lanzouq.com/iHCgi2fq13ad">https://wwwe.lanzouq.com/iHCgi2fq13ad</a><br>支持的芯片<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/9.png"><br>选择led电平具体看自己的开发板<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/10.png"><br>点进去选择io<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/12.png"><br>led所在引脚我手上这个板子是在pc13低电平<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/11.jpg"></p>
+<p>我们打开STM32CubeProgrammer烧录固件<br>我们还是先<br>把芯片调整<br>boot0 为1<br>boot1 为0<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/6.jpg"><br>然后按复位resrt按键</p>
+<p>打开STM32CubeProgrammer烧录固件<br>先读取设备<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/13.png"></p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/14.png"></p>
+<p>选择打开固件<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/15.png"><br>修改地址<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/16.png"><br>烧录<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/17.png"></p>
+<p>烧录完成后<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/7.png"><br>把芯片调整<br>boot0 为0<br>boot1 为0<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/8.jpg"></p>
+<p>然后usb直接连接电脑<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/18.png"><br>led亮说明烧录完成<br>选择usb烧录<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/19.png"></p>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>stm32</tag>
+        <tag>arduino</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的adc</title>
+    <url>/2024/11/21/arduino%E7%9A%84adc/</url>
+    <content><![CDATA[<h2 id="arduino的adc"><a href="#arduino的adc" class="headerlink" title="arduino的adc"></a>arduino的adc</h2><p>arduino支持adc，但是这个是和硬件绑定的<br>需要芯片支持adc转换芯片，具体要查哪些引脚支持。</p>
+<p>基准电压：<br>基准电压一般就是单片机gpio推挽输出高电平的电压<br>adc分辨率：<br>手册一般会说支持xxxbit的adc，那么分辨率就是2的xxx次方（2^xxx）</p>
+<p>拿esp32举例<br>esp32最高支持12bit的adc<br>那么最高分辨率就是2^12（2的12次方）也就是4096<br>因为esp32输出电压是3.3，所以基准电压是3.3<br>也就是能读取0到3.3之间的电压</p>
+<p>arduino 官方支持10bit adc<br>那么最高分辨率就是2^10（2的10次方）也就是1024<br>因为arduino输出电压是5，所以基准电压是5<br>也就是能读取0到5之间的电压</p>
+<span id="more"></span>
+<h2 id="读取adc数字量"><a href="#读取adc数字量" class="headerlink" title="读取adc数字量"></a>读取adc数字量</h2><pre><code>analogRead(引脚);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>引脚</td>
+<td>int</td>
+<td>支持adc的引脚io</td>
+<td>单片机io</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>int</td>
+<td>返回0到2的X次方（x就是adc位深比如10bit就是0到1024，12bit就是0到4096）</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>返回值：<br>引脚的输入电压将在0V到3.3之间，<br>模拟数字转换（adc）功能作用下，<br>该输入电压将被映射到数值0-4096之间。<br>（0V对应数值0， 3.3V对应4096）<br>以上是esp32单片机的adc</p>
+<h2 id="读取adc电压"><a href="#读取adc电压" class="headerlink" title="读取adc电压"></a>读取adc电压</h2><pre><code>float 电压 = 0;
+电压 = analogRead(引脚) * (基准电压 / adc分辨率);
+</code></pre>
+<p>电压：读取的电压<br>基准电压：<br>基准电压一般就是单片机gpio推挽输出高电平的电压<br>adc分辨率：<br>手册一般会说支持xxxbit的adc，那么分辨率就是2的xxx次方（2^xxx）</p>
+<p>参考：</p>
+<pre><code>const int analogInPin = 4; // 定义模拟输入引脚
+int sensorValue = 0; // 存储模拟输入的值
+float voltage = 0;
+void setup() 
+&#123;
+Serial.begin(9600); // 初始化串口通信
+&#125;
+
+void loop() 
+&#123;
+sensorValue = analogRead(analogInPin); // 读取模拟输入的值
+voltage = sensorValue * (3.3 / 4096); // 将模拟输入的值转换为电压值
+// 打印输出
+Serial.print(&quot;sensor = &quot;);
+Serial.print(sensorValue);
+Serial.print(&quot;\t vol = &quot;);
+Serial.print(voltage);
+Serial.println(&quot;V&quot;);
+delay(2); // 延迟2毫秒
+&#125;
+</code></pre>
+<p>&#x2F;&#x2F;4号脚输入0到3.3之间的电压</p>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编写PWM</title>
+    <url>/2024/11/22/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99PWM/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu编写PWM"><a href="#openharmony用ubuntu编写PWM" class="headerlink" title="openharmony用ubuntu编写PWM"></a>openharmony用ubuntu编写PWM</h2><p><a href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/pwm_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>1、我们需要先初始化GPIO为输出<br>2、初始化PWM<br>3、配置PWM</p>
+<span id="more"></span>
+
+
+
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><pre><code>#include &quot;iot_gpio.h&quot; // OpenHarmony HAL API：IoT硬件设备操作接口-GPIO
+#include &quot;iot_pwm.h&quot;  // OpenHarmony HAL API：IoT硬件设备操作接口-PWM
+#include &quot;hi_io.h&quot;    // 海思SDK API：IoT硬件设备操作接口-IO
+#include &quot;hi_pwm.h&quot;   // 海思SDK API：IoT硬件设备操作接口-PWM
+</code></pre>
+<h2 id="配置GPIO输出PWM"><a href="#配置GPIO输出PWM" class="headerlink" title="配置GPIO输出PWM"></a>配置GPIO输出PWM</h2><pre><code>hi_io_set_func(引脚,模式);
+</code></pre>
+<p>引脚：<br>开发板上要用的GPIO引脚号<br>模式：<br>我们这边主要设置的pwm的模式<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99PWM/1.png"><br>具体哪些模式需要查询：<br>&#x2F;&#x2F;鸿蒙路径&#x2F;device&#x2F;hisilicon&#x2F;hispark_pegasus&#x2F;sdk_liteos&#x2F;include&#x2F;hi_io.h<br><a href="https://github.com/HiW666/openharmony-code/blob/main/code/hi_io.h">https://github.com/HiW666/openharmony-code/blob/main/code/hi_io.h</a></p>
+<h2 id="设置pwm"><a href="#设置pwm" class="headerlink" title="设置pwm"></a>设置pwm</h2><pre><code>IoTPwmInit(pwm线程); 
+</code></pre>
+<p>pwm线程：<br>根据上方函数模式里面配置的pwm<br>比如是pwm1那么就填HI_PWM_PORT_PWM1<br>pwmx那么就填HI_PWM_PORT_PWMx</p>
+<h2 id="输出pwm"><a href="#输出pwm" class="headerlink" title="输出pwm"></a>输出pwm</h2><pre><code>hi_pwm_start(pwm线程, ccr, 分辨率);
+</code></pre>
+<p>pwm线程：<br>根据上方函数模式里面配置的pwm<br>比如是pwm1那么就填HI_PWM_PORT_PWM1<br>pwmx那么就填HI_PWM_PORT_PWMx<br>ccr：<br>设置占空比参数<br>分辨率：<br>设置占空比参数<br>占用比：<br>ccr&#x2F;分辨率</p>
+<h2 id="关闭pwm"><a href="#关闭pwm" class="headerlink" title="关闭pwm"></a>关闭pwm</h2><pre><code>hi_pwm_stop(pwm线程);
+</code></pre>
+<p>pwm线程：<br>根据上方函数模式里面配置的pwm<br>比如是pwm1那么就填HI_PWM_PORT_PWM1<br>pwmx那么就填HI_PWM_PORT_PWMx</p>
+<h2 id="pwm控制音频"><a href="#pwm控制音频" class="headerlink" title="pwm控制音频"></a>pwm控制音频</h2><p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99PWM/2.jpg"></p>
+<pre><code>hi_pwm_start(pwm线程, freqDivisor/2, freqDivisor);
+</code></pre>
+<p>占空比为百分之50<br>freqDivisor为分倍频率<br>freqDivisor&#x3D;时钟源频率&#x2F;音频表频率<br>hi3861为4m&#x2F;频率</p>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>关于鸿蒙默认pwm没有开启<br>鸿蒙路径&#x2F;device&#x2F;hisilicon&#x2F;hispark_pegasus&#x2F;sdk_liteos&#x2F;build&#x2F;config&#x2F;usr_config.mk<br>找到pwm文件<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99PWM/3.png"></p>
+<p>修改为</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99PWM/4.png"></p>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的菘果派e1环境搭建</title>
+    <url>/2024/11/25/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="arduino的菘果派e1环境搭建"><a href="#arduino的菘果派e1环境搭建" class="headerlink" title="arduino的菘果派e1环境搭建"></a>arduino的菘果派e1环境搭建</h2><p>arduino项目地址：<br><a href="https://github.com/py32duino/Arduino-PY32">https://github.com/py32duino/Arduino-PY32</a></p>
+<p>在线部署：<br><a href="https://github.com/py32duino/Arduino-PY32/blob/master/package/package_py32_index.template.json">https://github.com/py32duino/Arduino-PY32/blob/master/package/package_py32_index.template.json</a></p>
+<span id="more"></span>
+
+<p>离线部署方法：</p>
+<p>通过百度网盘分享的文件：py32<br>链接：<a href="https://pan.baidu.com/s/1qa_a0Ipf9JV_FzTPYu4tVA?pwd=7r0z">https://pan.baidu.com/s/1qa_a0Ipf9JV_FzTPYu4tVA?pwd=7r0z</a><br>提取码：7r0z </p>
+<p>打开hfs软件，把软件端口改8080</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1.png"></p>
+<p>把hfs之外的文件<br>全部拖入外里面</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/1.png"><br><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/2.png"></p>
+<p>点击package_py32_index.json文件，复制上面的链接</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/3.png"></p>
+<p>hfs不要关闭</p>
+<p>打开arduino ide软件<br>(<a href="https://www.arduino.cc/en/software/">安装链接</a>)</p>
+<p>左上角文件<br>点击首选项</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/5.png"></p>
+<p>在其他开发者管理器地址粘贴刚刚复制的链接</p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/6.png"></p>
+<p>点击arduino开发版管理器(在软件的左边菜单处)</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/4.png"></p>
+<p>选择安装py32<br>(注意版本不要修改，因为没准备其他版本的文件)</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/5.png"></p>
+<p>然后点安装<br>Arduino就会自动安装了<br>到此软件配置完成</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/6.png"></p>
+<p>注：如果新版本出现卡在某一处不动的情况，可以把hfs和arduino关掉再重新打开，然后重新安装。<br>按照这个步骤多试几次就可以完成安装。</p>
+<h1 id="更新："><a href="#更新：" class="headerlink" title="更新："></a>更新：</h1><p>菘果派兼容air001的arduino代码<br>所以也可以安装air001的环境</p>
+<p><a href="https://arduino.luatos.com/package_air_cn_index.json">https://arduino.luatos.com/package_air_cn_index.json</a><br>海外用户使用：<a href="https://github.com/Air-duino/Arduino-pack-json-ci/releases/download/Nightly/package_air_index.json">https://github.com/Air-duino/Arduino-pack-json-ci/releases/download/Nightly/package_air_index.json</a></p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/7.png"></p>
+]]></content>
+      <categories>
+        <category>菘果派e1</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>菘果派e1</tag>
+        <tag>py32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的菘果派e1程序烧录</title>
+    <url>/2024/11/26/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="arduino的的菘果派e1程序烧录"><a href="#arduino的的菘果派e1程序烧录" class="headerlink" title="arduino的的菘果派e1程序烧录"></a>arduino的的菘果派e1程序烧录</h2><p>我们先安装上一章安装环境</p>
+<a href="/2024/11/25/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="arduino的菘果派e1环境搭建">arduino的菘果派e1环境搭建</a>
+
+
+<p>我们打开arduino<br>打开工具，选择开发板<br>py32 arduino —→  py32f002a</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/1.png"></p>
+<span id="more"></span>
+
+<p>这里是设置芯片的编译环境</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/2.png"></p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/3.png"></p>
+<h2 id="设置时钟"><a href="#设置时钟" class="headerlink" title="设置时钟"></a>设置时钟</h2><p>HSI是高速内部时钟，RC振荡器。</p>
+<p>HSE是高速外部时钟，可接石英&#x2F;陶瓷谐振器，或者接外部时钟源。</p>
+<p>LSI是低速内部时钟，RC振荡器。</p>
+<p>LSE是低速外部时钟，可接石英&#x2F;陶瓷谐振器，或者接外部时钟源。</p>
+<p>HCLK（High Clock，高时钟）也称为系统时钟</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/4.png"></p>
+<p>然后我们设置完编译环境后</p>
+<h2 id="设置串口"><a href="#设置串口" class="headerlink" title="设置串口"></a>设置串口</h2><p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/5.png"></p>
+<p>如果没设备请检查串口驱动</p>
+<p>根据芯片手册<br>PA3为RX<br>PA2为TX<br>也就说<br>芯片接线图(RXTX为串口芯片)</p>
+<pre><code>TX&lt;---&gt;PA3
+RX&lt;---&gt;PA2
+</code></pre>
+<h2 id="烧录（boot0为高电平）"><a href="#烧录（boot0为高电平）" class="headerlink" title="烧录（boot0为高电平）"></a>烧录（boot0为高电平）</h2><pre><code>1先断电
+2按住boot按键不放
+3按住boot按键不放再插入串口芯片通电
+4烧录完成后复位芯片
+</code></pre>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/1.jpg"></p>
+<h1 id="新版本烧录："><a href="#新版本烧录：" class="headerlink" title="新版本烧录："></a>新版本烧录：</h1><p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/19.png"><br>1、先接好线序</p>
+<pre><code>V&lt;---&gt;5v或3.3
+G&lt;---&gt;GND
+R&lt;---&gt;TX
+T&lt;---&gt;RX
+</code></pre>
+<h2 id="进入下载模式"><a href="#进入下载模式" class="headerlink" title="进入下载模式"></a>进入下载模式</h2><p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/20.png"></p>
+<pre><code>1先接线
+2按下自锁开关锁定
+3按一下rts按键
+</code></pre>
+<h2 id="退出下载模式"><a href="#退出下载模式" class="headerlink" title="退出下载模式"></a>退出下载模式</h2><pre><code>1、按下自锁开关释放
+2、按一下rts按键
+</code></pre>
+<p>点击烧录芯片</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/6.png"></p>
+<p>出现下面图片代表烧录完毕<br><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/7.png"></p>
+<p>如果出现下图，代表进入下载模式失败<br>请重新重复上面的步骤，或者检查串口接线是否正确</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/8.png"></p>
+<h2 id="使用官方工具手动烧录"><a href="#使用官方工具手动烧录" class="headerlink" title="使用官方工具手动烧录"></a>使用官方工具手动烧录</h2><p>我们先用arduino导出二进制烧录文件</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/9.png"></p>
+<p>导出的文件在<br>工程&#x2F;build&#x2F;AirM2M.AirMCU.Air001Dev&#x2F;xxx.hex</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/10.png"></p>
+<p>我们打开PY32IspTool_x64.exe</p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/11.png"><br>我们先把芯片进去下载模式</p>
+<pre><code>1先断电
+2按住boot按键不放
+3按住boot按键不放再插入串口芯片通电
+4烧录完成后复位芯片
+</code></pre>
+<p>备注：新版烧录看上方<br>然后点击connext读取设备<br><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/12.png"></p>
+<p>读取成功<br><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/13.png"></p>
+<p>读取失败<br>如果出现下图，代表进入下载模式失败<br>请重新重复上面的步骤，或者检查串口接线是否正确<br>或者关闭其他串口工具（包括arduion ide）<br><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/14.png"></p>
+<p>打开固件选择hex文件<br>导出的文件在<br>工程&#x2F;build&#x2F;AirM2M.AirMCU.Air001Dev&#x2F;xxx.hex<br><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/15.png"></p>
+<p><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/16.png"><br>点击下载<br><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/17.png"><br>烧录成功后，点击重启芯片<br><img src="/img/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/18.png"></p>
+]]></content>
+      <categories>
+        <category>菘果派e1</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>菘果派e1</tag>
+        <tag>py32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino系列教程</title>
+    <url>/2024/11/26/arduino%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="arduino系列教程"><a href="#arduino系列教程" class="headerlink" title="arduino系列教程"></a>arduino系列教程</h2><p>arduinoIDE使用教程</p>
+<a href="/2024/11/04/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="arduinoIDE使用教程">arduinoIDE使用教程</a>
+
+<p>arduino的GPIO输入输出</p>
+<a href="/2024/11/03/arduino%E7%9A%84GPIO%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" title="arduino的GPIO输入输出">arduino的GPIO输入输出</a>
+
+<p>arduino的中断</p>
+<a href="/2024/11/05/arduino%E7%9A%84%E4%B8%AD%E6%96%AD/" title="arduino的中断">arduino的中断</a>
+
+<p>arduino的定时</p>
+<a href="/2024/11/06/arduino%E7%9A%84%E5%AE%9A%E6%97%B6/" title="arduino的定时">arduino的定时</a>
+
+<p>arduino的pwm</p>
+<a href="/2024/11/06/arduino%E7%9A%84pwm/" title="arduino的pwm">arduino的pwm</a>
+
+<p>arduino的adc</p>
+<a href="/2024/11/21/arduino%E7%9A%84adc/" title="arduino的adc">arduino的adc</a>
+
+<p>arduino的串口通信</p>
+<a href="/2024/11/07/arduino%E7%9A%84%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/" title="arduino的串口通信">arduino的串口通信</a>
+
+<p>arduino的IIC通信</p>
+<a href="/2024/12/29/arduino%E7%9A%84IIC%E9%80%9A%E4%BF%A1/" title="arduino的IIC通信">arduino的IIC通信</a>
+
+<p>arduino的spi通信</p>
+<a href="/2024/12/29/arduino%E7%9A%84spi%E9%80%9A%E4%BF%A1/" title="arduino的spi通信">arduino的spi通信</a>
+<span id="more"></span>
+<h2 id="arduino扩展库"><a href="#arduino扩展库" class="headerlink" title="arduino扩展库"></a>arduino扩展库</h2><p>arduino的0.95寸oled</p>
+<a href="/2024/12/16/arduino%E7%9A%84oled/" title="arduino的oled">arduino的oled</a>
+
+<p>arduino的DHT11温湿度传感器</p>
+<a href="/2024/12/28/arduino%E7%9A%84DHT11/" title="arduino的DHT11">arduino的DHT11</a>
+
+<h2 id="arduino芯片手册"><a href="#arduino芯片手册" class="headerlink" title="arduino芯片手册"></a>arduino芯片手册</h2><p>1、esp32</p>
+<p>arduino的ESP32的环境搭建</p>
+<a href="/2024/11/02/arduino%E7%9A%84ESP32%E7%9A%84%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="arduino的ESP32的环境搭建">arduino的ESP32的环境搭建</a>
+
+<p>arduino基于ESP32基本信息</p>
+<a href="/2024/11/01/arduino%E5%9F%BA%E4%BA%8EESP32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/" title="arduino基于ESP32基本信息">arduino基于ESP32基本信息</a>
+
+<p>2、stm32</p>
+<p>arduino基于stm32环境搭建</p>
+<a href="/2024/09/13/arduino%E5%9F%BA%E4%BA%8Estm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="arduino基于stm32环境搭建">arduino基于stm32环境搭建</a>
+
+<p>arduino基于stm32基本信息</p>
+<a href="/2024/11/21/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/" title="arduino基于stm32基本信息">arduino基于stm32基本信息</a>
+
+<p>3、py32、air001</p>
+<p>arduino的菘果派e1环境搭建</p>
+<a href="/2024/11/25/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="arduino的菘果派e1环境搭建">arduino的菘果派e1环境搭建</a>
+
+<p>菘果派e1系列基本资料</p>
+<a href="/2024/11/26/%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%B3%BB%E5%88%97%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99/" title="菘果派e1系列基本资料">菘果派e1系列基本资料</a>
+
+<p>arduino的菘果派e1程序烧录</p>
+<a href="/2024/11/26/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/" title="arduino的菘果派e1程序烧录">arduino的菘果派e1程序烧录</a>
+
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>菘果派e1</tag>
+        <tag>py32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>菘果派e1系列基本资料</title>
+    <url>/2024/11/26/%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%B3%BB%E5%88%97%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99/</url>
+    <content><![CDATA[<h1 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h1><p>官方手册下载：<br><a href="https://wwwe.lanzouq.com/iJN2w2hqzaab">下载</a></p>
+<p>菘果派e1采用PY32F002AF15P6TU作为核心主控<br>芯片采用 32位ARM® Cortex® - M0+核心制作<br>最高24MHz工作频率<br>最大3Kbytes SRAM<br>多达18个I&#x2F;O，均可作为外部中断<br>1 x 12-bit ADC<br>1个16bit高级控制定时器（TIM1）<br>1个基本定时器（TIM16）<br>1个串口<br>1个iic<br>1个spi<br><img src="/img/%E8%8F%98%E6%9E%9C%E6%B4%BE%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99/1.png"></p>
+<span id="more"></span>
+<h1 id="资料下载"><a href="#资料下载" class="headerlink" title="资料下载"></a>资料下载</h1><h1 id="原理图："><a href="#原理图：" class="headerlink" title="原理图："></a>原理图：</h1><p><img src="/img/%E8%8F%98%E6%9E%9C%E6%B4%BE%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99/3.png"></p>
+<h1 id="引脚图："><a href="#引脚图：" class="headerlink" title="引脚图："></a>引脚图：</h1><p><img src="/img/%E8%8F%98%E6%9E%9C%E6%B4%BE%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99/4.png"></p>
+<h1 id="芯片开发方法："><a href="#芯片开发方法：" class="headerlink" title="芯片开发方法："></a>芯片开发方法：</h1><h2 id="arduino："><a href="#arduino：" class="headerlink" title="arduino："></a>arduino：</h2><p>环境搭建</p>
+<a href="/2024/11/25/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="arduino的菘果派e1环境搭建">arduino的菘果派e1环境搭建</a>
+
+<p>芯片烧录</p>
+<a href="/2024/11/26/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%A8%8B%E5%BA%8F%E7%83%A7%E5%BD%95/" title="arduino的菘果派e1程序烧录">arduino的菘果派e1程序烧录</a>
+
+<p>参考代码开发</p>
+<a href="/2024/11/26/arduino%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/" title="arduino系列教程">arduino系列教程</a>
+
+<h2 id="KEIL："><a href="#KEIL：" class="headerlink" title="KEIL："></a>KEIL：</h2><p>编写ing，前面的区域以后再来探索吧<br>(绝对不是因为我蓝狗，:d)</p>
+]]></content>
+      <categories>
+        <category>菘果派e1</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>菘果派e1</tag>
+        <tag>py32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony南向开发教程</title>
+    <url>/2024/12/10/openharmony%E5%8D%97%E5%90%91%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="openharmony南向开发教程"><a href="#openharmony南向开发教程" class="headerlink" title="openharmony南向开发教程"></a>openharmony南向开发教程</h2><span id="more"></span>
+
+<p><img src="/img/openharmony%E5%8D%97%E5%90%91%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/1.jpg"></p>
+<p>openharmony用ubuntu源码下载</p>
+<a href="/2024/09/12/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/" title="openharmony用ubuntu源码下载">openharmony用ubuntu源码下载</a>
+
+<p>openharmony用ubuntu图形化页面快速部署</p>
+<a href="/2024/09/13/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/" title="openharmony用ubuntu图形化页面快速部署">openharmony用ubuntu图形化页面快速部署</a>
+
+<p>openharmony用windows开发hi3861</p>
+<a href="/2024/12/13/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/" title="openharmony用windows开发hi3861">openharmony用windows开发hi3861</a>
+
+<p>openharmony用ubuntu编写helloworld</p>
+<a href="/2024/09/13/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/" title="openharmony用ubuntu编写helloworld">openharmony用ubuntu编写helloworld</a>
+
+<p>openharmony烧录hi3861芯片</p>
+<a href="/2024/09/26/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/" title="openharmony烧录hi3861芯片">openharmony烧录hi3861芯片</a>
+
+<p>openharmony用ubuntu编译产品解决方案</p>
+<a href="/2024/10/14/openharmony%E7%94%A8ubuntu%E7%BC%96%E8%AF%91%E4%BA%A7%E5%93%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="openharmony用ubuntu编译产品解决方案.md">openharmony用ubuntu编译产品解决方案.md</a>
+
+<p>openharmony用ubuntu编写子系统模块</p>
+<a href="/2024/09/24/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AD%90%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97/" title="openharmony用ubuntu编写子系统模块">openharmony用ubuntu编写子系统模块</a>
+
+<p>openharmony用ubuntu编写线程</p>
+<a href="/2024/11/01/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E7%BA%BF%E7%A8%8B/" title="openharmony用ubuntu编写线程">openharmony用ubuntu编写线程</a>
+
+<p>openharmony用ubuntu编写GPIO</p>
+<a href="/2024/11/08/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99GPIO/" title="openharmony用ubuntu编写GPIO">openharmony用ubuntu编写GPIO</a>
+
+<p>openharmony用ubuntu编写中断</p>
+<a href="/2024/11/09/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E4%B8%AD%E6%96%AD/" title="openharmony用ubuntu编写中断">openharmony用ubuntu编写中断</a>
+
+<p>openharmony用ubuntu编写定时</p>
+<a href="/2024/11/09/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AE%9A%E6%97%B6/" title="openharmony用ubuntu编写定时">openharmony用ubuntu编写定时</a>
+
+<p>openharmony用ubuntu编写PWM</p>
+<a href="/2024/11/22/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99PWM/" title="openharmony用ubuntu编写PWM">openharmony用ubuntu编写PWM</a>
+
+<p>openharmony用ubuntu编写adc</p>
+<a href="/2024/11/11/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99adc/" title="openharmony用ubuntu编写adc">openharmony用ubuntu编写adc</a>
+
+<p>openharmony用ubuntu编写串口</p>
+<a href="/2024/12/12/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E4%B8%B2%E5%8F%A3/" title="openharmony用ubuntu编写串口">openharmony用ubuntu编写串口</a>
+
+<p>openharmony用ubuntu编写键值</p>
+<a href="/2024/10/22/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E9%94%AE%E5%80%BC/" title="openharmony用ubuntu编写键值">openharmony用ubuntu编写键值</a>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编写定时</title>
+    <url>/2024/11/09/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AE%9A%E6%97%B6/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu编写中断"><a href="#openharmony用ubuntu编写中断" class="headerlink" title="openharmony用ubuntu编写中断"></a>openharmony用ubuntu编写中断</h2><p><a href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/timer_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>timer_demo
+├─ BUILD.gn
+└─timer_once.c
+</code></pre>
+<p>我们打开文件<br>代码打开timer_once.c</p>
+<p>hi3861默认10ms为一个tick</p>
+<span id="more"></span>
+
+
+
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><pre><code>#include &lt;stdio.h&gt;      // 标准输入输出
+#include &lt;unistd.h&gt;     // POSIX标准接口
+
+#include &quot;ohos_init.h&quot;  // 用于初始化服务(services)和功能(features)
+#include &quot;cmsis_os2.h&quot;  // CMSIS-RTOS API V2
+</code></pre>
+<h2 id="创建定时"><a href="#创建定时" class="headerlink" title="创建定时"></a>创建定时</h2><pre><code>osTimerNew(osTimerFunc_t func, osTimerType_t type, const osTimerAttr_t *attr);                        
+</code></pre>
+<p>func：函数指针指向回调函数（时间到执行的函数）<br>type：定时器类型，osTimerOnce表示单次定时器，ostimer周期表示周期性定时器<br>argument：定时器回调函数的参数 不清楚填NULL<br>attr：计时器属性 不清楚填NULL<br>返回值：定时器ID</p>
+<h2 id="启动定时器，不能在中断服务调用该函数"><a href="#启动定时器，不能在中断服务调用该函数" class="headerlink" title="启动定时器，不能在中断服务调用该函数"></a>启动定时器，不能在中断服务调用该函数</h2><pre><code>osStatus_t osTimerStart (osTimerId_t timer_id,uint32_t ticks)
+</code></pre>
+<p>timer_id：定时器ID<br>ticks：时间滴答计时器的值<br>返回值：0 - 成功，非0 - 失败</p>
+<h2 id="停止定时器"><a href="#停止定时器" class="headerlink" title="停止定时器"></a>停止定时器</h2><pre><code>osTimerStop(osTimerId_t timer_id)
+</code></pre>
+<p>timer_id: 定时器id</p>
+<h2 id="删除定时器"><a href="#删除定时器" class="headerlink" title="删除定时器"></a>删除定时器</h2><pre><code>osStatus_t osTimerDelete (osTimerId_t timer_id)
+</code></pre>
+<p>timer_id：定时器ID<br>返回值：0 - 成功，非0 - 失败</p>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编写adc</title>
+    <url>/2024/11/11/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99adc/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu编写adc"><a href="#openharmony用ubuntu编写adc" class="headerlink" title="openharmony用ubuntu编写adc"></a>openharmony用ubuntu编写adc</h2><p><a href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/adc_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>adc_demo
+├─ BUILD.gn
+└─voltage_buttons_thread.c
+</code></pre>
+<p>我们打开文件<br>代码打开voltage_buttons_thread.c</p>
+<p>hi3861 ADC 通道有 7 个，其中 GPIO 可复用成 ADC 的通道如下：</p>
+<pre><code>6	    GPIO_04	    ADC1
+17  	    GPIO_05	    ADC2
+19	    GPIO_07	    ADC3
+27	    GPIO_09	    ADC4
+29	    GPIO_11	    ADC5
+30	    GPIO_12 	    ADC0
+31	    GPIO_13 	    ADC6
+</code></pre>
+<span id="more"></span>
+
+
+
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><pre><code>#include &lt;stdio.h&gt;      // 标准输入输出
+#include &lt;unistd.h&gt;     // POSIX标准接口
+
+#include &quot;ohos_init.h&quot;  // 用于初始化服务(services)和功能(features)
+#include &quot;cmsis_os2.h&quot;  // CMSIS-RTOS API V2
+
+#include &quot;iot_gpio.h&quot;   // OpenHarmony API：IoT硬件设备操作接口-GPIO
+#include &quot;hi_io.h&quot;      // 海思 Pegasus SDK：IoT硬件设备操作接口-IO
+#include &quot;hi_adc.h&quot;     // 海思 Pegasus SDK：IoT硬件设备操作接口-ADC
+</code></pre>
+<h1 id="函数1-读取adc"><a href="#函数1-读取adc" class="headerlink" title="函数1 读取adc"></a>函数1 读取adc</h1><pre><code>unsigned int hi_adc_read(WifiIotAdcChannelIndex channel, unsigned short *data, WifiIotAdcEquModelSel equModel, WifiIotAdcCurBais curBais, unsigned short rstCnt)
+          
+</code></pre>
+<h2 id="channel：表示ADC通道"><a href="#channel：表示ADC通道" class="headerlink" title="channel：表示ADC通道"></a>channel：表示ADC通道</h2><pre><code>    HI_ADC_CHANNEL_0,
+    HI_ADC_CHANNEL_1,
+    HI_ADC_CHANNEL_2,
+    HI_ADC_CHANNEL_3,
+    HI_ADC_CHANNEL_4,
+    HI_ADC_CHANNEL_5,
+    HI_ADC_CHANNEL_6,
+    HI_ADC_CHANNEL_7,
+    HI_ADC_CHANNEL_BUTT,//一共有8个通道
+</code></pre>
+<h2 id="data：表示指向存储读取数据的地址的指针"><a href="#data：表示指向存储读取数据的地址的指针" class="headerlink" title="data：表示指向存储读取数据的地址的指针"></a>data：表示指向存储读取数据的地址的指针</h2><h2 id="equModel：表示平均算法的次数"><a href="#equModel：表示平均算法的次数" class="headerlink" title="equModel：表示平均算法的次数"></a>equModel：表示平均算法的次数</h2><pre><code>HI_ADC_EQU_MODEL_1,            /**&lt; 0：The average value is not used.
+CNcomment:1次平均，即不进行
+平均 CNend */
+HI_ADC_EQU_MODEL_2,            /**&lt; 1：2-time average algorithm mode.
+CNcomment:2次平均算法模式 CNend */
+HI_ADC_EQU_MODEL_4,            /**&lt; 2：4-time average algorithm mode.
+CNcomment:4次平均算法模式 CNend */
+HI_ADC_EQU_MODEL_8,            /**&lt; 3：8-time average algorithm mode.
+CNcomment:8次平均算法模式 CNend */
+HI_ADC_EQU_MODEL_BUTT
+</code></pre>
+<h2 id="curBais：表示模拟功率控制模式"><a href="#curBais：表示模拟功率控制模式" class="headerlink" title="curBais：表示模拟功率控制模式"></a>curBais：表示模拟功率控制模式</h2><pre><code>    HI_ADC_CUR_BAIS_DEFAULT,       /**&lt; 0：Auto control.
+                                    CNcomment:自动识别模式 */
+    HI_ADC_CUR_BAIS_AUTO,          /**&lt; 1：Auto control.
+                                    CNcomment:自动识别模式 */
+    HI_ADC_CUR_BAIS_1P8V,          /**&lt; 2：Manual control, AVDD=1.8V.
+                                    CNcomment:手动控制，AVDD=1.8V */
+    HI_ADC_CUR_BAIS_3P3V,          /**&lt; 3：Manual control, AVDD=3.3V.
+                                    CNcomment:手动控制，AVDD=3.3V */
+    HI_ADC_CUR_BAIS_BUTT,
+</code></pre>
+<h2 id="rstCnt：指示从重置到转换开始的时间计数。一次计数等于334纳秒。值的范围必须从0到0xFF"><a href="#rstCnt：指示从重置到转换开始的时间计数。一次计数等于334纳秒。值的范围必须从0到0xFF" class="headerlink" title="rstCnt：指示从重置到转换开始的时间计数。一次计数等于334纳秒。值的范围必须从0到0xFF"></a>rstCnt：指示从重置到转换开始的时间计数。一次计数等于334纳秒。值的范围必须从0到0xFF</h2><h2 id="返回值：错误码-错误HI-ERR-ADC-TIMEOUT-成功-HI-ERR-SUCCESS"><a href="#返回值：错误码-错误HI-ERR-ADC-TIMEOUT-成功-HI-ERR-SUCCESS" class="headerlink" title="返回值：错误码 错误HI_ERR_ADC_TIMEOUT  成功 HI_ERR_SUCCESS"></a>返回值：错误码 错误HI_ERR_ADC_TIMEOUT  成功 HI_ERR_SUCCESS</h2>]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用ubuntu编写串口</title>
+    <url>/2024/12/12/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E4%B8%B2%E5%8F%A3/</url>
+    <content><![CDATA[<h2 id="openharmony用ubuntu编写串口"><a href="#openharmony用ubuntu编写串口" class="headerlink" title="openharmony用ubuntu编写串口"></a>openharmony用ubuntu编写串口</h2><p><a href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/UART">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>UART
+├─ BUILD.gn
+└─UART.c
+</code></pre>
+<p>我们打开文件<br>代码打开voltage_buttons_thread.c</p>
+<p>hi3861 其中 UART 端口有 3 个，其中 UART0 用于调试，每个 GPIO 可复用成 UART 的端口如下：</p>
+<pre><code>   Pin	管脚名称	    复用信号
+    2	GPIO_00	    UART1_TXD
+    3	GPIO_01	    UART1_RXD
+    4	GPIO_02	    UART1_RTS， UART1 的流控管脚，发送请求信号，输出
+    5	GPIO_03     复用信号 0：UART0_LOG_TXD，数据发送， Debug 和下载串口接口
+                    复用信号 1：UART1_CTS， UART1 的流控管脚，清除发送信号，输入
+
+    6	GPIO_04	    UART0_LOG_RXD 数据接收， Debug 和下载串口接口
+    17	GPIO_05	    UART1_RXD，数据接收口
+    18	GPIO_06	    UART1_TXD，数据发送口
+    19	GPIO_07     UART1_CTS，清除发送信号，通信串口
+    20	GPIO_08     UART1_RTS，发送请求信号，通信串口
+    27	GPIO_09	    UART2_RTS，发送请求信号，通信串口，输出信号
+    28	GPIO_10	    UART2_CTS，发送清除信号，通信串口，输入信号
+    29	GPIO_11	    UART2_TXD
+    30	GPIO_12	    UART2_RXD
+    31	GPIO_13	    复用信号 1：UART2_RTS
+                    复用信号 2：UART0_LOG_TXD
+    32	GPIO_14	    复用信号 1：UART2_CTS
+                    复用信号 2：UART0_LOG_RXD
+</code></pre>
+<span id="more"></span>
+
+
+
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><pre><code>#include &lt;stdio.h&gt;      // 标准输入输出
+#include &lt;unistd.h&gt;     // POSIX标准接口
+
+#include &quot;ohos_init.h&quot;  // 用于初始化服务(services)和功能(features)
+#include &quot;cmsis_os2.h&quot;  // CMSIS-RTOS API V2
+
+#include &quot;iot_gpio.h&quot;   // OpenHarmony API：IoT硬件设备操作接口-GPIO
+#include &quot;hi_io.h&quot;      // 海思 Pegasus SDK：IoT硬件设备操作接口-IO
+#include &quot;hi_adc.h&quot;     // 海思 Pegasus SDK：IoT硬件设备操作接口-ADC
+</code></pre>
+<h1 id="函数1-串口初始化"><a href="#函数1-串口初始化" class="headerlink" title="函数1 串口初始化"></a>函数1 串口初始化</h1><pre><code>hi_u32 hi_uart_init(hi_uart_idx id, const hi_uart_attribute *param, const hi_uart_extra_attr *extra_attr);
+备注：还需要初始化串口tx为输出模式加串口模式，rx为输入模式加串口模式          
+</code></pre>
+<p>不清楚看<a href="/2024/11/08/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99GPIO/" title="openharmony用ubuntu编写GPIO">openharmony用ubuntu编写GPIO</a></p>
+<h2 id="id：表示串口号"><a href="#id：表示串口号" class="headerlink" title="id：表示串口号"></a>id：表示串口号</h2><pre><code>HI_UART_IDX_0,    /**&lt; Physical port number 0.CNcomment:物理端口号0 CNend */
+HI_UART_IDX_1,    /**&lt; Physical port number 1.CNcomment:物理端口号1 CNend */
+HI_UART_IDX_2,    /**&lt; Physical port number 2.CNcomment:物理端口号2 CNend */
+HI_UART_IDX_MAX   /**&lt; Maximum physical port number, which cannot be used. CNcomment:物理端口号最大值，
+</code></pre>
+<h2 id="param：指定串口属性"><a href="#param：指定串口属性" class="headerlink" title="*param：指定串口属性"></a>*param：指定串口属性</h2><p>这个为结构体</p>
+<pre><code>        .baud_rate =填波特率比如115200
+        .data_bits = 数据位  HI_UART_DATA_BIT_5，HI_UART_DATA_BIT_6,HI_UART_DATA_BIT_7,HI_UART_DATA_BIT_8,
+       .stop_bits = 停止位  HI_UART_STOP_BIT_1，HI_UART_STOP_BIT_2 
+       .parity = 奇偶校验位   HI_UART_PARITY_NONE = 0, /**无校验CNend */ HI_UART_PARITY_ODD = 1,  /**校验位，奇校验CNend */ HI_UART_PARITY_EVEN = 2, /**偶校验CNend */
+</code></pre>
+<h2 id="extra-attr：表示高级功能配置"><a href="#extra-attr：表示高级功能配置" class="headerlink" title="*extra_attr：表示高级功能配置"></a>*extra_attr：表示高级功能配置</h2><p>不常用一般直接填null，具体看文章末尾</p>
+<h2 id="返回值-成功0失败1"><a href="#返回值-成功0失败1" class="headerlink" title="返回值 成功0失败1"></a>返回值 成功0失败1</h2><h1 id="函数2-串口读取"><a href="#函数2-串口读取" class="headerlink" title="函数2 串口读取"></a>函数2 串口读取</h1><pre><code>hi_s32 hi_uart_read(hi_uart_idx id, hi_u8 *data, hi_u32 data_len);
+</code></pre>
+<h2 id="id：表示串口号-1"><a href="#id：表示串口号-1" class="headerlink" title="id：表示串口号"></a>id：表示串口号</h2><pre><code>HI_UART_IDX_0,    /**&lt; Physical port number 0.CNcomment:物理端口号0 CNend */
+HI_UART_IDX_1,    /**&lt; Physical port number 1.CNcomment:物理端口号1 CNend */
+HI_UART_IDX_2,    /**&lt; Physical port number 2.CNcomment:物理端口号2 CNend */
+HI_UART_IDX_MAX   /**&lt; Maximum physical port number, which cannot be used. CNcomment:物理端口号最大值，
+</code></pre>
+<h2 id="data：读取的数据保存数据的指针"><a href="#data：读取的数据保存数据的指针" class="headerlink" title="*data：读取的数据保存数据的指针"></a>*data：读取的数据保存数据的指针</h2><h2 id="data-len：读取字节数的长度"><a href="#data-len：读取字节数的长度" class="headerlink" title="data_len：读取字节数的长度"></a>data_len：读取字节数的长度</h2><h2 id="返回值-成功大于0-失败-1"><a href="#返回值-成功大于0-失败-1" class="headerlink" title="返回值 成功大于0   失败-1"></a>返回值 成功大于0   失败-1</h2><h1 id="函数3-串口写"><a href="#函数3-串口写" class="headerlink" title="函数3 串口写"></a>函数3 串口写</h1><pre><code>hi_s32 hi_uart_write(hi_uart_idx id, const hi_u8 *data, hi_u32 data_len);
+</code></pre>
+<h2 id="id：表示串口号-2"><a href="#id：表示串口号-2" class="headerlink" title="id：表示串口号"></a>id：表示串口号</h2><p>看上方</p>
+<h2 id="data：写入的数据保存数据的指针"><a href="#data：写入的数据保存数据的指针" class="headerlink" title="*data：写入的数据保存数据的指针"></a>*data：写入的数据保存数据的指针</h2><h2 id="data-len：写入字节数的长度"><a href="#data-len：写入字节数的长度" class="headerlink" title="data_len：写入字节数的长度"></a>data_len：写入字节数的长度</h2><h2 id="返回值-成功大于0-失败-1-1"><a href="#返回值-成功大于0-失败-1-1" class="headerlink" title="返回值 成功大于0   失败-1"></a>返回值 成功大于0   失败-1</h2><h1 id="函数4-关闭串口"><a href="#函数4-关闭串口" class="headerlink" title="函数4 关闭串口"></a>函数4 关闭串口</h1><pre><code>hi_u32 hi_uart_deinit(hi_uart_idx id);
+</code></pre>
+<h2 id="id：表示串口号-3"><a href="#id：表示串口号-3" class="headerlink" title="id：表示串口号"></a>id：表示串口号</h2><p>看上方</p>
+<p>补充：<br>关于串口初始化高级功能</p>
+<pre><code>typedef struct &#123;
+    hi_uart_fifo_line tx_fifo_line;
+    hi_uart_fifo_line rx_fifo_line;
+    hi_uart_fifo_line flow_fifo_line;
+    hi_uart_block_state tx_block;
+    hi_uart_block_state rx_block;
+    hi_u16 tx_buf_size;
+    hi_u16 rx_buf_size;
+    hi_uart_dma_state tx_use_dma;
+    hi_uart_dma_state rx_use_dma;
+&#125; hi_uart_extra_attr;
+</code></pre>
+<p>1、tx_fifo_line、rx_fifo_line、flow_fifo_line</p>
+<pre><code>    HI_FIFO_LINE_ONE_EIGHT = 1,  /**&lt; FIFO interruption limitation, FIFO LINE = 1/8full.
+                                    CNcomment:FIFO中断门限，FIFO LINE = 1/8full CNend */
+    HI_FIFO_LINE_ONE_QUARTER,    /**&lt; FIFO interruption limitation, FIFO LINE = 1/4full.
+                                    CNcomment:FIFO中断门限，FIFO LINE = 1/4full CNend */
+    HI_FIFO_LINE_HALF,           /**&lt; FIFO interruption limitation, FIFO LINE = 1/2full.
+                                    CNcomment:FIFO中断门限，FIFO LINE = 1/2full CNend */
+    HI_FIFO_LINE_THREE_QUARTERS, /**&lt; FIFO interruption limitation, FIFO LINE = 3/4full.
+                                    CNcomment:FIFO中断门限，FIFO LINE = 3/4full CNend */
+    HI_FIFO_LINE_SEVEN_EIGHTS,   /**&lt; FIFO interruption limitation, FIFO LINE = 7/8full.
+                                    CNcomment:FIFO中断门限，FIFO LINE = 7/8full CNend */
+</code></pre>
+<p>2、tx_block和rx_block</p>
+<pre><code>HI_UART_BLOCK_STATE_NONE_BLOCK = 1, /**&lt; block mode, none-block. CNcomment:UART阻塞模式，非阻塞传输 CNend */
+HI_UART_BLOCK_STATE_BLOCK,          /**&lt; block mode, block. CNcomment:UART阻塞模式，阻塞传输 CNend */
+</code></pre>
+<p>3、hi_u16 tx_buf_size;hi_u16 rx_buf_size;</p>
+<pre><code>设置缓冲区大小
+</code></pre>
+<p>4、tx_use_dma、rx_use_dma</p>
+<pre><code>HI_UART_NONE_DMA = 1, /**&lt; None-DMA mode. CNcomment:DMA传输，不使用DMA CNend */
+    HI_UART_USE_DMA,      /**&lt; DMA mode. CNcomment:DMA传输，使用DMA CNend */
+</code></pre>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openharmony用windows开发hi3861</title>
+    <url>/2024/12/13/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/</url>
+    <content><![CDATA[<h2 id="openharmony用windows开发hi3861"><a href="#openharmony用windows开发hi3861" class="headerlink" title="openharmony用windows开发hi3861"></a>openharmony用windows开发hi3861</h2><h1 id="首先下载vscode"><a href="#首先下载vscode" class="headerlink" title="首先下载vscode"></a>首先下载vscode</h1><p><a href="https://code.visualstudio.com/Download">下载</a></p>
+<p><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/1.png"></p>
+<p>下载完成后记得一路点安装，不要修改安装路径默认c盘</p>
+<p>不要修改安装路径！<br>不要修改安装路径！<br>不要修改安装路径！</p>
+<span id="more"></span>
+<h1 id="安装vscod插件"><a href="#安装vscod插件" class="headerlink" title="安装vscod插件"></a>安装vscod插件</h1><p>安装完成后打开vscode<br>点击这里<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/2.png"><br>搜索输入 chinese<br>安装简体中文<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/3.png"><br>点击重启应用中文<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/4.png"><br>重启后发现都变成汉化了<br>继续点击插件，点击三个点<br>点击VSIX安装<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/5.png"></p>
+<p>依次安装这四个文件<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/6.png"></p>
+<p>或者手动搜索安装下面的插件<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/7.jpg"></p>
+<h1 id="安装华为开发环境"><a href="#安装华为开发环境" class="headerlink" title="安装华为开发环境"></a>安装华为开发环境</h1><p>官网：<a href="https://device.harmonyos.com/cn/develop/ide#download">https://device.harmonyos.com/cn/develop/ide#download</a></p>
+<p>下载完成后双击安装（记得关闭vscode）</p>
+<p><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/7.png"><br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/8.png"></p>
+<p>别傻等着，如果没有python环境就点击安装啊！！！<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/9.png"><br>正在从官网下载<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/10.png"><br>然后等待他自动部署<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/11.png"></p>
+<h1 id="导入SDK"><a href="#导入SDK" class="headerlink" title="导入SDK"></a>导入SDK</h1><p>打开vscode，发现这里是不是多了一个小图标<br>点他！！！<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/12.png"><br>点击主页，然后点导入工程<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/13.png"></p>
+<p>工程就是压缩包里面的东西导出来<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/14.png"><br>导入过点这里可以打开工程<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/15.png"></p>
+<h1 id="安装工具链"><a href="#安装工具链" class="headerlink" title="安装工具链"></a>安装工具链</h1><p>首先把编译工具解压出来<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/16.png"><br>点击工程配置，然后找到图片里面的位置<br>导入上面解压出来的文件夹<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/17.png"></p>
+<h1 id="编译代码"><a href="#编译代码" class="headerlink" title="编译代码"></a>编译代码</h1><p>点击左下角PROJECT TASKS里面的BUILD<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/18.png"><br>这样代表编译成功<br><img src="/img/openharmony%E7%94%A8windows%E5%BC%80%E5%8F%91hi3861/19.png"></p>
+<p>clean清除编译的文件<br>build 只编译修改过的地方<br>rebuild 全部重头编译</p>
+<h1 id="关于烧录"><a href="#关于烧录" class="headerlink" title="关于烧录"></a>关于烧录</h1><p>查看下面的文章不冲突</p>
+<a href="/2024/09/26/openharmony%E7%83%A7%E5%BD%95hi3861%E8%8A%AF%E7%89%87/" title="openharmony烧录hi3861芯片">openharmony烧录hi3861芯片</a>
+
+<h1 id="关于源码位置"><a href="#关于源码位置" class="headerlink" title="关于源码位置"></a>关于源码位置</h1><p>参考代码：<br>鸿蒙源码\src\vendor\pzkj\pz_hi3861\demo</p>
+<p>具体开发请看下面</p>
+<a href="/2024/12/10/openharmony%E5%8D%97%E5%90%91%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/" title="openharmony南向开发教程">openharmony南向开发教程</a>
+]]></content>
+      <categories>
+        <category>openharmony</category>
+      </categories>
+      <tags>
+        <tag>openharmony</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的oled</title>
+    <url>/2024/12/16/arduino%E7%9A%84oled/</url>
+    <content><![CDATA[<h2 id="arduino的oled"><a href="#arduino的oled" class="headerlink" title="arduino的oled"></a>arduino的oled</h2><p>芯片手册：</p>
+<a href="/2024/12/16/%E8%8A%AF%E7%B3%BB%E5%88%970.96oled(SSD1306)/" title="芯系列0.96oled(SSD1306)">芯系列0.96oled(SSD1306)</a>
+
+<p>请确保你的芯片支持&lt;Wire.h&gt;或者&lt;SPI.h&gt;的库<br>否则不做支持<br>具体引脚请看自己的芯片不做过多叙述</p>
+<p>头文件加宏定义：</p>
+<pre><code>//这个为IIC屏
+#include &lt;SPI.h&gt;//spi库
+#include &lt;Wire.h&gt;//iic库
+#include &lt;Adafruit_GFX.h&gt;//适配很多种屏幕显示图形字体的一个功能库；
+#include &lt;Adafruit_SSD1306.h&gt;//适配驱动OLED屏显示芯片的库文件；
+#define SCREEN_WIDTH 128 //横向分辨率 x
+#define SCREEN_HEIGHT 64 //纵向向分辨率 yy
+#define OLED_RESET    -1 //复位脚，一般屏幕没复位所以填-1
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, OLED_RESET);
+//第三个参数用于选择模式，&amp;Wire为iic模式，&amp;SPI为spi模式
+</code></pre>
+<span id="more"></span>
+
+
+
+<h2 id="oled初始化函数"><a href="#oled初始化函数" class="headerlink" title="oled初始化函数"></a>oled初始化函数</h2><pre><code>display.begin(SSD1306_SWITCHCAPVCC, 0x3C)
+</code></pre>
+<p>SSD1306_SWITCHCAPVCC这个不知道<br>0x3C为iic通信的设备的地址<br>返回值：布尔值成功是1否则是0</p>
+<h2 id="清空屏幕信息"><a href="#清空屏幕信息" class="headerlink" title="清空屏幕信息"></a>清空屏幕信息</h2><pre><code>display.clearDisplay();
+</code></pre>
+<h2 id="设置文本大小"><a href="#设置文本大小" class="headerlink" title="设置文本大小"></a>设置文本大小</h2><pre><code>display.setTextSize(uint16_t s);
+</code></pre>
+<p>s:<br>为文本的大小，默认为1。<br>其中1代表6 x 8<br>2代表12 x 16<br>3代表18 x 24<br>以此类推。</p>
+<h2 id="设置屏幕颜色"><a href="#设置屏幕颜色" class="headerlink" title="设置屏幕颜色"></a>设置屏幕颜色</h2><pre><code>display.setTextColor(uint16_t c);
+</code></pre>
+<p>c参数：<br>SSD1306_BLACK（0）设置黑色<br>SSD1306_WHITE（1）设置白色<br>SSD1306_INVERSE（2）设置相反的颜色</p>
+<h2 id="设置显示屏显示旋转角度"><a href="#设置显示屏显示旋转角度" class="headerlink" title="设置显示屏显示旋转角度"></a>设置显示屏显示旋转角度</h2><pre><code>display.setRotation(uint8_t x)
+</code></pre>
+<p>参数：x为旋转角度，范围：0~3。默认为0。<br>其中0代表旋转0度，1代表旋转90度2代表旋转180度，3代表旋转270度。</p>
+<h2 id="设置屏幕渲染的位置"><a href="#设置屏幕渲染的位置" class="headerlink" title="设置屏幕渲染的位置"></a>设置屏幕渲染的位置</h2><pre><code>display.setCursor(x,y);
+</code></pre>
+<p>参数：x为文本的起始x坐标，y为文本的起始y坐标。<br>范围：x，y均大于或等于0</p>
+<h2 id="在指定位置画一个不填充颜色的矩形"><a href="#在指定位置画一个不填充颜色的矩形" class="headerlink" title="在指定位置画一个不填充颜色的矩形"></a>在指定位置画一个不填充颜色的矩形</h2><pre><code>display.drawRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color)
+</code></pre>
+<p>x:<br>为矩形起始x坐标<br>y：<br>为矩形起始y坐标<br>w：<br>为矩形宽度<br>h：<br>为矩形高度<br>color：<br>为矩形边的颜色范围：x，y大于或等于0；w，h大于0，在Adafruit_SSD1306库中color的取值为<br>SSD1306_BLACK，SSD1306_WHITE或SSD1306_INVERSE</p>
+<h2 id="在指定位置显示绘制位图"><a href="#在指定位置显示绘制位图" class="headerlink" title="在指定位置显示绘制位图"></a>在指定位置显示绘制位图</h2><pre><code>display.drawBitmap(int16_t x, int16_t y, const uint8_t bitmap[], int16_t w， int16_t h, uint16_t color)
+</code></pre>
+<p>在指定位置显示绘制位图，可用来在显示屏上显示中文。<br>参数：x为图像起始x坐标，y为图像起始y坐标<br>bitmap[]:<br>为单色位图的字节数组w为位图宽度，h为位图高度<br>color：<br>为位图颜色。范围x，y均大于或等于0同上</p>
+<h2 id="打印屏幕"><a href="#打印屏幕" class="headerlink" title="打印屏幕"></a>打印屏幕</h2><pre><code>display.display();
+</code></pre>
+<p>将当前缓冲区中的数据推送到SSD1306 显示屏。即显示数据。</p>
+<p>参考代码：</p>
+<h1 id="IIC"><a href="#IIC" class="headerlink" title="IIC"></a>IIC</h1><pre><code>#include &lt;SPI.h&gt;
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+#define OLED_RESET    -1
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, OLED_RESET);
+
+void ShowText(void);
+void setup() &#123;
+Serial.begin(9600);//初始化串口
+if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) &#123;
+    Serial.println(&quot;SSD1306 allocation failed&quot;);
+    //等待屏幕初始化
+    while(1);
+&#125;
+ShowText();
+&#125;
+
+
+void loop() &#123;
+// put your main code here, to run repeatedly:
+
+&#125;
+
+void ShowText(void) &#123;
+//清空屏幕信息
+display.clearDisplay();
+//设置文本字体大小为2
+display.setTextSize(2);
+//设置屏幕颜色为白色
+display.setTextColor(SSD1306_WHITE);
+//设置打印的起始坐标10,16
+display.setCursor(10, 16);
+//设置显示的文本信息
+display.println(F(&quot;happy day&quot;));
+//将屏幕缓冲区数据刷到屏幕上，显示出来
+display.display();
+&#125;
+</code></pre>
+<h1 id="SPI"><a href="#SPI" class="headerlink" title="SPI"></a>SPI</h1><p>开发ing</p>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的DHT11</title>
+    <url>/2024/12/28/arduino%E7%9A%84DHT11/</url>
+    <content><![CDATA[<h2 id="arduino的DHT11"><a href="#arduino的DHT11" class="headerlink" title="arduino的DHT11"></a>arduino的DHT11</h2><p>芯片手册：</p>
+<a href="/2024/12/27/%E8%8A%AF%E7%B3%BB%E5%88%97DHT11%E6%B8%A9%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/" title="芯系列DHT11温湿度传感器">芯系列DHT11温湿度传感器</a>
+
+<p>芯片库下载：<br><a href="https://github.com/adafruit/DHT-sensor-library">https://github.com/adafruit/DHT-sensor-library</a><br><a href="https://github.com/adafruit/Adafruit_Sensor">https://github.com/adafruit/Adafruit_Sensor</a><br>(以上两个文件都要下载)</p>
+<p>头文件加宏定义：</p>
+<pre><code>//这个为DHT11头文件
+#include &lt;DHT.h&gt;
+#include &lt;DHT_U.h&gt;
+//
+</code></pre>
+<p>创建DHT对象</p>
+<pre><code>#define DHTPIN 4           // 设置获取数据的引脚
+#define DHTTYPE DHT11      // 选择DHT11
+
+DHT dht(DHTPIN, DHTTYPE);  // 创建一个DHT对象
+</code></pre>
+<span id="more"></span>
+
+
+
+<h2 id="传感器初始化"><a href="#传感器初始化" class="headerlink" title="传感器初始化"></a>传感器初始化</h2><pre><code>dht.begin();           // 初始化DHT11
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="读取湿度"><a href="#读取湿度" class="headerlink" title="读取湿度"></a>读取湿度</h2><pre><code>dht.readHumidity();       // 读取湿度
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>float</td>
+<td>读取湿度</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="读取温度"><a href="#读取温度" class="headerlink" title="读取温度"></a>读取温度</h2><pre><code>dht.readTemperature();    // 读取温度
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>float</td>
+<td>读取温度</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="判断是否启动正常"><a href="#判断是否启动正常" class="headerlink" title="判断是否启动正常"></a>判断是否启动正常</h2><pre><code>if (isnan(h) || isnan(t)) &#123; 
+    Serial.println(&quot;DHT11数据读取失败&quot;);         
+    return;
+&#125;
+</code></pre>
+<p>参考代码:</p>
+<pre><code>#include &lt;DHT.h&gt;
+#include &lt;DHT_U.h&gt;
+
+#define DHTPIN  PB1
+#define DHTTYPE DHT11
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() &#123;
+Serial.begin(115200);
+dht.begin(); // 初始化DHT11
+&#125;
+
+void loop() &#123;
+// 暂停2秒，读取数据官方说明需要250毫秒
+delay(2000); 
+
+// 读取传感器数据
+float h = dht.readHumidity();       // 读取湿度
+float t = dht.readTemperature();    // 读取温度
+
+// 判断数据是否成功读取
+if (isnan(h) || isnan(t)) &#123; 
+    Serial.println(&quot;DHT11数据读取失败&quot;);         
+    return;
+&#125;
+
+// 串口打印
+Serial.print (&quot;湿度: &quot;);
+Serial.print (h);
+Serial.print (&quot;% | &quot;);
+Serial.print (&quot;温度度: &quot;);
+Serial.print (t);
+Serial.println (&quot;℃&quot;);
+&#125;
+</code></pre>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+        <tag>ESP32</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>芯系列0.96oled(SSD1306)</title>
+    <url>/2024/12/16/%E8%8A%AF%E7%B3%BB%E5%88%970.96oled(SSD1306)/</url>
+    <content><![CDATA[<h2 id="0-96oled-SSD1306"><a href="#0-96oled-SSD1306" class="headerlink" title="0.96oled(SSD1306)"></a>0.96oled(SSD1306)</h2><p>开发ing</p>
+]]></content>
+      <categories>
+        <category>芯片手册</category>
+      </categories>
+      <tags>
+        <tag>芯片手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>芯系列DHT11温湿度传感器</title>
+    <url>/2024/12/27/%E8%8A%AF%E7%B3%BB%E5%88%97DHT11%E6%B8%A9%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="DHT11"><a href="#DHT11" class="headerlink" title="DHT11"></a>DHT11</h1><p><img src="/img/%E8%8A%AF%E7%B3%BB%E5%88%97DHT11%E6%B8%A9%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/1.jpg"></p>
+<p>手册下载：<a href="https://wwwe.lanzouq.com/b007t5inji">https://wwwe.lanzouq.com/b007t5inji</a><br>密码:aqyc</p>
+<p>介绍：DHT11是一款有已校准数字信号输出的温湿度传感器。 </p>
+<pre><code>其精度湿度±5%RH， 温度±2℃，量程湿度5~95%RH， 温度-20~+60℃。
+</code></pre>
+<span id="more"></span>
+<p>荐的存储环境<br>温度：10~40℃ 湿度：60%RH以下。<br>暴露在化学物质中的影响<br>电容式湿度传感器的感应层会受到化学蒸汽的干扰，化学物质在感应层中的扩散可能导致测量值漂移和灵敏度下降。在一个纯净的环境中，污染物质会缓慢地释放出去。下文所述的恢复处理将加速实现这一过程。高浓度的化学污染会导致传感器感应层的彻底损坏。</p>
+<table>
+<thead>
+<tr>
+<th>pin</th>
+<th>名称</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>VDD</td>
+<td>供电 3－5.5VDC</td>
+</tr>
+<tr>
+<td>2</td>
+<td>DATA</td>
+<td>串行数据，单总线</td>
+</tr>
+<tr>
+<td>3</td>
+<td>NC</td>
+<td>空脚</td>
+</tr>
+<tr>
+<td>4</td>
+<td>GND</td>
+<td>地线</td>
+</tr>
+</tbody></table>
+<p>产品封装<br><img src="/img/%E8%8A%AF%E7%B3%BB%E5%88%97DHT11%E6%B8%A9%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/2.webp"></p>
+<p>工作时序：<br>DHT11 整体工作时序为：主机发送开始信号、DHT11 响应输出、主机接收 40bit 数据（湿度数据+温度数据+校验值），结束信号（可选）。具体过程如下：</p>
+<p>总线空闲状态为高电平，主机拉低总线等待 DHT11 响应, 主机把总线拉低必须大于 18ms，保证 DHT11 能检测到起始信号；<br>主机发送开始信号结束后，拉高总线电平并延时等待 20-40us 后，读取 DHT11 的响应信号；<br>DHT11 接收到主机的开始信号后，等待微处理器开始信号结束，发送 80us 低电平响应信号；<br>DHT11 发送 80us 高电平准备发送数据；<br>DHT11 发送 40bit 数据（湿度数据+温度数据+校验值）。</p>
+<p>大概的一个通信流程<br><img src="/img/%E8%8A%AF%E7%B3%BB%E5%88%97DHT11%E6%B8%A9%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/3.jpg"></p>
+<p>DHT11 开始传输数据。每 1bit 数据都以 50us 低电平开始，告诉主机开始传输一位数据了。DHT11 以高电平的长短定义数据位是 0 还是 1：当 50us 低电平过后拉高总线，高电平持续 26~28us 表示 0，高电平持续 70us 表示数据 1。</p>
+<p>当最后 1bit 数据传送完毕后，DHT11 拉低总线 50us，表示数据传输完毕，随后总线由上拉电阻拉高进入空闲状态。</p>
+<pre><code>以 50us 低电平开始，高电平持续 26~28us 表示 0
+</code></pre>
+<p><img src="/img/%E8%8A%AF%E7%B3%BB%E5%88%97DHT11%E6%B8%A9%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/4.jpg"></p>
+<pre><code>以 50us 低电平开始，高电平持续 70us 表示 0
+</code></pre>
+<p><img src="/img/%E8%8A%AF%E7%B3%BB%E5%88%97DHT11%E6%B8%A9%E6%B9%BF%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8/5.jpg"></p>
+<p>DHT11 的 DATA 传输一次完整的数据为 40bit，按照高位在前，低位在后的顺序传输。</p>
+<p>数据格式为：8bit 湿度整数数据 + 8bit 湿度小数数据 + 8bit 温度整数数据 + 8bit 温度小数数据 + 8bit 校验位，一共 5 字节（40bit）数据。</p>
+<p>正常情况下，前四个字节的和刚好与校验位相等，通过这种机制可以保证数据传输的准确性。</p>
+]]></content>
+      <categories>
+        <category>芯片手册</category>
+      </categories>
+      <tags>
+        <tag>芯片手册</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的IIC通信</title>
+    <url>/2024/12/29/arduino%E7%9A%84IIC%E9%80%9A%E4%BF%A1/</url>
+    <content><![CDATA[<h1 id="arduino的IIC"><a href="#arduino的IIC" class="headerlink" title="arduino的IIC"></a>arduino的IIC</h1><p>首先arduino的IIC是硬件IIC，硬件IIC一般都是固定引脚的<br>所以需要自己先去查一下自己芯片的第一组IIC接口是哪两个引脚<br>(esp32例外)<br>然后，需要芯片支持Wire.h库。一般芯片都会自带有的。<br>(这是官方库)<br>最后说明：读写缓存只有 32 字节<br>文件宏定义：</p>
+<pre><code>//这个为IIC头文件
+#include &lt;Wire.h&gt;
+//
+</code></pre>
+<p>esp32iic可以是任意的IO</p>
+<span id="more"></span>
+
+<h1 id="主机模式"><a href="#主机模式" class="headerlink" title="主机模式"></a>主机模式</h1><h2 id="IIC初始化"><a href="#IIC初始化" class="headerlink" title="IIC初始化"></a>IIC初始化</h2><pre><code>Wire.begin(address);          // 初始化IIC
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>address</td>
+<td>int</td>
+<td>注册成为从机模式</td>
+<td>0到128之间</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<pre><code>Wire.begin();          // 初始化IIC
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无</td>
+<td>无</td>
+<td>啥也不填直接调用就是主机模式</td>
+<td>无</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>esp32iic可以是任意的IO</p>
+<p>所以</p>
+<h2 id="初始化主机模式"><a href="#初始化主机模式" class="headerlink" title="初始化主机模式"></a>初始化主机模式</h2><pre><code>Wire.begin(sda,scl);          // 初始化IIC
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sda</td>
+<td>int</td>
+<td>定义sda的引脚</td>
+<td>单片机引脚</td>
+</tr>
+<tr>
+<td>scl</td>
+<td>int</td>
+<td>定义scl的引脚</td>
+<td>单片机引脚</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="初始化从机模式"><a href="#初始化从机模式" class="headerlink" title="初始化从机模式"></a>初始化从机模式</h2><pre><code>Wire.begin(sda,scl,address);          // 初始化IIC
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sda</td>
+<td>int</td>
+<td>定义sda的引脚</td>
+<td>单片机引脚</td>
+</tr>
+<tr>
+<td>scl</td>
+<td>int</td>
+<td>定义scl的引脚</td>
+<td>单片机引脚</td>
+</tr>
+<tr>
+<td>address</td>
+<td>int</td>
+<td>注册成为从机模式</td>
+<td>0到128之间</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="主机准备向从机读数据"><a href="#主机准备向从机读数据" class="headerlink" title="主机准备向从机读数据"></a>主机准备向从机读数据</h2><pre><code>Wire.requrstFrom(addtess,quantity)
+Wire.requrstFrom(addtess,quantity,stop)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>address</td>
+<td>int</td>
+<td>向指定从机请求数据</td>
+<td>0到128之间</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>int</td>
+<td>请求数据的长度（单位字节）</td>
+<td>0到32之间</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>布尔形</td>
+<td>‘真’ 则在请求结束后发送一个停止命令，并释放总线。‘假’则继续发送请求保持连接</td>
+<td>真或者假</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>int</td>
+<td>主机从从机接受到的字节数目，主机接受到一个数据返回的字节数就会减少一个</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="主机准备向从机写数据"><a href="#主机准备向从机写数据" class="headerlink" title="主机准备向从机写数据"></a>主机准备向从机写数据</h2><pre><code>Wire.beginTransmission(addtess);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>address</td>
+<td>int</td>
+<td>向指定从机请求数据</td>
+<td>0到128之间</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="发送停止位"><a href="#发送停止位" class="headerlink" title="发送停止位"></a>发送停止位</h2><pre><code>Wire.endTransmission()
+Wire.endTransmission(stop)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stop</td>
+<td>布尔形</td>
+<td>‘真’ 发送一个停止信息，并释放总线。‘假’则继续发送请求保持连接</td>
+<td>真或者假</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>int</td>
+<td>0、成功 1、数据溢出 2、发送addtess时从机接受到NACK 3、发送数据时接受到 NACK 4、其他错误</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h2><pre><code>Wire.write(value)
+Wire.write(string)
+Wire.write(data, length)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>value</td>
+<td>int</td>
+<td>要发送的数值</td>
+<td>int</td>
+</tr>
+<tr>
+<td>string</td>
+<td>string</td>
+<td>发送的字符组的指针</td>
+<td>字符组</td>
+</tr>
+<tr>
+<td>data</td>
+<td>数组</td>
+<td>要发送的数组</td>
+<td>数组</td>
+</tr>
+<tr>
+<td>length</td>
+<td>int</td>
+<td>发送的数组的长度（单位字节）</td>
+<td>int</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="返回读到的字节数"><a href="#返回读到的字节数" class="headerlink" title="返回读到的字节数"></a>返回读到的字节数</h2><pre><code>Wire. available()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>int</td>
+<td>主机从从机接受到的字节数目，主机接受到一个数据返回的字节数就会减少一个</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="读取数据"><a href="#读取数据" class="headerlink" title="读取数据"></a>读取数据</h2><pre><code>Wire.read()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>uint8_t</td>
+<td>读到的字节数据，通常一次返回一个字节的数据</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h1 id="从机模式"><a href="#从机模式" class="headerlink" title="从机模式"></a>从机模式</h1><h2 id="当从机接受到主机写的请求"><a href="#当从机接受到主机写的请求" class="headerlink" title="当从机接受到主机写的请求"></a>当从机接受到主机写的请求</h2><pre><code>Wire.onReceive(handler)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>handler</td>
+<td>回调函数</td>
+<td>当从机接受到数据就执行回调函数,回调函数需要带一个int型参数（无返回值）</td>
+<td>void handler(int howMany){}</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>uint8_t</td>
+<td>主机从从机接受到的字节数目，主机接受到一个数据返回的字节数就会减少一个</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="当从机接受到主机读的请求"><a href="#当从机接受到主机读的请求" class="headerlink" title="当从机接受到主机读的请求"></a>当从机接受到主机读的请求</h2><pre><code>Wire.onRequest(handler)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>handler</td>
+<td>回调函数</td>
+<td>当从机接受到数据就执行回调函数（无返回值）</td>
+<td>回调函数</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>uint8_t</td>
+<td>主机从从机接受到的字节数目，主机接受到一个数据返回的字节数就会减少一个</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h1 id="参考代码bh1750通信"><a href="#参考代码bh1750通信" class="headerlink" title="参考代码bh1750通信"></a>参考代码bh1750通信</h1><pre><code>//addr接高电平设备地址为1011100也就是0x5c
+//低电平0100011也就是0x23
+uint8_t data[1];
+uint16_t Rx_Data;
+int i;
+#include &lt;Wire.h&gt;
+void setup() &#123;
+// put your setup code here, to run once:
+Wire.begin();
+Serial.begin(115200);
+bh711 ();
+&#125;
+void loop() &#123;
+// put your main code here, to run repeatedly
+i=0;
+Wire.requestFrom(0x5c, 2);//请求两个字节数据
+    // 当从从设备接收到信息时值为true
+    while (Wire.available())
+    &#123;
+    Serial.println(i);
+        // 接受并读取从设备发来的一个字节的数据
+        data[i] = Wire.read();
+        i++;
+        // 向串口打印该字节
+        if (i=2)
+        &#123;
+        Rx_Data = ((uint16_t)data[0] &lt;&lt; 8) + data[1];//0高位1地位
+        &#125;
+    &#125;
+    Serial.println(Rx_Data/ 1.2f);//合并数据并打印
+    delay(500);
+&#125;
+
+void bh711 ()
+&#123;
+Wire.beginTransmission(0x5c);//请求设备地址
+Wire.write(0x00);//关闭电源
+Wire.endTransmission();//结束通信
+Wire.beginTransmission(0x5c);
+Wire.write(0x01);//打开电源
+Wire.endTransmission();
+Wire.beginTransmission(0x5c);
+Wire.write(0x07);//初始化扫描
+Wire.endTransmission();
+    Wire.beginTransmission(0x5c);
+Wire.write(0x11);//连续h分辨率模式2
+Wire.endTransmission();
+&#125;
+</code></pre>
+<h1 id="从机和主机通信"><a href="#从机和主机通信" class="headerlink" title="从机和主机通信"></a>从机和主机通信</h1><p>目前已知air001（py32f002a）iic从机有问题<br>从机代码</p>
+<pre><code>#include &lt;Wire.h&gt;
+
+#define I2C_ADDR  2
+int a;
+char adb[0];
+void setup()
+&#123;
+Wire.begin(I2C_ADDR);         // join i2c bus with address #4
+Wire.onRequest(requestEvent); // register event
+Wire.onReceive(receiveEvent); // register event
+Serial.begin(9600);           // start serial for output
+&#125;
+
+void loop()
+&#123;
+//empty loop
+
+&#125;
+
+// function that executes whenever data is received from master
+// this function is registered as an event, see setup()
+void receiveEvent(int howMany)
+&#123;
+a++;
+int cc;
+while( Wire.available()) // loop through all but the last
+&#123;
+    cc = Wire.read();     // receive byte as a character
+    if (cc)
+    &#123;
+    a++;
+    &#125;
+    //Serial.print(cc);          // print the character
+&#125;
+//int x = Wire.read();        // receive byte as an integer
+&#125;
+
+// function that executes whenever data is requested by master
+// this function is registered as an event, see setup()
+void requestEvent()
+&#123;
+
+sprintf(adb, &quot;%d&quot;,a);
+Wire.write(a);  // respond with message of 6 bytes
+                        // as expected by master
+&#125;
+</code></pre>
+<p>主机代码</p>
+<pre><code>#include &lt;Wire.h&gt;
+void setup() &#123;
+// put your setup code here, to run once:
+Wire.begin();
+Serial.begin(115200);
+&#125;
+
+void loop() &#123;
+// put your main code here, to run repeatedly:
+
+    // 向从设备＃8请求1个字节
+
+    Wire.requestFrom(2, 1);
+    // 当从从设备接收到信息时值为true
+    while (Wire.available())
+    &#123;
+        // 接受并读取从设备发来的一个字节的数据
+        char c = Wire.read();
+        // 向串口打印该字节
+        Serial.print(c);
+    &#125;
+    Wire.endTransmission();
+
+    Wire.beginTransmission(2);
+    Wire.write(0x78);
+Wire.endTransmission();
+    
+    delay(500);
+&#125;
+</code></pre>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>arduino的spi通信</title>
+    <url>/2024/12/29/arduino%E7%9A%84spi%E9%80%9A%E4%BF%A1/</url>
+    <content><![CDATA[<h1 id="arduino的spi"><a href="#arduino的spi" class="headerlink" title="arduino的spi"></a>arduino的spi</h1><p>串行外围设备接口（SPI）是微控制器使用的同步串行数据协议，用于在短距离内快速与一个或多个外围设备进行通信。它也可以用于两个开发板之间相互的通信。</p>
+<p>使用SPI连接，总是有一个主设备（通常是微控制器）来控制外围设备。通常，所有设备共用以下三条线：</p>
+<p>MISO（Master In Slave Out）-从机线路，用于向主机发送数据，<br>MOSI（Master Out Slave In）-主机线路，用于向外围设备发送数据，<br>SCK（串行时钟）-同步主机产生的数据传输的时钟脉冲</p>
+<p>每个从设备专用的一条线：</p>
+<p>SS（从设备选择）-主设备可用此引脚来决定启用或禁用指定设备。<br>当从设备的CS引脚为低电平时，它与主机通信。同理CS引脚电平为高时，它将忽略连接到CS引脚的设备, 不与之进行数据交互。<br>文件宏定义：</p>
+<pre><code>//这个为SPI头文件
+#include &lt;SPI.h&gt;
+//
+</code></pre>
+<span id="more"></span>
+
+<h1 id="主机模式"><a href="#主机模式" class="headerlink" title="主机模式"></a>主机模式</h1><h2 id="spi初始化"><a href="#spi初始化" class="headerlink" title="spi初始化"></a>spi初始化</h2><pre><code>SPI.begin()        
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>初始化SPI通信，调用该函数后，SCK&#x2F;MOSI&#x2F;SS引脚将被设置为输出模式<br>且SCK&#x2F;MOSI引脚拉低，SS引脚拉高</p>
+<h2 id="spi模式自定义初始化"><a href="#spi模式自定义初始化" class="headerlink" title="spi模式自定义初始化"></a>spi模式自定义初始化</h2><pre><code>SPI.beginTransaction(SPISettings mySettting(speedMaximum, dataOrder, dataMode));
+SPI.beginTransaction(SPISettings(14000000, MSBFIRST, SPI_MODE0));
+SPISettings mySettting(speedMaximum, dataOrder, dataMode)
+SPI.beginTransaction(SPISettings(14000000, MSBFIRST, SPI_MODE0))//默认设置
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>speedMaximum</td>
+<td>int</td>
+<td>最高的通讯速度</td>
+<td>看自己spi的芯片通信速率</td>
+</tr>
+<tr>
+<td>dataOrder</td>
+<td>int</td>
+<td>数据传输顺序选择</td>
+<td>LSBFIRST(0)&#x2F;&#x2F;低位在前<br/>MSBFIRST(1)&#x2F;&#x2F;高位在前</td>
+</tr>
+<tr>
+<td>dataMode</td>
+<td>int</td>
+<td>spi通信模式</td>
+<td>SPI_MODE0 (0x00)<br/>SPI_MODE1 (0x01)<br/>SPI_MODE2 (0x02)<br/>SPI_MODE3 (0x03)</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<pre><code>模式	时钟极性 （CPOL）	时钟相位 （CPHA）	输出边缘	数据捕获
+SPI_MODE0	0	0	       下降	   上升
+SPI_MODE1	0	1	       上升	   下降
+SPI_MODE2	1	0	       上升	   下降
+SPI_MODE3	1	1	       下降	   上升
+</code></pre>
+<p>使用SPI.beginTransaction()函数初始化spi总线，该函数的参数</p>
+<h2 id="停止全部spi总线"><a href="#停止全部spi总线" class="headerlink" title="停止全部spi总线"></a>停止全部spi总线</h2><pre><code>SPI.end()        
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>（在初始化时设置的各个引脚输出模式将不会改变）。</p>
+<h2 id="停止部分使用SPI总线。"><a href="#停止部分使用SPI总线。" class="headerlink" title="停止部分使用SPI总线。"></a>停止部分使用SPI总线。</h2><pre><code>SPI.endTransaction()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+<tr>
+<td>通常在禁用某引脚上的从设备后调用此函数</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>以允许其他库使用SPI总线。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="设定spi传输是高位还是低位"><a href="#设定spi传输是高位还是低位" class="headerlink" title="设定spi传输是高位还是低位"></a>设定spi传输是高位还是低位</h2><pre><code>SPI.setBitOrder(order)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order</td>
+<td>int</td>
+<td>数据传输顺序选择</td>
+<td>LSBFIRST(0)&#x2F;&#x2F;低位在前<br/>MSBFIRST(1)&#x2F;&#x2F;高位在前</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="设定spi传输时钟"><a href="#设定spi传输时钟" class="headerlink" title="设定spi传输时钟"></a>设定spi传输时钟</h2><pre><code>SPI.setClockDivider（divider）
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>divider</td>
+<td>int</td>
+<td>通信时钟系统时钟分频</td>
+<td>SPI_CLOCK_DIV2(2)&#x2F;&#x2F;2分频<br/>SPI_CLOCK_DIV4(4)&#x2F;&#x2F;4分频<br/>SPI_CLOCK_DIV8(8)&#x2F;&#x2F;8分频<br/>SPI_CLOCK_DIV16(16)&#x2F;&#x2F;16分频<br/>SPI_CLOCK_DIV32(32)&#x2F;&#x2F;32分频<br/>SPI_CLOCK_DIV64(64)&#x2F;&#x2F;64分频<br/>SPI_CLOCK_DIV128(128)&#x2F;&#x2F;128分频</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="设定spi传输模式"><a href="#设定spi传输模式" class="headerlink" title="设定spi传输模式"></a>设定spi传输模式</h2><pre><code>SPI.setDataMode（mode）
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mode</td>
+<td>int</td>
+<td>spi通信模式</td>
+<td>SPI_MODE0 (0x00)<br/>SPI_MODE1 (0x01)<br/>SPI_MODE2 (0x02)<br/>SPI_MODE3 (0x03)</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>SPI_MODE0（上升沿采样，下降沿置位，SCK闲置时为0），<br>SPI_MODE1（上升沿置位，下降沿采样，SCK闲置时为0），<br>SPI_MODE2（下降沿采样，上升沿置位，SCK闲置时为1），<br>SPI_MODE3（下降沿置位，上升沿采样，SCK闲置时为1）。</p>
+<h2 id="设定spi输入还有输出"><a href="#设定spi输入还有输出" class="headerlink" title="设定spi输入还有输出"></a>设定spi输入还有输出</h2><pre><code>SPI.transfer(val)
+SPI.transfer16(val16)
+SPI.transfer(buffer, size)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>val</td>
+<td>uint8_t</td>
+<td>通过总线发送的字节</td>
+<td>无</td>
+</tr>
+<tr>
+<td>val16</td>
+<td>int</td>
+<td>通过总线发送的两个字节变量</td>
+<td>无</td>
+</tr>
+<tr>
+<td>buffer</td>
+<td>int</td>
+<td>要传输的数据数组</td>
+<td>无</td>
+</tr>
+<tr>
+<td>size</td>
+<td>int</td>
+<td>传输数据的字节长度（单位字节）</td>
+<td>无</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>int</td>
+<td>返回读取的数据</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="SPI通讯是在中断"><a href="#SPI通讯是在中断" class="headerlink" title="SPI通讯是在中断"></a>SPI通讯是在中断</h2><pre><code>SPI.usingInterrupt(interruptNumber)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>interruptNumber</td>
+<td>int</td>
+<td>中断编号</td>
+<td>支持中断的io</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>arduino</category>
+      </categories>
+      <tags>
+        <tag>arduino</tag>
+      </tags>
+  </entry>
+</search>

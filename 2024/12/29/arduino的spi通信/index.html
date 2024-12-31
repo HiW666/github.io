@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>arduino的spi通信 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>arduino的spi通信</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/12/29
+        </span>
+        
+        <span class="category">
+            <a href="/categories/arduino/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                arduino
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/arduino/" style="color: #ffa2c4">arduino</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="arduino的spi"><a href="#arduino的spi" class="headerlink" title="arduino的spi"></a>arduino的spi</h1><p>串行外围设备接口（SPI）是微控制器使用的同步串行数据协议，用于在短距离内快速与一个或多个外围设备进行通信。它也可以用于两个开发板之间相互的通信。</p>
+<p>使用SPI连接，总是有一个主设备（通常是微控制器）来控制外围设备。通常，所有设备共用以下三条线：</p>
+<p>MISO（Master In Slave Out）-从机线路，用于向主机发送数据，<br>MOSI（Master Out Slave In）-主机线路，用于向外围设备发送数据，<br>SCK（串行时钟）-同步主机产生的数据传输的时钟脉冲</p>
+<p>每个从设备专用的一条线：</p>
+<p>SS（从设备选择）-主设备可用此引脚来决定启用或禁用指定设备。<br>当从设备的CS引脚为低电平时，它与主机通信。同理CS引脚电平为高时，它将忽略连接到CS引脚的设备, 不与之进行数据交互。<br>文件宏定义：</p>
+<pre><code>//这个为SPI头文件
+#include &lt;SPI.h&gt;
+//
+</code></pre>
+<span id="more"></span>
+
+<h1 id="主机模式"><a href="#主机模式" class="headerlink" title="主机模式"></a>主机模式</h1><h2 id="spi初始化"><a href="#spi初始化" class="headerlink" title="spi初始化"></a>spi初始化</h2><pre><code>SPI.begin()        
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>初始化SPI通信，调用该函数后，SCK&#x2F;MOSI&#x2F;SS引脚将被设置为输出模式<br>且SCK&#x2F;MOSI引脚拉低，SS引脚拉高</p>
+<h2 id="spi模式自定义初始化"><a href="#spi模式自定义初始化" class="headerlink" title="spi模式自定义初始化"></a>spi模式自定义初始化</h2><pre><code>SPI.beginTransaction(SPISettings mySettting(speedMaximum, dataOrder, dataMode));
+SPI.beginTransaction(SPISettings(14000000, MSBFIRST, SPI_MODE0));
+SPISettings mySettting(speedMaximum, dataOrder, dataMode)
+SPI.beginTransaction(SPISettings(14000000, MSBFIRST, SPI_MODE0))//默认设置
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>speedMaximum</td>
+<td>int</td>
+<td>最高的通讯速度</td>
+<td>看自己spi的芯片通信速率</td>
+</tr>
+<tr>
+<td>dataOrder</td>
+<td>int</td>
+<td>数据传输顺序选择</td>
+<td>LSBFIRST(0)&#x2F;&#x2F;低位在前<br/>MSBFIRST(1)&#x2F;&#x2F;高位在前</td>
+</tr>
+<tr>
+<td>dataMode</td>
+<td>int</td>
+<td>spi通信模式</td>
+<td>SPI_MODE0 (0x00)<br/>SPI_MODE1 (0x01)<br/>SPI_MODE2 (0x02)<br/>SPI_MODE3 (0x03)</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<pre><code>模式	时钟极性 （CPOL）	时钟相位 （CPHA）	输出边缘	数据捕获
+SPI_MODE0	0	0	       下降	   上升
+SPI_MODE1	0	1	       上升	   下降
+SPI_MODE2	1	0	       上升	   下降
+SPI_MODE3	1	1	       下降	   上升
+</code></pre>
+<p>使用SPI.beginTransaction()函数初始化spi总线，该函数的参数</p>
+<h2 id="停止全部spi总线"><a href="#停止全部spi总线" class="headerlink" title="停止全部spi总线"></a>停止全部spi总线</h2><pre><code>SPI.end()        
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>（在初始化时设置的各个引脚输出模式将不会改变）。</p>
+<h2 id="停止部分使用SPI总线。"><a href="#停止部分使用SPI总线。" class="headerlink" title="停止部分使用SPI总线。"></a>停止部分使用SPI总线。</h2><pre><code>SPI.endTransaction()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+<tr>
+<td>通常在禁用某引脚上的从设备后调用此函数</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>以允许其他库使用SPI总线。</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="设定spi传输是高位还是低位"><a href="#设定spi传输是高位还是低位" class="headerlink" title="设定spi传输是高位还是低位"></a>设定spi传输是高位还是低位</h2><pre><code>SPI.setBitOrder(order)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>order</td>
+<td>int</td>
+<td>数据传输顺序选择</td>
+<td>LSBFIRST(0)&#x2F;&#x2F;低位在前<br/>MSBFIRST(1)&#x2F;&#x2F;高位在前</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="设定spi传输时钟"><a href="#设定spi传输时钟" class="headerlink" title="设定spi传输时钟"></a>设定spi传输时钟</h2><pre><code>SPI.setClockDivider（divider）
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>divider</td>
+<td>int</td>
+<td>通信时钟系统时钟分频</td>
+<td>SPI_CLOCK_DIV2(2)&#x2F;&#x2F;2分频<br/>SPI_CLOCK_DIV4(4)&#x2F;&#x2F;4分频<br/>SPI_CLOCK_DIV8(8)&#x2F;&#x2F;8分频<br/>SPI_CLOCK_DIV16(16)&#x2F;&#x2F;16分频<br/>SPI_CLOCK_DIV32(32)&#x2F;&#x2F;32分频<br/>SPI_CLOCK_DIV64(64)&#x2F;&#x2F;64分频<br/>SPI_CLOCK_DIV128(128)&#x2F;&#x2F;128分频</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="设定spi传输模式"><a href="#设定spi传输模式" class="headerlink" title="设定spi传输模式"></a>设定spi传输模式</h2><pre><code>SPI.setDataMode（mode）
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mode</td>
+<td>int</td>
+<td>spi通信模式</td>
+<td>SPI_MODE0 (0x00)<br/>SPI_MODE1 (0x01)<br/>SPI_MODE2 (0x02)<br/>SPI_MODE3 (0x03)</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>SPI_MODE0（上升沿采样，下降沿置位，SCK闲置时为0），<br>SPI_MODE1（上升沿置位，下降沿采样，SCK闲置时为0），<br>SPI_MODE2（下降沿采样，上升沿置位，SCK闲置时为1），<br>SPI_MODE3（下降沿置位，上升沿采样，SCK闲置时为1）。</p>
+<h2 id="设定spi输入还有输出"><a href="#设定spi输入还有输出" class="headerlink" title="设定spi输入还有输出"></a>设定spi输入还有输出</h2><pre><code>SPI.transfer(val)
+SPI.transfer16(val16)
+SPI.transfer(buffer, size)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>val</td>
+<td>uint8_t</td>
+<td>通过总线发送的字节</td>
+<td>无</td>
+</tr>
+<tr>
+<td>val16</td>
+<td>int</td>
+<td>通过总线发送的两个字节变量</td>
+<td>无</td>
+</tr>
+<tr>
+<td>buffer</td>
+<td>int</td>
+<td>要传输的数据数组</td>
+<td>无</td>
+</tr>
+<tr>
+<td>size</td>
+<td>int</td>
+<td>传输数据的字节长度（单位字节）</td>
+<td>无</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>int</td>
+<td>返回读取的数据</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="SPI通讯是在中断"><a href="#SPI通讯是在中断" class="headerlink" title="SPI通讯是在中断"></a>SPI通讯是在中断</h2><pre><code>SPI.usingInterrupt(interruptNumber)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>interruptNumber</td>
+<td>int</td>
+<td>中断编号</td>
+<td>支持中断的io</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,898 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+<script src="/js/lib/home.js"></script>
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div id="home-head">
+    <div id="home-background" ref="homeBackground" data-images="/images/background.jpg"></div>
+    <div id="home-info" @click="homeClick">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>Binging</h1>
+                <h3>一个无名的小站</h3>
+                <h5></h5>
+            </div>
+        </span>
+    </div>
+</div>
+<div id="home-posts-wrap" true ref="homePostsWrap">
+    <div id="home-posts">
+        
+
+<div class="post">
+    <a href="/2024/11/26/arduino%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/">
+        <h2 class="post-title">arduino系列教程</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/arduino/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                arduino
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/26
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="arduino系列教程"><a href="#arduino系列教程" class="headerlink" title="arduino系列教程"></a>arduino系列教程</h2><p>arduinoIDE使用教程</p>
+<a href="/2024/11/04/arduinoIDE%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="arduinoIDE使用教程">arduinoIDE使用教程</a>
+
+<p>arduino的GPIO输入输出</p>
+<a href="/2024/11/03/arduino%E7%9A%84GPIO%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/" title="arduino的GPIO输入输出">arduino的GPIO输入输出</a>
+
+<p>arduino的中断</p>
+<a href="/2024/11/05/arduino%E7%9A%84%E4%B8%AD%E6%96%AD/" title="arduino的中断">arduino的中断</a>
+
+<p>arduino的定时</p>
+<a href="/2024/11/06/arduino%E7%9A%84%E5%AE%9A%E6%97%B6/" title="arduino的定时">arduino的定时</a>
+
+<p>arduino的pwm</p>
+<a href="/2024/11/06/arduino%E7%9A%84pwm/" title="arduino的pwm">arduino的pwm</a>
+
+<p>arduino的adc</p>
+<a href="/2024/11/21/arduino%E7%9A%84adc/" title="arduino的adc">arduino的adc</a>
+
+<p>arduino的串口通信</p>
+<a href="/2024/11/07/arduino%E7%9A%84%E4%B8%B2%E5%8F%A3%E9%80%9A%E4%BF%A1/" title="arduino的串口通信">arduino的串口通信</a>
+
+<p>arduino的IIC通信</p>
+<a href="/2024/12/29/arduino%E7%9A%84IIC%E9%80%9A%E4%BF%A1/" title="arduino的IIC通信">arduino的IIC通信</a>
+
+<p>arduino的spi通信</p>
+<a href="/2024/12/29/arduino%E7%9A%84spi%E9%80%9A%E4%BF%A1/" title="arduino的spi通信">arduino的spi通信</a>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/arduino/" style="color: #03a9f4">arduino</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E8%8F%98%E6%9E%9C%E6%B4%BEe1/" style="color: #00a596">菘果派e1</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/py32/" style="color: #ffa2c4">py32</a>
+        </span>
+        
+    </div>
+    <a href="/2024/11/26/arduino%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/11/26/%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%B3%BB%E5%88%97%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99/">
+        <h2 class="post-title">菘果派e1系列基本资料</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E8%8F%98%E6%9E%9C%E6%B4%BEe1/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                菘果派e1
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/26
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h1><p>官方手册下载：<br><a target="_blank" rel="noopener" href="https://wwwe.lanzouq.com/iJN2w2hqzaab">下载</a></p>
+<p>菘果派e1采用PY32F002AF15P6TU作为核心主控<br>芯片采用 32位ARM® Cortex® - M0+核心制作<br>最高24MHz工作频率<br>最大3Kbytes SRAM<br>多达18个I&#x2F;O，均可作为外部中断<br>1 x 12-bit ADC<br>1个16bit高级控制定时器（TIM1）<br>1个基本定时器（TIM16）<br>1个串口<br>1个iic<br>1个spi<br><img src="/img/%E8%8F%98%E6%9E%9C%E6%B4%BE%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99/1.png"></p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/arduino/" style="color: #ff7d73">arduino</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E8%8F%98%E6%9E%9C%E6%B4%BEe1/" style="color: #ffa2c4">菘果派e1</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/py32/" style="color: #00bcd4">py32</a>
+        </span>
+        
+    </div>
+    <a href="/2024/11/26/%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%B3%BB%E5%88%97%E5%9F%BA%E6%9C%AC%E8%B5%84%E6%96%99/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/11/25/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+        <h2 class="post-title">arduino的菘果派e1环境搭建</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/%E8%8F%98%E6%9E%9C%E6%B4%BEe1/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                菘果派e1
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/25
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="arduino的菘果派e1环境搭建"><a href="#arduino的菘果派e1环境搭建" class="headerlink" title="arduino的菘果派e1环境搭建"></a>arduino的菘果派e1环境搭建</h2><p>arduino项目地址：<br><a target="_blank" rel="noopener" href="https://github.com/py32duino/Arduino-PY32">https://github.com/py32duino/Arduino-PY32</a></p>
+<p>在线部署：<br><a target="_blank" rel="noopener" href="https://github.com/py32duino/Arduino-PY32/blob/master/package/package_py32_index.template.json">https://github.com/py32duino/Arduino-PY32/blob/master/package/package_py32_index.template.json</a></p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/arduino/" style="color: #00bcd4">arduino</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/%E8%8F%98%E6%9E%9C%E6%B4%BEe1/" style="color: #00a596">菘果派e1</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/py32/" style="color: #ff7d73">py32</a>
+        </span>
+        
+    </div>
+    <a href="/2024/11/25/arduino%E7%9A%84%E8%8F%98%E6%9E%9C%E6%B4%BEe1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/11/22/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99PWM/">
+        <h2 class="post-title">openharmony用ubuntu编写PWM</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/22
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="openharmony用ubuntu编写PWM"><a href="#openharmony用ubuntu编写PWM" class="headerlink" title="openharmony用ubuntu编写PWM"></a>openharmony用ubuntu编写PWM</h2><p><a target="_blank" rel="noopener" href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/pwm_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>1、我们需要先初始化GPIO为输出<br>2、初始化PWM<br>3、配置PWM</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/openharmony/" style="color: #ffa2c4">openharmony</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/ubuntu/" style="color: #ff7d73">ubuntu</a>
+        </span>
+        
+    </div>
+    <a href="/2024/11/22/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99PWM/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/11/21/arduino%E7%9A%84adc/">
+        <h2 class="post-title">arduino的adc</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/arduino/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                arduino
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/21
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="arduino的adc"><a href="#arduino的adc" class="headerlink" title="arduino的adc"></a>arduino的adc</h2><p>arduino支持adc，但是这个是和硬件绑定的<br>需要芯片支持adc转换芯片，具体要查哪些引脚支持。</p>
+<p>基准电压：<br>基准电压一般就是单片机gpio推挽输出高电平的电压<br>adc分辨率：<br>手册一般会说支持xxxbit的adc，那么分辨率就是2的xxx次方（2^xxx）</p>
+<p>拿esp32举例<br>esp32最高支持12bit的adc<br>那么最高分辨率就是2^12（2的12次方）也就是4096<br>因为esp32输出电压是3.3，所以基准电压是3.3<br>也就是能读取0到3.3之间的电压</p>
+<p>arduino 官方支持10bit adc<br>那么最高分辨率就是2^10（2的10次方）也就是1024<br>因为arduino输出电压是5，所以基准电压是5<br>也就是能读取0到5之间的电压</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/arduino/" style="color: #ffa2c4">arduino</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/ESP32/" style="color: #00bcd4">ESP32</a>
+        </span>
+        
+    </div>
+    <a href="/2024/11/21/arduino%E7%9A%84adc/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/11/21/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/">
+        <h2 class="post-title">arduino基于stm32基本信息</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/arduino/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                arduino
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/21
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="arduino基于stm32基本信息"><a href="#arduino基于stm32基本信息" class="headerlink" title="arduino基于stm32基本信息"></a>arduino基于stm32基本信息</h2><p>关于stm32在arduino io图<br>可以选择PAX，PBX keil引脚方式<br>或者直接使用arduino io：1，2，3，4。。。20，21等<br>stm32f103c8t6<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/1.jpg"></p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/stm32/" style="color: #ff7d73">stm32</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/arduino/" style="color: #03a9f4">arduino</a>
+        </span>
+        
+    </div>
+    <a href="/2024/11/21/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/11/11/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99adc/">
+        <h2 class="post-title">openharmony用ubuntu编写adc</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/11
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="openharmony用ubuntu编写adc"><a href="#openharmony用ubuntu编写adc" class="headerlink" title="openharmony用ubuntu编写adc"></a>openharmony用ubuntu编写adc</h2><p><a target="_blank" rel="noopener" href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/adc_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>adc_demo
+├─ BUILD.gn
+└─voltage_buttons_thread.c
+</code></pre>
+<p>我们打开文件<br>代码打开voltage_buttons_thread.c</p>
+<p>hi3861 ADC 通道有 7 个，其中 GPIO 可复用成 ADC 的通道如下：</p>
+<pre><code>6	    GPIO_04	    ADC1
+17  	    GPIO_05	    ADC2
+19	    GPIO_07	    ADC3
+27	    GPIO_09	    ADC4
+29	    GPIO_11	    ADC5
+30	    GPIO_12 	    ADC0
+31	    GPIO_13 	    ADC6
+</code></pre>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/openharmony/" style="color: #ffa2c4">openharmony</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/ubuntu/" style="color: #00bcd4">ubuntu</a>
+        </span>
+        
+    </div>
+    <a href="/2024/11/11/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99adc/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/11/09/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E4%B8%AD%E6%96%AD/">
+        <h2 class="post-title">openharmony用ubuntu编写中断</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/9
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="openharmony用ubuntu编写中断"><a href="#openharmony用ubuntu编写中断" class="headerlink" title="openharmony用ubuntu编写中断"></a>openharmony用ubuntu编写中断</h2><p><a target="_blank" rel="noopener" href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/gpio_input_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>gpio_input_demo
+├─ BUILD.gn
+└─gpio_input_int.c
+</code></pre>
+<p>我们打开文件<br>代码打开gpio_input_int.c</p>
+<p>不同SOC芯片由于其GPIO控制器型号、参数、以及控制器驱动的不同，GPIO管脚号的换算方式不一样。</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/openharmony/" style="color: #03a9f4">openharmony</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/ubuntu/" style="color: #ffa2c4">ubuntu</a>
+        </span>
+        
+    </div>
+    <a href="/2024/11/09/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E4%B8%AD%E6%96%AD/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/11/09/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AE%9A%E6%97%B6/">
+        <h2 class="post-title">openharmony用ubuntu编写定时</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/9
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="openharmony用ubuntu编写中断"><a href="#openharmony用ubuntu编写中断" class="headerlink" title="openharmony用ubuntu编写中断"></a>openharmony用ubuntu编写中断</h2><p><a target="_blank" rel="noopener" href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/timer_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>timer_demo
+├─ BUILD.gn
+└─timer_once.c
+</code></pre>
+<p>我们打开文件<br>代码打开timer_once.c</p>
+<p>hi3861默认10ms为一个tick</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/openharmony/" style="color: #00a596">openharmony</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/ubuntu/" style="color: #00bcd4">ubuntu</a>
+        </span>
+        
+    </div>
+    <a href="/2024/11/09/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E5%AE%9A%E6%97%B6/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/11/08/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99GPIO/">
+        <h2 class="post-title">openharmony用ubuntu编写GPIO</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/8
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="openharmony用ubuntu编写GPIO"><a href="#openharmony用ubuntu编写GPIO" class="headerlink" title="openharmony用ubuntu编写GPIO"></a>openharmony用ubuntu编写GPIO</h2><p><a target="_blank" rel="noopener" href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/gpio_input_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>gpio_input_demo
+├─ BUILD.gn
+└─ gpio_input_get.c
+</code></pre>
+<p>我们打开文件<br>代码打开gpio_input_get.c</p>
+<p>不同SOC芯片由于其GPIO控制器型号、参数、以及控制器驱动的不同，GPIO管脚号的换算方式不一样。</p>
+<p>工作流程<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99GPIO/1.png"></p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <i class="fa-solid fa-tags fa-fw"></i>
+        </span>
+        
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/openharmony/" style="color: #03a9f4">openharmony</a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/ubuntu/" style="color: #00bcd4">ubuntu</a>
+        </span>
+        
+    </div>
+    <a href="/2024/11/08/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99GPIO/" class="go-post">阅读全文</a>
+</div>
+
+
+        <div class="page-current">
+    
+    <a class="page-num" href="/">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="/">1</a>
+    <span class="page-omit">...</span>
+    
+    <span class="current">2</span>
+    
+    <a class="page-num" href="/page/3">3</a>
+    
+    
+    <a class="page-num" href="/page/4">4</a>
+    
+    
+    <span class="page-omit">...</span>
+    <a class="page-num" href="/page/6">6</a>
+    
+    
+    <a class="page-num" href="/page/3/">
+        <i class="fa-solid fa-caret-right fa-fw"></i>
+    </a>
+    
+</div>
+
+    </div>
+    
+    <div id="home-card">
+        <div id="card-style">
+    <div id="card-div">
+        <div class="avatar">
+            <img src="/images/avatar3.jpg" alt="avatar" />
+        </div>
+        <div class="name">HiW</div>
+        <div class="description">
+            <p>关于<br>我懒就先这样….<br>邮箱: <a href="mailto:&#x48;&#105;&#87;&#x40;&#98;&#105;&#x6e;&#x67;&#105;&#x6e;&#103;&#x2e;&#116;&#x6f;&#112;">&#x48;&#105;&#87;&#x40;&#98;&#105;&#x6e;&#x67;&#105;&#x6e;&#103;&#x2e;&#116;&#x6f;&#112;</a><br>QQ: 1098093635</p>
+
+        </div>
+        
+        
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://gitee.com/KSweb">gitee</a>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>

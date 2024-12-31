@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>arduino的定时 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>arduino的定时</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/6
+        </span>
+        
+        <span class="category">
+            <a href="/categories/arduino/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                arduino
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/arduino/" style="color: #00bcd4">arduino</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ESP32/" style="color: #03a9f4">ESP32</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="arduino的定时"><a href="#arduino的定时" class="headerlink" title="arduino的定时"></a>arduino的定时</h2><p><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1dxKUrDeoobj41xB9lVkXcg?pwd=fdeo">工程下载</a></p>
+<p>关于arduino定时的这里介绍的主要是软件定时的方法<br>和一般单片机的硬件定时不同的是，如果在中断函数里面<br>arduino的定时是无效的</p>
+<span id="more"></span>
+<h2 id="Arduino开机后运行的时间"><a href="#Arduino开机后运行的时间" class="headerlink" title="Arduino开机后运行的时间"></a>Arduino开机后运行的时间</h2><pre><code>millis()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>unsigned long</td>
+<td>读取单片机启动到现在的运行了多少ms</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>该时间长度单位是毫秒,最长可记录接近50天左右的时间。<br>如果超出记录时间上限，记录将从0重新开始。<br>实际读取为unsigned long整数<br>所以最大为4294967295毫秒<br>计算方法：<br>秒&#x3D;millis()&#x2F;1000<br>分钟&#x3D;millis()&#x2F;1000&#x2F;60<br>小时&#x3D;millis()&#x2F;1000&#x2F;60&#x2F;60<br>天&#x3D;millis()&#x2F;1000&#x2F;60&#x2F;60&#x2F;60</p>
+<pre><code>micros()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>unsigned long</td>
+<td>读取单片机启动到现在的运行了多少us</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>和上面函数一样也是unsigned long整数<br>但是这个是微秒<br>所以最大为4294967295毫秒<br>也就是最大记录70分钟左右<br>微秒&#x3D;millis()&#x2F;1000<br>秒&#x3D;millis()&#x2F;1000&#x2F;60<br>分钟&#x3D;millis()&#x2F;1000&#x2F;60&#x2F;60</p>
+<h2 id="函数使用"><a href="#函数使用" class="headerlink" title="函数使用"></a>函数使用</h2><p>1、获取时间</p>
+<pre><code>millis()%时间
+</code></pre>
+<p> 可以获取时，分钟，秒</p>
+<p> 2、可以记录下两次间隔的时间</p>
+<pre><code>unsigned long t1,t2,t3;
+
+void setup() &#123;
+    
+&#125;
+
+void loop()
+&#123;
+t1=millis();//记录第一次时间
+//一段时间后。。。
+t2=millis();//记录第二次
+t3=time(t1,t2);//计算差t3读取差
+&#125;
+
+unsigned long time (unsigned long time1,unsigned long time2)
+&#123;
+unsigned long time3;
+if(time2-time1&gt;=0)
+&#123;
+time3=time2-time1;//两个时间差
+return time3;
+&#125;else if (time2-time1&lt;0)
+&#123;
+time3=4294967295-time1+time2;//防止溢出
+return time3;
+&#125;
+&#125;
+</code></pre>
+<p> 3、定时延迟<br> 可以同时进行其他操作不会影响到其他程序运行</p>
+<pre><code>unsigned long previousBlinkTime;
+int blinkInterval = xxx; //设置延迟xxx执行程序
+
+
+void setup() &#123;
+    
+&#125;
+
+void loop()
+&#123;
+unsigned long currentMillis = millis(); // 获取当前时间
+millisBlink(currentMillis);//调用函数
+&#125;
+
+void millisBlink(unsigned long currentTime) &#123; 
+//检查是否到达时间间隔
+if (currentTime - previousBlinkTime &gt;= blinkInterval) &#123;    //如果时间间隔达到
+//执行代码区
+
+//执行代码区
+    previousBlinkTime = currentTime;  // 将检查时间复位           
+&#125;  else if (currentTime - previousBlinkTime &lt;= 0) &#123;   // 如果millis时间溢出
+    previousBlinkTime = currentTime;
+&#125;
+&#125;
+</code></pre>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

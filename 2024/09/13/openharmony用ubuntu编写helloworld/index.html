@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>openharmony用ubuntu编写helloworld | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>openharmony用ubuntu编写helloworld</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/9/13
+        </span>
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/openharmony/" style="color: #03a9f4">openharmony</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ubuntu/" style="color: #ffa2c4">ubuntu</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="openharmony用ubuntu编写helloworld"><a href="#openharmony用ubuntu编写helloworld" class="headerlink" title="openharmony用ubuntu编写helloworld"></a>openharmony用ubuntu编写helloworld</h2><p>上一期环境安装</p>
+<a href="/2024/09/12/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/" title="openharmony用ubuntu源码下载">openharmony用ubuntu源码下载</a>
+<a href="/2024/09/13/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/" title="openharmony用ubuntu图形化页面快速部署">openharmony用ubuntu图形化页面快速部署</a>
+
+<h1 id="第一部分：介绍目录结构"><a href="#第一部分：介绍目录结构" class="headerlink" title="第一部分：介绍目录结构"></a>第一部分：介绍目录结构</h1><p>（看不懂的请直接拉到下面实践部分跟着复刻，这里是理论讲解）</p>
+<p>软件部分目录结构</p>
+<pre><code>app
+├─ BUILD.gn
+└─ 目标文件夹1
+   ├─ BUILD.gn
+   └─ xxxx.c
+└─ 目标文件夹2
+   ├─ BUILD.gn
+   └─ xxxx.c
+.....
+</code></pre>
+<p>首先打开<br>&#x2F;&#x2F;鸿蒙根目录&#x2F;applications&#x2F;sample&#x2F;wifi-iot&#x2F;app&#x2F;</p>
+<p>找到</p>
+<p>BUILD.gn的文件</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/1.png"><br>(不要问我为什么拿window系统演示实际操作要在ubuntu里面)</p>
+<span id="more"></span>
+
+<p>我们打开文件</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/6.png"><br>只有红框里面是函数，其他的#号开头的都是注释</p>
+<p>文件有两个部分组成<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/7.png"></p>
+<p>其中features 的部分可以用 “:” 来增加要参与编译的文件夹<br>介绍完之后打开目标文件夹介绍目标文件夹下的BUILD.gn文件</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/2.png"><br>只有红框里面是函数，其他的#号开头的都是注释</p>
+<p>该函数文件由三部分内容构成，目标、源文件、头文件路径。</p>
+<p>目标：当前BUILD.gn文件所在的文件夹<br>源文件：写C或者CPP代码文件<br>头文件：C或CPP调用的库文件</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/3.png"></p>
+<h1 id="第二部分：实践"><a href="#第二部分：实践" class="headerlink" title="第二部分：实践"></a>第二部分：实践</h1><p>了解之后</p>
+<p>我们在&#x2F;&#x2F;鸿蒙根目录&#x2F;applications&#x2F;sample&#x2F;wifi-iot&#x2F;app&#x2F;</p>
+<h3 id="目录下面创建-hello的文件夹"><a href="#目录下面创建-hello的文件夹" class="headerlink" title="目录下面创建 hello的文件夹"></a>目录下面创建 hello的文件夹</h3><p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/4.png"></p>
+<h3 id="在hello的文件夹下面创建"><a href="#在hello的文件夹下面创建" class="headerlink" title="在hello的文件夹下面创建"></a>在hello的文件夹下面创建</h3><p>hello.c<br>BUILD.gn<br>这两个文件<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/9.png"><br>然后先打开hello.c文件里面编写</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &quot;ohos_init.h&quot;
+
+void Hello_World(void)
+&#123;
+    printf(&quot;this is a test demo \r\n Hello World!\r\n&quot;);
+&#125;
+
+SYS_RUN(Hello_World);
+</code></pre>
+<p> 也可以使用APP_FEATURE_INIT来实现，<br>  APP_FEATURE_INIT是OpenHarmony启动恢复模块接口，该接口用来启动业务。<br> 效果是一样的。（APP_FEATURE_INIT和SYS_RUN定义都在ohos_init.h）文件中。</p>
+<p> 然后保存文件<br> 再编写BUILD.gn文件</p>
+<pre><code>static_library(&quot;hello&quot;) &#123;
+    sources = [
+              &quot;hello.c&quot;]
+    include_dirs = [ 
+             &quot;//utils/native/lite/include&quot;]
+&#125;
+</code></pre>
+<h3 id="然后回到-鸿蒙根目录-applications-sample-wifi-iot-app"><a href="#然后回到-鸿蒙根目录-applications-sample-wifi-iot-app" class="headerlink" title="然后回到&#x2F;&#x2F;鸿蒙根目录&#x2F;applications&#x2F;sample&#x2F;wifi-iot&#x2F;app&#x2F;"></a>然后回到&#x2F;&#x2F;鸿蒙根目录&#x2F;applications&#x2F;sample&#x2F;wifi-iot&#x2F;app&#x2F;</h3><p>修改app目录下面的BUILD.gn文件<br>在features处把startup改成hello</p>
+<p>然后保存<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/8.png"></p>
+<pre><code>import(&quot;//build/lite/config/component/lite_component.gni&quot;)
+
+lite_component(&quot;app&quot;) &#123;
+    features = [
+        &quot;hello&quot;,
+   ]
+&#125;
+</code></pre>
+<p>备注头文件位置：<br>&#x2F;&#x2F;鸿蒙根目录&#x2F;utils&#x2F;native&#x2F;lite&#x2F;include</p>
+<p>到此编译成功<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99helloworld/5.png"><br>编译输出的文件位置<br>&#x2F;&#x2F;鸿蒙根目录&#x2F;out&#x2F;wifiiot_hispark_pegasus&#x2F;Hi3861_wifiiot_app_allinone.bin<br>(只是拿hi3861芯片举例其他芯片可能不适用)</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

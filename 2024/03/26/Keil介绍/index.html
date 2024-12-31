@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>Keil介绍 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>Keil介绍</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/3/26
+        </span>
+        
+        <span class="category">
+            <a href="/categories/STM32/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                STM32
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/STM32/" style="color: #03a9f4">STM32</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/51/" style="color: #ff7d73">51</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/MDK/" style="color: #03a9f4">MDK</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <p>Keil介绍：<br>keil是一款主流的单片机开发工具，目前已经被arm收购。<br>官网下载:<a target="_blank" rel="noopener" href="http://www2.keil.com/mdk5">http://www2.keil.com/mdk5</a><br>我提供的下载：<a target="_blank" rel="noopener" href="https://www.123pan.com/s/siA6Vv-D59uA.html">https://www.123pan.com/s/siA6Vv-D59uA.html</a><br>51版本：<a target="_blank" rel="noopener" href="https://www.123pan.com/s/siA6Vv-r59uA.html">https://www.123pan.com/s/siA6Vv-r59uA.html</a><br>我提供的版本不是最新版本，但是有较为完整的汉化，虽然不知道是谁汉化的，但是能够汉化的如此完整我觉得也是够牛逼的。<br>同时，说一下keil如果不破解的话，只能编译少量的代码。<br>只有破解了才能完整的编译。</p>
+<span id="more"></span>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>keil分arm版本和c51版本。<br>ARM版本可以向下兼容C51，C51不兼容ARM。所以建议ARM版本。</p>
+<p>首先是正常的安装流程。<br>点击Next&gt;&gt;<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/1.jpg"><br>打勾，然后Next&gt;&gt;<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/2.jpg"><br>选择安装路径，建议默认即可。Next&gt;&gt;<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/3.jpg"><br>随便写点什么。Next&gt;&gt;<br>什么都可以填自己马马也行<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/4.jpg"><br>反正就是安装完成了。<br>要中文版本，就要在你的安装软件目录里面找到Keil_v5\UV4<br>找到uv4.exe直接覆盖就好了</p>
+<p>安装兼容51版本<br>前面的安装流程是一样的<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/10.png"><br>不要修改安装路径<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/11.png"></p>
+<p>直到遇到这个页面，然后一直点skip跳过就可以，要按无数次。<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/12.png"></p>
+<h2 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h2><p>下面是破解教程只是提供学习目的，如果需要支持正版，请到ARM官网购买，或者到ARM注册社区版。<br>如果你真心是要社区版请到下面。</p>
+<p>正常破解流程。安装完毕之后，请右键管理员运行keil软件。</p>
+<h2 id="请右键管理员运行keil软件。"><a href="#请右键管理员运行keil软件。" class="headerlink" title="请右键管理员运行keil软件。"></a>请右键管理员运行keil软件。</h2><h2 id="请右键管理员运行keil软件。-1"><a href="#请右键管理员运行keil软件。-1" class="headerlink" title="请右键管理员运行keil软件。"></a>请右键管理员运行keil软件。</h2><h2 id="请右键管理员运行keil软件。-2"><a href="#请右键管理员运行keil软件。-2" class="headerlink" title="请右键管理员运行keil软件。"></a>请右键管理员运行keil软件。</h2><p>不管理员打开破解不成功别找老子</p>
+<p>打开软件这个页面<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/5.jpg"></p>
+<p>复制好你的Cid<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/6.jpg"><br>然后放入破解软件里面。<br>如果你是ARM版本就选择ARM，是C51就选择C51。我提供的版本是ARM版本，选择ARM。<br>如果你还安装了我的C51兼容keil。那么C51，ARM都要激活要输入两次激活码。</p>
+<p>点击Generate，将生成的代码复制。<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/7.jpg"><br>粘贴到如图所示，点击Add LIC。出现如图所示表示破解完成。到这KEIL5的安装算是完成了。<br>如果破解不成功，就是没管理员打开keil<br>破解到2035年。有人担心过去咋办，其实不用担心，就算到了2035年以后，软件还是能用，只是会提醒你要续费。只是ARM官网目前最长<br>到2035年，2035年以后肯定还有新的破解的。<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/8.jpg"></p>
+<p>如果你的ARM和51版本破解过后应该是这样的<br><img src="/img/Keil%E4%BB%8B%E7%BB%8D/9.png"></p>
+<p>到此软件已经安装完成</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

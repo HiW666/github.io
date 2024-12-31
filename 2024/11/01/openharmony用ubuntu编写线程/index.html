@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>openharmony用ubuntu编写线程 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>openharmony用ubuntu编写线程</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/1
+        </span>
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/openharmony/" style="color: #ff7d73">openharmony</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ubuntu/" style="color: #03a9f4">ubuntu</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="openharmony用ubuntu编写线程"><a href="#openharmony用ubuntu编写线程" class="headerlink" title="openharmony用ubuntu编写线程"></a>openharmony用ubuntu编写线程</h2><p><a target="_blank" rel="noopener" href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/thread_demo">完整代码</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>thread_demo
+├─ BUILD.gn
+├─ thread_basic.c
+└─ thread.c
+</code></pre>
+<p>我们打开文件<br>代码打开thread_basic.c</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E7%BA%BF%E7%A8%8B/1.png"></p>
+<span id="more"></span>
+
+<p>编译后会看到效果<br><img src="/img/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99%E7%BA%BF%E7%A8%8B/2.png"><br>可以看到是一直增加的</p>
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><pre><code>// POSIX标准接口
+#include &lt;unistd.h&gt;
+
+// 用于初始化服务(services)和功能(features)
+#include &quot;ohos_init.h&quot;
+
+// CMSIS-RTOS API V2
+// 是OpenHarmony的LiteOS_m内核与应用程序之间的抽象层。（LiteOS_m内核基于Cortex M系列芯片）
+// 提供标准接口，便于应用程序移植来OpenHarmony，或者移植到其他支持CMSIS-RTOS API V2的系统。
+// 头文件：kernel/liteos_m/kal/cmsis/cmsis_os2.h
+// 源文件：kernel/liteos_m/kal/cmsis/cmsis_liteos2.c
+#include &quot;cmsis_os2.h&quot;
+</code></pre>
+<h2 id="创建一个线程，并将其加入活跃线程组中"><a href="#创建一个线程，并将其加入活跃线程组中" class="headerlink" title="创建一个线程，并将其加入活跃线程组中"></a>创建一个线程，并将其加入活跃线程组中</h2><pre><code>osThreadNew((osThreadFunc_t)threadMain, NULL, &amp;attr) 
+osThreadId_t osThreadNew(osThreadFunc_t func, void *argument, const osThreadAttr_t *attr)
+</code></pre>
+<p>&#x2F;&#x2F; func	线程要运行的函数<br>&#x2F;&#x2F; argument	指针，指向传递给线程函数的参数（可以是”xxxx”的形式）<br>&#x2F;&#x2F; attr	线程属性(使用结构体)<br>&#x2F;&#x2F; 注意：不能在中断服务调用该函数</p>
+<pre><code>//关于attr结构体
+// 定义线程属性
+osThreadAttr_t attr;
+// 线程名
+attr.name = &quot;rtosv2_thread_main&quot;;
+// 线程属性位
+attr.attr_bits = 0U;
+// 线程控制块的内存初始地址，默认为系统自动分配
+attr.cb_mem = NULL;
+// 线程控制块的内存大小
+attr.cb_size = 0U;
+// 线程栈的内存初始地址，默认为系统自动分配
+attr.stack_mem = NULL;
+// 线程栈的内存大小
+attr.stack_size = 1024;
+// 线程优先级，9(highest) - 38(lowest priority)，默认为osPriorityNormal
+// 位置：kernel\liteos_m\kal\cmsis\cmsis_os2.h
+attr.priority = osPriorityNormal;
+</code></pre>
+<p>如果osThreadNew((osThreadFunc_t)threadMain, NULL, &amp;attr)&#x3D;&#x3D;NULL说明函数运行失败</p>
+<h2 id="读取当前线程ID"><a href="#读取当前线程ID" class="headerlink" title="读取当前线程ID"></a>读取当前线程ID</h2><pre><code>osThreadGetId();
+</code></pre>
+<p>参考用法</p>
+<pre><code>osThreadId_t tid = osThreadGetId();
+printf(&quot;thread id: %p\r\n&quot;, tid);
+</code></pre>
+<h2 id="读取当前线程名字"><a href="#读取当前线程名字" class="headerlink" title="读取当前线程名字"></a>读取当前线程名字</h2><pre><code>osThreadGetName(tid)
+</code></pre>
+<p>tid为线程ID<br>可以用上面的方法获取ID</p>
+<h2 id="得到线程的状态"><a href="#得到线程的状态" class="headerlink" title="得到线程的状态"></a>得到线程的状态</h2><pre><code>osThreadGetState(tid)
+</code></pre>
+<p>tid为线程ID<br>可以用上面的方法获取ID</p>
+<h2 id="设置线程的优先级"><a href="#设置线程的优先级" class="headerlink" title="设置线程的优先级"></a>设置线程的优先级</h2><pre><code>osThreadSetPriority(tid, osPriorityNormal4);
+</code></pre>
+<p>tid为线程ID<br>可以用上面的方法获取ID<br>osPriorityNormal4为优先级<br>优先级有</p>
+<pre><code>osPriorityNormal        = 24,
+osPriorityNormal1       = 24+1,
+osPriorityNormal2       = 24+2,
+osPriorityNormal3       = 24+3,
+osPriorityNormal4       = 24+4,
+osPriorityNormal5       = 24+5,
+osPriorityNormal6       = 24+6,
+osPriorityNormal7       = 24+7,
+</code></pre>
+<h2 id="读取线程的优先级"><a href="#读取线程的优先级" class="headerlink" title="读取线程的优先级"></a>读取线程的优先级</h2><pre><code>osThreadGetPriority(tid);
+</code></pre>
+<p>tid为线程ID<br>可以用上面的方法获取ID   </p>
+<h2 id="挂起线程"><a href="#挂起线程" class="headerlink" title="挂起线程"></a>挂起线程</h2><pre><code>osThreadSuspend(tid);
+</code></pre>
+<p>也可以读取挂起情况</p>
+<h2 id="恢复线程"><a href="#恢复线程" class="headerlink" title="恢复线程"></a>恢复线程</h2><pre><code>osThreadResume(tid);
+</code></pre>
+<h2 id="得到线程的栈空间大小"><a href="#得到线程的栈空间大小" class="headerlink" title="得到线程的栈空间大小"></a>得到线程的栈空间大小</h2><pre><code>osThreadGetStackSize(tid);
+</code></pre>
+<h2 id="得到线程的未使用的栈空间大小"><a href="#得到线程的未使用的栈空间大小" class="headerlink" title="得到线程的未使用的栈空间大小"></a>得到线程的未使用的栈空间大小</h2><pre><code>osThreadGetStackSpace(tid);
+</code></pre>
+<h2 id="获取活跃线程数"><a href="#获取活跃线程数" class="headerlink" title="获取活跃线程数"></a>获取活跃线程数</h2><pre><code>osThreadGetCount();
+</code></pre>
+<h2 id="终止线程"><a href="#终止线程" class="headerlink" title="终止线程"></a>终止线程</h2><pre><code>osThreadTerminate(tid);
+</code></pre>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

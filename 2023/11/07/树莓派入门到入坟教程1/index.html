@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>树莓派入门到入坟教程1 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>树莓派入门到入坟教程1</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/7
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E6%A0%91%E8%8E%93%E6%B4%BE/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                树莓派
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" style="color: #00a596">树莓派</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/Linux/" style="color: #00bcd4">Linux</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="树莓派入门到入坟教程1"><a href="#树莓派入门到入坟教程1" class="headerlink" title="树莓派入门到入坟教程1"></a>树莓派入门到入坟教程1</h2><p>写这玩意，绝对不是因为树莓派是理财产品<br>也不是为了让他死灰复燃，让他发挥出更大的意义。<br>问我他有什么用，我也不知道，反正是花了好大功夫，<br>才勉强从老师的手里里面借出来的。<br>（www，真没钱买这东西）</p>
+<span id="more"></span>
+<p>关于树莓派这东西，可以说是一个小主机吧，比起单片机来说<br>更多是要一个操作系统来控制他。<br>首先，我们需要一张tf卡来安装系统。<br>我们在安装操作系统之前先要把tf来进行格式化<br><a target="_blank" rel="noopener" href="https://wwwe.lanzouq.com/ia7DR1e43rfa/">sd卡格式化工具</a></p>
+<p>然后有两种安装方法</p>
+<h1 id="树莓派官方安装工具"><a href="#树莓派官方安装工具" class="headerlink" title="树莓派官方安装工具"></a>树莓派官方安装工具</h1><p><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/software/">官方工具</a><br><a target="_blank" rel="noopener" href="https://wwwe.lanzouq.com/i2lV91e44n0h">蓝奏云</a><br>密码:6btj<br><code>Raspberry Pi OS with desktop版本的特点是有电脑桌面，对于普通用户来说，这个就够用了。</code><br><code>Raspberry Pi OS Lite版本特点是没有电脑桌面，进入系统所有操作都要用命令行，</code><br><code>由于没有UI界面，适合TF卡容量小和熟练掌握Linux操作使用，如果您没有</code><br><code>linux基础，使用起来会非常艰难，入门还是建议选择带桌面的镜像。</code></p>
+<p>将TF卡连接电脑。<br>打开 Raspberry Pi Imager选择所需的操作系统。<br>选择要写入图像的 TF 卡(注意：最好移除其它U盘设备，以防将U盘文件擦除)。<br>预先配置系统，按住 CTRL+SHIFT+X(或点击右下角小齿轮)，设置完成点击保存即可。<br>单击烧录按钮，将数据写入TF卡。<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B1/%E5%9B%BE%E7%89%871.gif"></p>
+<h1 id="其他系统"><a href="#其他系统" class="headerlink" title="其他系统"></a>其他系统</h1><p>烧录镜像可以使用其它方法，使用镜像写入工具将下载好镜像写入树莓派，例如：balenaEtcher或Win32DiskImager 。<br>首先去树莓派官网下载镜像，推荐使用Raspberry Pi OS with desktop。<br><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/software/operating-systems/">树莓派官方系统下载</a></p>
+<p>打开对应的烧录工具<a target="_blank" rel="noopener" href="https://wwwe.lanzouq.com/iQ10X1e43sgh">Win32DiskImager</a><br>将TF卡插入读卡器，将读卡器插入电脑。<br>选择下载好的树莓派镜像文件。<br>单击“写入”并等待写入完成。<br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B1/%E5%9B%BE%E7%89%872.gif"></p>
+<h1 id="树莓派开机"><a href="#树莓派开机" class="headerlink" title="树莓派开机"></a>树莓派开机</h1><p>然后完成上面的步骤树莓派就可以开机了<br>但是要注意，树莓派要先连接好外设之后再启动主机，而且强调供电要5v3a的电源</p>
+<p><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B1/%E5%9B%BE%E7%89%873.gif"></p>
+<p>下面的教程适用于没有hdmi或者键盘，鼠标外设的人使用的</p>
+<h1 id="树莓派ssh配置"><a href="#树莓派ssh配置" class="headerlink" title="树莓派ssh配置"></a>树莓派ssh配置</h1><p>开启ssh<br>boot盘符下新建一个名为ssh的文件，不要任何扩展名<br><code>不要任何扩展名，不要任何扩展名，不要任何扩展名</code><br>你可以新建一个ssh.txt,确保文件夹选项中的设置是显示扩展名的，<br>然后将.txt删除，这样你就获得了一个没有任何扩展名的名为ssh的文件。</p>
+<p>然后我们要给树莓派连接wifi<br>我们继续在boot新建一个记事本重命名为<br><code>wpa_supplicant.conf</code><br><img src="/img/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9D%9F%E6%95%99%E7%A8%8B1/%E5%9B%BE%E7%89%874.png"></p>
+<p>记事本里面内容<br>打开并输入对应内容（’假设我在中国，无线名称test，无线密码密码为12345678）</p>
+<p>&#96;<br>country&#x3D;CN<br>update_config&#x3D;1<br>ctrl_interface&#x3D;&#x2F;var&#x2F;run&#x2F;wpa_supplicant</p>
+<p>network&#x3D;{<br>ssid&#x3D;”test”<br>psk&#x3D;”12345678”<br>key_mgmt&#x3D;WPA-PSK<br>}<br>&#96;</p>
+<p>然后我们要获取树莓派的ip<br>我们可以登录路由器的后台查看<br>或者自己百度如何获取局域网设备的ip这里不细说</p>
+<h1 id="树莓派ssh配置-1"><a href="#树莓派ssh配置-1" class="headerlink" title="树莓派ssh配置"></a>树莓派ssh配置</h1><p>去看树莓派ssh连接教程<br>本人就先不放在本篇里面了</p>
+<a href="/2023/11/08/%E6%A0%91%E8%8E%93%E6%B4%BE%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Cssh%E8%BF%9E%E6%8E%A5/" title="树莓派如何进行ssh连接">树莓派如何进行ssh连接</a>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

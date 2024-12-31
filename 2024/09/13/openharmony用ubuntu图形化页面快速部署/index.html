@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>openharmony用ubuntu图形化页面快速部署 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>openharmony用ubuntu图形化页面快速部署</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/9/13
+        </span>
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/openharmony/" style="color: #00a596">openharmony</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ubuntu/" style="color: #ffa2c4">ubuntu</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="openharmony用ubuntu图形化页面快速部署"><a href="#openharmony用ubuntu图形化页面快速部署" class="headerlink" title="openharmony用ubuntu图形化页面快速部署"></a>openharmony用ubuntu图形化页面快速部署</h2><p>上一期</p>
+<a href="/2024/09/12/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/" title="openharmony用ubuntu源码下载">openharmony用ubuntu源码下载</a>
+
+<p><a target="_blank" rel="noopener" href="https://www.123pan.com/s/E3OdTd-g7Nod">镜像下载</a><br><a target="_blank" rel="noopener" href="https://www.123pan.com/s/siA6Vv-kcEuA">文章内文件</a></p>
+<p>我们打开Ubuntu</p>
+<p>用火狐打开<br><a target="_blank" rel="noopener" href="https://device.harmonyos.com/cn/develop/ide">https://device.harmonyos.com/cn/develop/ide</a></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/1.png"></p>
+<span id="more"></span>
+<p>将下载的文件解压出来</p>
+<p>在解压出来的路径下右键终端打开</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/2.png"></p>
+<p><code>ls -l /bin/sh</code><br>执行如下命令，确认输出结果为bash。如果输出结果不是bash<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/3.png"><br>输入<br><code>sudo dpkg-reconfigure dash</code><br>打开终端工具，执行如下命令，输入密码，然后选择No，将Ubuntu shell由dash修改为bash。</p>
+<p>然后开始安装HUAWEI DevEco Device Tool<br>右键解压出来的文件 点属性 权限 勾选上允许执行文件<br>再右键在终端打开（一定要在安装文件路径下打开）<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/4.png"><br><code>sudo ./devicetool-linux-tool-&#123;这里改为你下载的版本号&#125;.sh -- --install-plugins</code></p>
+<p>比如<br><code>sudo ./devicetool-linux-tool-3.0.0.400.sh -- --install-plugins</code></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/5.png"><br>在用户协议和隐私声明签署界面，请详细阅读用户协议和隐私声明，需签署同意用户协议和隐私声明才能进行下一步的安装.<br>上下键选择<br>左右键是确定和取消<br>按 回车键确定</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/13.png"><br>如果报错有几个包无法下载输入</p>
+<p><code>sudo apt-get update</code><br>然后会安装好带vscode的版本</p>
+<p>打开vscode<br>点击工程<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/6.png"><br>导入工程</p>
+<p>然后点击打开工程<br>我们选择好工具链的位置<br>&#x2F;鸿蒙根目录&#x2F;prebuilts<br>然后选择好版本</p>
+<p>点击安装他会自动补全工具链<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/7.png"></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/14.png"><br>如果出现权限不够终端输入，然后重启vscode<br><code>sudo code --user-data-dir=&quot;~/.vscode-root&quot;</code></p>
+<p>这里选择好芯片<br>以下拿HI3861举例<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/8.png"><br>记下自己的编译芯片名称<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/9.png"></p>
+<p>打开这个和刚刚的编译名称一样<br>点击build就可以编译了<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/10.png"></p>
+<p>已经完成编译，<br><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/11.png"></p>
+<p>生产的文件在<br>&#x2F;鸿蒙根目录&#x2F;out&#x2F;hispark_pegasus&#x2F;wifiiot_hispark_pegasus&#x2F;Hi3861_wifiiot_app_allinone.bin</p>
+<p>（不同芯片可能不一样）</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E5%9B%BE%E5%BD%A2%E5%8C%96%E9%A1%B5%E9%9D%A2%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2/12.png"></p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

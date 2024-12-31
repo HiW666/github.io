@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>arduino基于stm32基本信息 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>arduino基于stm32基本信息</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/21
+        </span>
+        
+        <span class="category">
+            <a href="/categories/arduino/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                arduino
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/stm32/" style="color: #00bcd4">stm32</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/arduino/" style="color: #03a9f4">arduino</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="arduino基于stm32基本信息"><a href="#arduino基于stm32基本信息" class="headerlink" title="arduino基于stm32基本信息"></a>arduino基于stm32基本信息</h2><p>关于stm32在arduino io图<br>可以选择PAX，PBX keil引脚方式<br>或者直接使用arduino io：1，2，3，4。。。20，21等<br>stm32f103c8t6<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/1.jpg"></p>
+<span id="more"></span>
+
+
+
+<p>arduino工具烧录方式<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/1.png"><br>我们主要使用的工具<br>1，选择芯片型号<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/2.png"><br>2，选择烧录工具<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/3.png"></p>
+<h1 id="stlink烧录"><a href="#stlink烧录" class="headerlink" title="stlink烧录"></a>stlink烧录</h1><p>主要是就是用上面那三种<br>要用stlink需要下载<br>STM32CubeProgrammer<br>注：只有官方正版stlink才行，非st芯片的stlink不行</p>
+<p><a target="_blank" rel="noopener" href="https://www.st.com/en/development-tools/stm32cubeprog.html">官网</a><br><a target="_blank" rel="noopener" href="https://wwwe.lanzouq.com/iNRiH2fpwwhe">其他网盘</a></p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/4.png"></p>
+<h1 id="串口烧录"><a href="#串口烧录" class="headerlink" title="串口烧录"></a>串口烧录</h1><p>根据上面stm32引脚图<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/5.png"></p>
+<pre><code>PA9  接  RX
+PA10 接  TX
+</code></pre>
+<p>把芯片调整<br>boot0 为1<br>boot1 为0<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/6.jpg"><br>然后按复位resrt按键<br>就可以烧录</p>
+<p>烧录完成后<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/7.png"><br>把芯片调整<br>boot0 为0<br>boot1 为0<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/8.jpg"><br>再按复位程序就能运行了</p>
+<h1 id="usb烧录"><a href="#usb烧录" class="headerlink" title="usb烧录"></a>usb烧录</h1><p>首先我们要给stm32刷入特定固件<br>固件下载：<a target="_blank" rel="noopener" href="https://wwwe.lanzouq.com/iHCgi2fq13ad">https://wwwe.lanzouq.com/iHCgi2fq13ad</a><br>支持的芯片<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/9.png"><br>选择led电平具体看自己的开发板<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/10.png"><br>点进去选择io<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/12.png"><br>led所在引脚我手上这个板子是在pc13低电平<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/11.jpg"></p>
+<p>我们打开STM32CubeProgrammer烧录固件<br>我们还是先<br>把芯片调整<br>boot0 为1<br>boot1 为0<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/6.jpg"><br>然后按复位resrt按键</p>
+<p>打开STM32CubeProgrammer烧录固件<br>先读取设备<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/13.png"></p>
+<p><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/14.png"></p>
+<p>选择打开固件<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/15.png"><br>修改地址<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/16.png"><br>烧录<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/17.png"></p>
+<p>烧录完成后<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/7.png"><br>把芯片调整<br>boot0 为0<br>boot1 为0<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/8.jpg"></p>
+<p>然后usb直接连接电脑<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/18.png"><br>led亮说明烧录完成<br>选择usb烧录<br><img src="/img/arduino%E5%9F%BA%E4%BA%8Estm32%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF/19.png"></p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

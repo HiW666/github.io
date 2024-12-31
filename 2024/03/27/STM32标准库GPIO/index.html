@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>STM32标准库GPIO | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>STM32标准库GPIO</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/3/27
+        </span>
+        
+        <span class="category">
+            <a href="/categories/STM32/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                STM32
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/STM32/" style="color: #ff7d73">STM32</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="STM32标准库GPIO"><a href="#STM32标准库GPIO" class="headerlink" title="STM32标准库GPIO"></a>STM32标准库GPIO</h2><p>作为STM32最基本的外设，GPIO最基本的输出功能是由STM32控制 引脚输出高低电平，比如可以把GPIO接LED灯来控制其亮灭，<br>也可以接继电器或者三极管，通过继电器或三极管来控制外部大功率电路的通断。</p>
+<p>这是大概到结构图，看的懂就看，看不懂就算了。<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/1.png"></p>
+<p>STM32一共是有8种模式<br>输入模式：<br>（1）GPIO_Mode_IN_FLOATING 浮空输入<br>（2）GPIO_Mode_IPU 上拉输入<br>（3）GPIO_Mode_IPD 下拉输入<br>（4）GPIO_Mode_AIN 模拟输入<br>输出模式：<br>（5）GPIO_Mode_Out_OD 开漏输出（带上拉或者下拉）<br>（6）GPIO_Mode_AF_OD 复用开漏输出（带上拉或者下拉）<br>（7）GPIO_Mode_Out_PP 推挽输出（带上拉或者下拉）<br>（8）GPIO_Mode_AF_PP 复用推挽输出（带上拉或者下拉）</p>
+<span id="more"></span>
+<p>先来介绍输出模式</p>
+<p>在开漏输出模式时，只有N-MOS管工作，如果我们控制输出为0，低电平，则P-MOS管关闭，N-MOS管导通，使输出低电平，<br>I&#x2F;O端口的电平就是低电平，若控制输出为1时，高电平，则P-MOS管和N-MOS管都关闭，输出指令就不会起到作用，<br>此时I&#x2F;O端口的电平就不会由输出的高电平决定，而是由I&#x2F;O端口外部的上拉或者下拉决定   如果没有上拉或者下拉 IO口就处于悬空状态<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/2.png"><br>（省流，能输出大电流，但是可能会短路）</p>
+<p>在推挽输出模式时，N-MOS管和P-MOS管都工作，如果我们控制输出为0，低电平，则P-MOS管关闭，N-MOS管导通，使输出低电平，<br>I&#x2F;O端口的电平就是低电平，若控制输出为1 高电平，则P-MOS管导通N-MOS管关闭，使输出高电平，I&#x2F;O端口的电平就是高电平，<br>外部上拉和下拉的作用是控制在没有输出时IO口电平<br>（省流，只能输入弱电流，需要上拉可以保护避免短路）<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/3.png"></p>
+<p>输入模式<br>上拉就是悬空就是高电平<br>下拉就是悬空就是低电平<br>浮空输入就是不上拉不下拉，容易干扰</p>
+<p>下面内容建议配合代码查看（stm32f103c8t6）<br>配置GPIO步骤</p>
+<p>1 开启gpio时钟<br>2 配置GPIO初始化<br>3 调用</p>
+<h1 id="开启gpio时钟"><a href="#开启gpio时钟" class="headerlink" title="开启gpio时钟"></a>开启gpio时钟</h1><p>而相对应的外设功能所使用的时钟 在stm32f4xx.h 中即可查看到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RCC_AHB1PeriphClockCmd ( RCC_AHB1Periph_GPIOX, ENABLE);     /*开启 AHB1时钟*/</span><br></pre></td></tr></table></figure>
+<p>X是选择引脚组<br>ENABLE开<br>DISABLE 关</p>
+<p>RCC_AHB1<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/4.png"></p>
+<p>RCC_APB1<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/5.png"></p>
+<h1 id="配置GPIO初始化"><a href="#配置GPIO初始化" class="headerlink" title="配置GPIO初始化"></a>配置GPIO初始化</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPIO_Init(GPIOX, &amp;GPIO_InitStructure);    //初始化所设置的引脚</span><br></pre></td></tr></table></figure>
+<p>X是初始化引脚组为ABCD等组<br>GPIO_InitStructure 是结构体<br>用于初始化</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPIO_InitTypeDef GPIO_InitStruct;                    //定义初始化结构体</span><br></pre></td></tr></table></figure>
+<p>定义完结构体后就可以对结构体进行配置</p>
+<p>GPIO_InitStruct.GPIO_Mode    &#x3D; x;     &#x2F;&#x2F;配置模式模式上面有<br>GPIO_InitStruct.GPIO_Pin     &#x3D; GPIO_Pin_X;           &#x2F;&#x2F;配置哪个IO口一共有1到16个引脚<br>GPIO_InitStruct.GPIO_Speed   &#x3D; GPIO_Speed_xMHz;     &#x2F;&#x2F;配置IO口速度,仅输出有效</p>
+<p>gpio的速度<br><img src="/img/STM32%E6%A0%87%E5%87%86%E5%BA%93GPIO/6.png"></p>
+<h1 id="调用"><a href="#调用" class="headerlink" title="调用"></a>调用</h1><p>输出</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPIO_ResetBits(GPIOX, GPIO_Pin_X);  //X组，x引脚  gpio引脚低电平</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPIO_SetBits(GPIOX, GPIO_Pin_X);  //X组，x引脚  gpio引脚高电平</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPIO_SetBits(GPIOX, GPIO_Pin_X);  //X组，x引脚  gpio引脚高电平</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPIO_WriteBit(GPIOX, GPIO_Pin_X, Bit_RESET);//X组，x引脚  gpio引脚低电平</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPIO_WriteBit(GPIOX, GPIO_Pin_X,  Bit_SET);//X组，x引脚  gpio引脚高电平</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPIO_WriteBit(GPIOX, GPIO_Pin_X, X);//X组，x引脚 X可以为高低电平</span><br></pre></td></tr></table></figure>
+
+<p>输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPIO_ReadInputDataBit(GPIOX, GPIO_Pin_X) //X为组 X为引脚</span><br></pre></td></tr></table></figure>
+<p>这个就可以检测高低电平用if判断上面的函数为1或者0就是高或者低</p>
+<p>参考工程：<br><a target="_blank" rel="noopener" href="https://wwm.lanzouq.com/b03lno3za">https://wwm.lanzouq.com/b03lno3za</a><br>密码:6jed</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

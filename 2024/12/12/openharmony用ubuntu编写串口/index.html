@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>openharmony用ubuntu编写串口 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>openharmony用ubuntu编写串口</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/12/12
+        </span>
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/openharmony/" style="color: #03a9f4">openharmony</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ubuntu/" style="color: #00a596">ubuntu</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="openharmony用ubuntu编写串口"><a href="#openharmony用ubuntu编写串口" class="headerlink" title="openharmony用ubuntu编写串口"></a>openharmony用ubuntu编写串口</h2><p><a target="_blank" rel="noopener" href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/UART">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>UART
+├─ BUILD.gn
+└─UART.c
+</code></pre>
+<p>我们打开文件<br>代码打开voltage_buttons_thread.c</p>
+<p>hi3861 其中 UART 端口有 3 个，其中 UART0 用于调试，每个 GPIO 可复用成 UART 的端口如下：</p>
+<pre><code>   Pin	管脚名称	    复用信号
+    2	GPIO_00	    UART1_TXD
+    3	GPIO_01	    UART1_RXD
+    4	GPIO_02	    UART1_RTS， UART1 的流控管脚，发送请求信号，输出
+    5	GPIO_03     复用信号 0：UART0_LOG_TXD，数据发送， Debug 和下载串口接口
+                    复用信号 1：UART1_CTS， UART1 的流控管脚，清除发送信号，输入
+
+    6	GPIO_04	    UART0_LOG_RXD 数据接收， Debug 和下载串口接口
+    17	GPIO_05	    UART1_RXD，数据接收口
+    18	GPIO_06	    UART1_TXD，数据发送口
+    19	GPIO_07     UART1_CTS，清除发送信号，通信串口
+    20	GPIO_08     UART1_RTS，发送请求信号，通信串口
+    27	GPIO_09	    UART2_RTS，发送请求信号，通信串口，输出信号
+    28	GPIO_10	    UART2_CTS，发送清除信号，通信串口，输入信号
+    29	GPIO_11	    UART2_TXD
+    30	GPIO_12	    UART2_RXD
+    31	GPIO_13	    复用信号 1：UART2_RTS
+                    复用信号 2：UART0_LOG_TXD
+    32	GPIO_14	    复用信号 1：UART2_CTS
+                    复用信号 2：UART0_LOG_RXD
+</code></pre>
+<span id="more"></span>
+
+
+
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><pre><code>#include &lt;stdio.h&gt;      // 标准输入输出
+#include &lt;unistd.h&gt;     // POSIX标准接口
+
+#include &quot;ohos_init.h&quot;  // 用于初始化服务(services)和功能(features)
+#include &quot;cmsis_os2.h&quot;  // CMSIS-RTOS API V2
+
+#include &quot;iot_gpio.h&quot;   // OpenHarmony API：IoT硬件设备操作接口-GPIO
+#include &quot;hi_io.h&quot;      // 海思 Pegasus SDK：IoT硬件设备操作接口-IO
+#include &quot;hi_adc.h&quot;     // 海思 Pegasus SDK：IoT硬件设备操作接口-ADC
+</code></pre>
+<h1 id="函数1-串口初始化"><a href="#函数1-串口初始化" class="headerlink" title="函数1 串口初始化"></a>函数1 串口初始化</h1><pre><code>hi_u32 hi_uart_init(hi_uart_idx id, const hi_uart_attribute *param, const hi_uart_extra_attr *extra_attr);
+备注：还需要初始化串口tx为输出模式加串口模式，rx为输入模式加串口模式          
+</code></pre>
+<p>不清楚看<a href="/2024/11/08/openharmony%E7%94%A8ubuntu%E7%BC%96%E5%86%99GPIO/" title="openharmony用ubuntu编写GPIO">openharmony用ubuntu编写GPIO</a></p>
+<h2 id="id：表示串口号"><a href="#id：表示串口号" class="headerlink" title="id：表示串口号"></a>id：表示串口号</h2><pre><code>HI_UART_IDX_0,    /**&lt; Physical port number 0.CNcomment:物理端口号0 CNend */
+HI_UART_IDX_1,    /**&lt; Physical port number 1.CNcomment:物理端口号1 CNend */
+HI_UART_IDX_2,    /**&lt; Physical port number 2.CNcomment:物理端口号2 CNend */
+HI_UART_IDX_MAX   /**&lt; Maximum physical port number, which cannot be used. CNcomment:物理端口号最大值，
+</code></pre>
+<h2 id="param：指定串口属性"><a href="#param：指定串口属性" class="headerlink" title="*param：指定串口属性"></a>*param：指定串口属性</h2><p>这个为结构体</p>
+<pre><code>        .baud_rate =填波特率比如115200
+        .data_bits = 数据位  HI_UART_DATA_BIT_5，HI_UART_DATA_BIT_6,HI_UART_DATA_BIT_7,HI_UART_DATA_BIT_8,
+       .stop_bits = 停止位  HI_UART_STOP_BIT_1，HI_UART_STOP_BIT_2 
+       .parity = 奇偶校验位   HI_UART_PARITY_NONE = 0, /**无校验CNend */ HI_UART_PARITY_ODD = 1,  /**校验位，奇校验CNend */ HI_UART_PARITY_EVEN = 2, /**偶校验CNend */
+</code></pre>
+<h2 id="extra-attr：表示高级功能配置"><a href="#extra-attr：表示高级功能配置" class="headerlink" title="*extra_attr：表示高级功能配置"></a>*extra_attr：表示高级功能配置</h2><p>不常用一般直接填null，具体看文章末尾</p>
+<h2 id="返回值-成功0失败1"><a href="#返回值-成功0失败1" class="headerlink" title="返回值 成功0失败1"></a>返回值 成功0失败1</h2><h1 id="函数2-串口读取"><a href="#函数2-串口读取" class="headerlink" title="函数2 串口读取"></a>函数2 串口读取</h1><pre><code>hi_s32 hi_uart_read(hi_uart_idx id, hi_u8 *data, hi_u32 data_len);
+</code></pre>
+<h2 id="id：表示串口号-1"><a href="#id：表示串口号-1" class="headerlink" title="id：表示串口号"></a>id：表示串口号</h2><pre><code>HI_UART_IDX_0,    /**&lt; Physical port number 0.CNcomment:物理端口号0 CNend */
+HI_UART_IDX_1,    /**&lt; Physical port number 1.CNcomment:物理端口号1 CNend */
+HI_UART_IDX_2,    /**&lt; Physical port number 2.CNcomment:物理端口号2 CNend */
+HI_UART_IDX_MAX   /**&lt; Maximum physical port number, which cannot be used. CNcomment:物理端口号最大值，
+</code></pre>
+<h2 id="data：读取的数据保存数据的指针"><a href="#data：读取的数据保存数据的指针" class="headerlink" title="*data：读取的数据保存数据的指针"></a>*data：读取的数据保存数据的指针</h2><h2 id="data-len：读取字节数的长度"><a href="#data-len：读取字节数的长度" class="headerlink" title="data_len：读取字节数的长度"></a>data_len：读取字节数的长度</h2><h2 id="返回值-成功大于0-失败-1"><a href="#返回值-成功大于0-失败-1" class="headerlink" title="返回值 成功大于0   失败-1"></a>返回值 成功大于0   失败-1</h2><h1 id="函数3-串口写"><a href="#函数3-串口写" class="headerlink" title="函数3 串口写"></a>函数3 串口写</h1><pre><code>hi_s32 hi_uart_write(hi_uart_idx id, const hi_u8 *data, hi_u32 data_len);
+</code></pre>
+<h2 id="id：表示串口号-2"><a href="#id：表示串口号-2" class="headerlink" title="id：表示串口号"></a>id：表示串口号</h2><p>看上方</p>
+<h2 id="data：写入的数据保存数据的指针"><a href="#data：写入的数据保存数据的指针" class="headerlink" title="*data：写入的数据保存数据的指针"></a>*data：写入的数据保存数据的指针</h2><h2 id="data-len：写入字节数的长度"><a href="#data-len：写入字节数的长度" class="headerlink" title="data_len：写入字节数的长度"></a>data_len：写入字节数的长度</h2><h2 id="返回值-成功大于0-失败-1-1"><a href="#返回值-成功大于0-失败-1-1" class="headerlink" title="返回值 成功大于0   失败-1"></a>返回值 成功大于0   失败-1</h2><h1 id="函数4-关闭串口"><a href="#函数4-关闭串口" class="headerlink" title="函数4 关闭串口"></a>函数4 关闭串口</h1><pre><code>hi_u32 hi_uart_deinit(hi_uart_idx id);
+</code></pre>
+<h2 id="id：表示串口号-3"><a href="#id：表示串口号-3" class="headerlink" title="id：表示串口号"></a>id：表示串口号</h2><p>看上方</p>
+<p>补充：<br>关于串口初始化高级功能</p>
+<pre><code>typedef struct &#123;
+    hi_uart_fifo_line tx_fifo_line;
+    hi_uart_fifo_line rx_fifo_line;
+    hi_uart_fifo_line flow_fifo_line;
+    hi_uart_block_state tx_block;
+    hi_uart_block_state rx_block;
+    hi_u16 tx_buf_size;
+    hi_u16 rx_buf_size;
+    hi_uart_dma_state tx_use_dma;
+    hi_uart_dma_state rx_use_dma;
+&#125; hi_uart_extra_attr;
+</code></pre>
+<p>1、tx_fifo_line、rx_fifo_line、flow_fifo_line</p>
+<pre><code>    HI_FIFO_LINE_ONE_EIGHT = 1,  /**&lt; FIFO interruption limitation, FIFO LINE = 1/8full.
+                                    CNcomment:FIFO中断门限，FIFO LINE = 1/8full CNend */
+    HI_FIFO_LINE_ONE_QUARTER,    /**&lt; FIFO interruption limitation, FIFO LINE = 1/4full.
+                                    CNcomment:FIFO中断门限，FIFO LINE = 1/4full CNend */
+    HI_FIFO_LINE_HALF,           /**&lt; FIFO interruption limitation, FIFO LINE = 1/2full.
+                                    CNcomment:FIFO中断门限，FIFO LINE = 1/2full CNend */
+    HI_FIFO_LINE_THREE_QUARTERS, /**&lt; FIFO interruption limitation, FIFO LINE = 3/4full.
+                                    CNcomment:FIFO中断门限，FIFO LINE = 3/4full CNend */
+    HI_FIFO_LINE_SEVEN_EIGHTS,   /**&lt; FIFO interruption limitation, FIFO LINE = 7/8full.
+                                    CNcomment:FIFO中断门限，FIFO LINE = 7/8full CNend */
+</code></pre>
+<p>2、tx_block和rx_block</p>
+<pre><code>HI_UART_BLOCK_STATE_NONE_BLOCK = 1, /**&lt; block mode, none-block. CNcomment:UART阻塞模式，非阻塞传输 CNend */
+HI_UART_BLOCK_STATE_BLOCK,          /**&lt; block mode, block. CNcomment:UART阻塞模式，阻塞传输 CNend */
+</code></pre>
+<p>3、hi_u16 tx_buf_size;hi_u16 rx_buf_size;</p>
+<pre><code>设置缓冲区大小
+</code></pre>
+<p>4、tx_use_dma、rx_use_dma</p>
+<pre><code>HI_UART_NONE_DMA = 1, /**&lt; None-DMA mode. CNcomment:DMA传输，不使用DMA CNend */
+    HI_UART_USE_DMA,      /**&lt; DMA mode. CNcomment:DMA传输，使用DMA CNend */
+</code></pre>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>openharmony用ubuntu编写adc | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>openharmony用ubuntu编写adc</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/11/11
+        </span>
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/openharmony/" style="color: #00a596">openharmony</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ubuntu/" style="color: #00bcd4">ubuntu</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="openharmony用ubuntu编写adc"><a href="#openharmony用ubuntu编写adc" class="headerlink" title="openharmony用ubuntu编写adc"></a>openharmony用ubuntu编写adc</h2><p><a target="_blank" rel="noopener" href="https://github.com/HiW666/openharmony-code/tree/main/applications/sample/wifi-iot/app/adc_demo">代码下载</a></p>
+<h1 id="第一部分：代码结构"><a href="#第一部分：代码结构" class="headerlink" title="第一部分：代码结构"></a>第一部分：代码结构</h1><p>软件部分目录结构</p>
+<pre><code>adc_demo
+├─ BUILD.gn
+└─voltage_buttons_thread.c
+</code></pre>
+<p>我们打开文件<br>代码打开voltage_buttons_thread.c</p>
+<p>hi3861 ADC 通道有 7 个，其中 GPIO 可复用成 ADC 的通道如下：</p>
+<pre><code>6	    GPIO_04	    ADC1
+17  	    GPIO_05	    ADC2
+19	    GPIO_07	    ADC3
+27	    GPIO_09	    ADC4
+29	    GPIO_11	    ADC5
+30	    GPIO_12 	    ADC0
+31	    GPIO_13 	    ADC6
+</code></pre>
+<span id="more"></span>
+
+
+
+<h1 id="主要函数"><a href="#主要函数" class="headerlink" title="主要函数"></a>主要函数</h1><h2 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h2><pre><code>#include &lt;stdio.h&gt;      // 标准输入输出
+#include &lt;unistd.h&gt;     // POSIX标准接口
+
+#include &quot;ohos_init.h&quot;  // 用于初始化服务(services)和功能(features)
+#include &quot;cmsis_os2.h&quot;  // CMSIS-RTOS API V2
+
+#include &quot;iot_gpio.h&quot;   // OpenHarmony API：IoT硬件设备操作接口-GPIO
+#include &quot;hi_io.h&quot;      // 海思 Pegasus SDK：IoT硬件设备操作接口-IO
+#include &quot;hi_adc.h&quot;     // 海思 Pegasus SDK：IoT硬件设备操作接口-ADC
+</code></pre>
+<h1 id="函数1-读取adc"><a href="#函数1-读取adc" class="headerlink" title="函数1 读取adc"></a>函数1 读取adc</h1><pre><code>unsigned int hi_adc_read(WifiIotAdcChannelIndex channel, unsigned short *data, WifiIotAdcEquModelSel equModel, WifiIotAdcCurBais curBais, unsigned short rstCnt)
+          
+</code></pre>
+<h2 id="channel：表示ADC通道"><a href="#channel：表示ADC通道" class="headerlink" title="channel：表示ADC通道"></a>channel：表示ADC通道</h2><pre><code>    HI_ADC_CHANNEL_0,
+    HI_ADC_CHANNEL_1,
+    HI_ADC_CHANNEL_2,
+    HI_ADC_CHANNEL_3,
+    HI_ADC_CHANNEL_4,
+    HI_ADC_CHANNEL_5,
+    HI_ADC_CHANNEL_6,
+    HI_ADC_CHANNEL_7,
+    HI_ADC_CHANNEL_BUTT,//一共有8个通道
+</code></pre>
+<h2 id="data：表示指向存储读取数据的地址的指针"><a href="#data：表示指向存储读取数据的地址的指针" class="headerlink" title="data：表示指向存储读取数据的地址的指针"></a>data：表示指向存储读取数据的地址的指针</h2><h2 id="equModel：表示平均算法的次数"><a href="#equModel：表示平均算法的次数" class="headerlink" title="equModel：表示平均算法的次数"></a>equModel：表示平均算法的次数</h2><pre><code>HI_ADC_EQU_MODEL_1,            /**&lt; 0：The average value is not used.
+CNcomment:1次平均，即不进行
+平均 CNend */
+HI_ADC_EQU_MODEL_2,            /**&lt; 1：2-time average algorithm mode.
+CNcomment:2次平均算法模式 CNend */
+HI_ADC_EQU_MODEL_4,            /**&lt; 2：4-time average algorithm mode.
+CNcomment:4次平均算法模式 CNend */
+HI_ADC_EQU_MODEL_8,            /**&lt; 3：8-time average algorithm mode.
+CNcomment:8次平均算法模式 CNend */
+HI_ADC_EQU_MODEL_BUTT
+</code></pre>
+<h2 id="curBais：表示模拟功率控制模式"><a href="#curBais：表示模拟功率控制模式" class="headerlink" title="curBais：表示模拟功率控制模式"></a>curBais：表示模拟功率控制模式</h2><pre><code>    HI_ADC_CUR_BAIS_DEFAULT,       /**&lt; 0：Auto control.
+                                    CNcomment:自动识别模式 */
+    HI_ADC_CUR_BAIS_AUTO,          /**&lt; 1：Auto control.
+                                    CNcomment:自动识别模式 */
+    HI_ADC_CUR_BAIS_1P8V,          /**&lt; 2：Manual control, AVDD=1.8V.
+                                    CNcomment:手动控制，AVDD=1.8V */
+    HI_ADC_CUR_BAIS_3P3V,          /**&lt; 3：Manual control, AVDD=3.3V.
+                                    CNcomment:手动控制，AVDD=3.3V */
+    HI_ADC_CUR_BAIS_BUTT,
+</code></pre>
+<h2 id="rstCnt：指示从重置到转换开始的时间计数。一次计数等于334纳秒。值的范围必须从0到0xFF"><a href="#rstCnt：指示从重置到转换开始的时间计数。一次计数等于334纳秒。值的范围必须从0到0xFF" class="headerlink" title="rstCnt：指示从重置到转换开始的时间计数。一次计数等于334纳秒。值的范围必须从0到0xFF"></a>rstCnt：指示从重置到转换开始的时间计数。一次计数等于334纳秒。值的范围必须从0到0xFF</h2><h2 id="返回值：错误码-错误HI-ERR-ADC-TIMEOUT-成功-HI-ERR-SUCCESS"><a href="#返回值：错误码-错误HI-ERR-ADC-TIMEOUT-成功-HI-ERR-SUCCESS" class="headerlink" title="返回值：错误码 错误HI_ERR_ADC_TIMEOUT  成功 HI_ERR_SUCCESS"></a>返回值：错误码 错误HI_ERR_ADC_TIMEOUT  成功 HI_ERR_SUCCESS</h2>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

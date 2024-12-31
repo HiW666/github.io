@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>openharmony用ubuntu源码下载 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>openharmony用ubuntu源码下载</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/9/12
+        </span>
+        
+        <span class="category">
+            <a href="/categories/openharmony/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                openharmony
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/openharmony/" style="color: #03a9f4">openharmony</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/ubuntu/" style="color: #ffa2c4">ubuntu</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="openharmony用ubuntu源码下载"><a href="#openharmony用ubuntu源码下载" class="headerlink" title="openharmony用ubuntu源码下载"></a>openharmony用ubuntu源码下载</h1><h2 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h2><p><a target="_blank" rel="noopener" href="https://gitee.com/openharmony/docs">官方文档</a></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/1.png"></p>
+<p>记得拉到下面<br>点击你要下载的版本<br>拿鸿蒙3.0举例<br><a target="_blank" rel="noopener" href="https://gitee.com/openharmony/docs/blob/master/zh-cn/release-notes/OpenHarmony-v3.0-LTS.md">https://gitee.com/openharmony/docs/blob/master/zh-cn/release-notes/OpenHarmony-v3.0-LTS.md</a></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/2.png"><br>就可以直接下载了</p>
+<p>直接把源码放到ubuntu里面解压就可以了</p>
+<span id="more"></span>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/3.png"></p>
+<h2 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h2><p>repo加http下载</p>
+<p>执行如下命令，确认输出结果为bash<br><code>ls -l /bin/sh</code><br>如果输出结果不是bash</p>
+<p>打开终端工具，执行如下命令，输入密码，然后选择No，将Ubuntu shell由dash修改为bash。<br><code>sudo dpkg-reconfigure dash</code></p>
+<p>然后切换源镜像为清华源</p>
+<p><a target="_blank" rel="noopener" href="https://mirrors.ustc.edu.cn/repogen/">https://mirrors.ustc.edu.cn/repogen/</a></p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/4.png"><br>这里记得切换版本</p>
+<p>切换好点下载</p>
+<p>然后备份之前的源文件（文件路径&#x2F;etc&#x2F;apt&#x2F;sources.list）<br><code>sudo cp /etc/apt/sources.list /etc/apt/source.list.bak</code><br>把sources.list文件备份成sources.list.bak路径不变</p>
+<p>把下载的清华源sources.list替换原本的文件<br><code>sudo mv -f (这里修改你下载的sources.list文件的路径) /etc/apt/</code><br>输入下面命令更新源<br><code>sudo apt update</code></p>
+<p>安装环境，有两个命令<br>第一条</p>
+<pre><code>sudo apt-get install binutils binutils-dev git git-lfs gnupg flex bison gperf build-essential zip curl zlib1g-dev   libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z1-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip m4 bc gnutls-bin python3.8 python3-pip ruby genext2fs device-tree-compiler make libffi-dev e2fsprogs pkg-config perl openssl libssl-dev libelf-dev libdwarf-dev u-boot-tools mtd-utils cpio doxygen liblz4-tool openjdk-8-jre gcc g++ texinfo dosfstools mtools default-jre default-jdk libncurses5 apt-utils wget scons python3.8-distutils tar rsync git-core libxml2-dev lib32z-dev grsync xxd libglib2.0-dev libpixman-1-dev kmod jfsutils reiserfsprogs xfsprogs squashfs-tools pcmciautils quota ppp libtinfo-dev libtinfo5 libncurses5-dev libncursesw5 libstdc++6 gcc-arm-none-eabi vim ssh locales libxinerama-dev libxcursor-dev libxrandr-dev libxi-dev
+</code></pre>
+<p>第二条</p>
+<pre><code>sudo apt-get install gcc-arm-linux-gnueabi gcc-9-arm-linux-gnueabi
+</code></pre>
+<p>配置Python<br>设置默认Python解释器，python和python3软链接为python3.8：</p>
+<pre><code>sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 1
+python --version
+</code></pre>
+<p>安装python包管理工具（pip3）：</p>
+<pre><code>sudo apt install python3-pip
+</code></pre>
+<p>配置pip软件包更新源：</p>
+<pre><code>mkdir ~/.pip
+pip3 config set global.index-url https://mirrors.huaweicloud.com/repository/pypi/simple
+pip3 config set global.trusted-host mirrors.huaweicloud.com
+pip3 config set global.timeout 120
+</code></pre>
+<p>安装Samba服务<br>用于在开发环境中使用VS Code编写代码。执行下列命令安装samba并打开配置文件：</p>
+<pre><code>sudo apt install samba
+sudo gedit /etc/samba/smb.conf
+</code></pre>
+<p>在配置文件末尾添加以下内容：</p>
+<pre><code>[home]
+comment = User Homes
+path = /home
+guest ok = no
+writable = yes
+browsable = yes
+create mask = 0755
+directory mask = 0755
+</code></pre>
+<p>建立用户并设置密码（请将下面的用户名换成您自己的）：<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/5.png"></p>
+<pre><code>sudo smbpasswd -a  （你自己的用户名）
+</code></pre>
+<p>重启samba：</p>
+<pre><code>sudo service smbd restart
+</code></pre>
+<p>安装git-lfs，会自动安装git：</p>
+<pre><code>sudo apt install git-lfs
+</code></pre>
+<p>安装repo和requests：</p>
+<pre><code>wget https://gitee.com/oschina/repo/raw/fork_flow/repo-py3
+sudo mv repo-py3 /usr/local/bin/repo
+sudo chmod a+x /usr/local/bin/repo
+pip3 install -i https://repo.huaweicloud.com/repository/pypi/simple requests
+</code></pre>
+<p>配置git（请将下面的邮箱和用户名换成您自己的）：</p>
+<pre><code>git config --global user.email &quot;你的邮箱@邮箱域名&quot;
+git config --global user.name &quot;名称&quot;
+git config --global credential.helper store
+git config --global --add safe.directory &quot;*&quot;
+</code></pre>
+<p>然后以上就完成了基本环境安装</p>
+<p>接下来我们进行http源码下载</p>
+<p>   我们先创建目录这样看起来不会太乱</p>
+<pre><code>mkdir -p ~/openharmony
+cd ~/openharmony
+</code></pre>
+<p>然后我们打开官方文档<br><a target="_blank" rel="noopener" href="https://gitee.com/openharmony/docs">官方文档</a></p>
+<p>找到你要下载的版本<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/6.png"><br>我们拿3.0lts举例</p>
+<p>我们要复制的是htpp的链接<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/7.png"></p>
+<pre><code>repo init -u （复制的链接）
+repo sync -c
+repo forall -c &#39;git lfs pull&#39;
+</code></pre>
+<p>然后就可以下载源码了</p>
+<h2 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h2><p><a target="_blank" rel="noopener" href="https://gitee.com/help/articles/4191">gitee教程</a></p>
+<p>ssh下载<br>上面的环境安装保持不便，如果已经安装环境的话就不用修改了</p>
+<p>首先我们先注册公钥<br>终端输入命令生成密钥</p>
+<p><code> ssh-keygen</code><br>输入完之后一直回车<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/8.png"><br>这样就完成了</p>
+<p>输入命令查看公钥<br><code>cat ~/.ssh/id_rsa.pub</code><br>复制这个一大串的东西<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/9.png"></p>
+<p>然后我们打开gitee登录自己账号<br>点击设置，点SSH公钥，粘贴刚刚复制的一大串东西<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/10.png"><br>终端输入命令测试<br><code>ssh -T git@gitee.com</code><br>如果出现这个页面那就输入yes，再重新输入命令就好了<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/11.png"></p>
+<p>这样就是配置好公钥了<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/12.png"></p>
+<p>然后我们打开官方文档<br><a target="_blank" rel="noopener" href="https://gitee.com/openharmony/docs">官方文档</a></p>
+<p>找到你要下载的版本<br><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/6.png"><br>我们拿3.0lts举例</p>
+<p>这次我们选择复制第一个链接</p>
+<p><img src="/img/openharmony%E7%94%A8ubuntu%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/13.png"></p>
+<p>   我们先创建目录</p>
+<pre><code>mkdir -p ~/openharmony
+cd ~/openharmony
+</code></pre>
+<p>然后是在目录下面输入这些命令</p>
+<pre><code>repo init -u 你刚刚复制的链接
+repo sync -c
+repo forall -c &#39;git lfs pull&#39;
+</code></pre>
+<p>这样就可以正常的通过ssh下载了</p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

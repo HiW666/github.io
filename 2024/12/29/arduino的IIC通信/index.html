@@ -1,0 +1,731 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>arduino的IIC通信 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>arduino的IIC通信</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/12/29
+        </span>
+        
+        <span class="category">
+            <a href="/categories/arduino/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                arduino
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/arduino/" style="color: #ffa2c4">arduino</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="arduino的IIC"><a href="#arduino的IIC" class="headerlink" title="arduino的IIC"></a>arduino的IIC</h1><p>首先arduino的IIC是硬件IIC，硬件IIC一般都是固定引脚的<br>所以需要自己先去查一下自己芯片的第一组IIC接口是哪两个引脚<br>(esp32例外)<br>然后，需要芯片支持Wire.h库。一般芯片都会自带有的。<br>(这是官方库)<br>最后说明：读写缓存只有 32 字节<br>文件宏定义：</p>
+<pre><code>//这个为IIC头文件
+#include &lt;Wire.h&gt;
+//
+</code></pre>
+<p>esp32iic可以是任意的IO</p>
+<span id="more"></span>
+
+<h1 id="主机模式"><a href="#主机模式" class="headerlink" title="主机模式"></a>主机模式</h1><h2 id="IIC初始化"><a href="#IIC初始化" class="headerlink" title="IIC初始化"></a>IIC初始化</h2><pre><code>Wire.begin(address);          // 初始化IIC
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>address</td>
+<td>int</td>
+<td>注册成为从机模式</td>
+<td>0到128之间</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<pre><code>Wire.begin();          // 初始化IIC
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>无</td>
+<td>无</td>
+<td>啥也不填直接调用就是主机模式</td>
+<td>无</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>esp32iic可以是任意的IO</p>
+<p>所以</p>
+<h2 id="初始化主机模式"><a href="#初始化主机模式" class="headerlink" title="初始化主机模式"></a>初始化主机模式</h2><pre><code>Wire.begin(sda,scl);          // 初始化IIC
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sda</td>
+<td>int</td>
+<td>定义sda的引脚</td>
+<td>单片机引脚</td>
+</tr>
+<tr>
+<td>scl</td>
+<td>int</td>
+<td>定义scl的引脚</td>
+<td>单片机引脚</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="初始化从机模式"><a href="#初始化从机模式" class="headerlink" title="初始化从机模式"></a>初始化从机模式</h2><pre><code>Wire.begin(sda,scl,address);          // 初始化IIC
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sda</td>
+<td>int</td>
+<td>定义sda的引脚</td>
+<td>单片机引脚</td>
+</tr>
+<tr>
+<td>scl</td>
+<td>int</td>
+<td>定义scl的引脚</td>
+<td>单片机引脚</td>
+</tr>
+<tr>
+<td>address</td>
+<td>int</td>
+<td>注册成为从机模式</td>
+<td>0到128之间</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="主机准备向从机读数据"><a href="#主机准备向从机读数据" class="headerlink" title="主机准备向从机读数据"></a>主机准备向从机读数据</h2><pre><code>Wire.requrstFrom(addtess,quantity)
+Wire.requrstFrom(addtess,quantity,stop)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>address</td>
+<td>int</td>
+<td>向指定从机请求数据</td>
+<td>0到128之间</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>int</td>
+<td>请求数据的长度（单位字节）</td>
+<td>0到32之间</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>布尔形</td>
+<td>‘真’ 则在请求结束后发送一个停止命令，并释放总线。‘假’则继续发送请求保持连接</td>
+<td>真或者假</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>int</td>
+<td>主机从从机接受到的字节数目，主机接受到一个数据返回的字节数就会减少一个</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="主机准备向从机写数据"><a href="#主机准备向从机写数据" class="headerlink" title="主机准备向从机写数据"></a>主机准备向从机写数据</h2><pre><code>Wire.beginTransmission(addtess);
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>address</td>
+<td>int</td>
+<td>向指定从机请求数据</td>
+<td>0到128之间</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="发送停止位"><a href="#发送停止位" class="headerlink" title="发送停止位"></a>发送停止位</h2><pre><code>Wire.endTransmission()
+Wire.endTransmission(stop)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stop</td>
+<td>布尔形</td>
+<td>‘真’ 发送一个停止信息，并释放总线。‘假’则继续发送请求保持连接</td>
+<td>真或者假</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>int</td>
+<td>0、成功 1、数据溢出 2、发送addtess时从机接受到NACK 3、发送数据时接受到 NACK 4、其他错误</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="发送数据"><a href="#发送数据" class="headerlink" title="发送数据"></a>发送数据</h2><pre><code>Wire.write(value)
+Wire.write(string)
+Wire.write(data, length)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>value</td>
+<td>int</td>
+<td>要发送的数值</td>
+<td>int</td>
+</tr>
+<tr>
+<td>string</td>
+<td>string</td>
+<td>发送的字符组的指针</td>
+<td>字符组</td>
+</tr>
+<tr>
+<td>data</td>
+<td>数组</td>
+<td>要发送的数组</td>
+<td>数组</td>
+</tr>
+<tr>
+<td>length</td>
+<td>int</td>
+<td>发送的数组的长度（单位字节）</td>
+<td>int</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>无</td>
+<td>无</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="返回读到的字节数"><a href="#返回读到的字节数" class="headerlink" title="返回读到的字节数"></a>返回读到的字节数</h2><pre><code>Wire. available()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>int</td>
+<td>主机从从机接受到的字节数目，主机接受到一个数据返回的字节数就会减少一个</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="读取数据"><a href="#读取数据" class="headerlink" title="读取数据"></a>读取数据</h2><pre><code>Wire.read()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>返回值</td>
+<td>uint8_t</td>
+<td>读到的字节数据，通常一次返回一个字节的数据</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h1 id="从机模式"><a href="#从机模式" class="headerlink" title="从机模式"></a>从机模式</h1><h2 id="当从机接受到主机写的请求"><a href="#当从机接受到主机写的请求" class="headerlink" title="当从机接受到主机写的请求"></a>当从机接受到主机写的请求</h2><pre><code>Wire.onReceive(handler)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>handler</td>
+<td>回调函数</td>
+<td>当从机接受到数据就执行回调函数,回调函数需要带一个int型参数（无返回值）</td>
+<td>void handler(int howMany){}</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>uint8_t</td>
+<td>主机从从机接受到的字节数目，主机接受到一个数据返回的字节数就会减少一个</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h2 id="当从机接受到主机读的请求"><a href="#当从机接受到主机读的请求" class="headerlink" title="当从机接受到主机读的请求"></a>当从机接受到主机读的请求</h2><pre><code>Wire.onRequest(handler)
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>数据类型</th>
+<th>作用</th>
+<th>选项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>handler</td>
+<td>回调函数</td>
+<td>当从机接受到数据就执行回调函数（无返回值）</td>
+<td>回调函数</td>
+</tr>
+<tr>
+<td>返回值</td>
+<td>uint8_t</td>
+<td>主机从从机接受到的字节数目，主机接受到一个数据返回的字节数就会减少一个</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<h1 id="参考代码bh1750通信"><a href="#参考代码bh1750通信" class="headerlink" title="参考代码bh1750通信"></a>参考代码bh1750通信</h1><pre><code>//addr接高电平设备地址为1011100也就是0x5c
+//低电平0100011也就是0x23
+uint8_t data[1];
+uint16_t Rx_Data;
+int i;
+#include &lt;Wire.h&gt;
+void setup() &#123;
+// put your setup code here, to run once:
+Wire.begin();
+Serial.begin(115200);
+bh711 ();
+&#125;
+void loop() &#123;
+// put your main code here, to run repeatedly
+i=0;
+Wire.requestFrom(0x5c, 2);//请求两个字节数据
+    // 当从从设备接收到信息时值为true
+    while (Wire.available())
+    &#123;
+    Serial.println(i);
+        // 接受并读取从设备发来的一个字节的数据
+        data[i] = Wire.read();
+        i++;
+        // 向串口打印该字节
+        if (i=2)
+        &#123;
+        Rx_Data = ((uint16_t)data[0] &lt;&lt; 8) + data[1];//0高位1地位
+        &#125;
+    &#125;
+    Serial.println(Rx_Data/ 1.2f);//合并数据并打印
+    delay(500);
+&#125;
+
+void bh711 ()
+&#123;
+Wire.beginTransmission(0x5c);//请求设备地址
+Wire.write(0x00);//关闭电源
+Wire.endTransmission();//结束通信
+Wire.beginTransmission(0x5c);
+Wire.write(0x01);//打开电源
+Wire.endTransmission();
+Wire.beginTransmission(0x5c);
+Wire.write(0x07);//初始化扫描
+Wire.endTransmission();
+    Wire.beginTransmission(0x5c);
+Wire.write(0x11);//连续h分辨率模式2
+Wire.endTransmission();
+&#125;
+</code></pre>
+<h1 id="从机和主机通信"><a href="#从机和主机通信" class="headerlink" title="从机和主机通信"></a>从机和主机通信</h1><p>目前已知air001（py32f002a）iic从机有问题<br>从机代码</p>
+<pre><code>#include &lt;Wire.h&gt;
+
+#define I2C_ADDR  2
+int a;
+char adb[0];
+void setup()
+&#123;
+Wire.begin(I2C_ADDR);         // join i2c bus with address #4
+Wire.onRequest(requestEvent); // register event
+Wire.onReceive(receiveEvent); // register event
+Serial.begin(9600);           // start serial for output
+&#125;
+
+void loop()
+&#123;
+//empty loop
+
+&#125;
+
+// function that executes whenever data is received from master
+// this function is registered as an event, see setup()
+void receiveEvent(int howMany)
+&#123;
+a++;
+int cc;
+while( Wire.available()) // loop through all but the last
+&#123;
+    cc = Wire.read();     // receive byte as a character
+    if (cc)
+    &#123;
+    a++;
+    &#125;
+    //Serial.print(cc);          // print the character
+&#125;
+//int x = Wire.read();        // receive byte as an integer
+&#125;
+
+// function that executes whenever data is requested by master
+// this function is registered as an event, see setup()
+void requestEvent()
+&#123;
+
+sprintf(adb, &quot;%d&quot;,a);
+Wire.write(a);  // respond with message of 6 bytes
+                        // as expected by master
+&#125;
+</code></pre>
+<p>主机代码</p>
+<pre><code>#include &lt;Wire.h&gt;
+void setup() &#123;
+// put your setup code here, to run once:
+Wire.begin();
+Serial.begin(115200);
+&#125;
+
+void loop() &#123;
+// put your main code here, to run repeatedly:
+
+    // 向从设备＃8请求1个字节
+
+    Wire.requestFrom(2, 1);
+    // 当从从设备接收到信息时值为true
+    while (Wire.available())
+    &#123;
+        // 接受并读取从设备发来的一个字节的数据
+        char c = Wire.read();
+        // 向串口打印该字节
+        Serial.print(c);
+    &#125;
+    Wire.endTransmission();
+
+    Wire.beginTransmission(2);
+    Wire.write(0x78);
+Wire.endTransmission();
+    
+    delay(500);
+&#125;
+</code></pre>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>

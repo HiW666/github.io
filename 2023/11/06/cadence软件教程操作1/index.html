@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>cadence教程操作1 | Binging</title>
+    <meta name="author" content="HiW" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" href="/images/avatar3.jpg" />
+    <link rel="preconnect" href="https://cdn.staticfile.org" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.loli.net" />
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
+<link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body>
+    <div id="layout">
+        <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <img src="/images/loading.gif" />
+                </div>
+            </div>
+        </transition>
+        <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>BINGING</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;文档搜索</span>
+        </a>
+        
+        <a href="/categories/hexo/">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags/hexo/">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a href="/songse">
+            <i class="fa-solid fa-circle-down fa-fw"></i>
+            <span>&ensp;产品资料</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+            <span>&ensp;必应</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;BINGING</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">文档搜索</div>
+                    </div>
+                </a>
+                
+                <a href="/categories/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags/hexo/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+                <a href="/songse">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-circle-down fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">产品资料</div>
+                    </div>
+                </a>
+                
+                <a target="_blank" rel="noopener" href="https://cn.bing.com/?mkt=zh-cn">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-fa-solid fa-archway fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">必应</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+        <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>cadence教程操作1</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/11/6
+        </span>
+        
+        <span class="category">
+            <a href="/categories/cadence/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                cadence
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
+            
+            
+            <span class="tag">
+                
+                <a href="/tags/cadence/" style="color: #00bcd4">cadence</a>
+            </span>
+            
+        </span>
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h2 id="关于cadence软件的一些基本的操作"><a href="#关于cadence软件的一些基本的操作" class="headerlink" title="关于cadence软件的一些基本的操作"></a>关于cadence软件的一些基本的操作</h2><p>本篇文章只是说明软件的一些启动，不包括软件安装与linux系统的安装<br>（vm虚拟机配置也不在这里了啦！）</p>
+<p>关于软件的基本使用逻辑<br>1建立库<br>2关联库<br>3打开图层</p>
+<span id="more"></span>
+
+
+<p>1，安装软件成功以后在终端里面输入<br><code>icfb</code><br> 或者<br> <code> virtuoso </code><br> 启动软件</p>
+<p>等待一会直到出现下面的页面为止<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%871.png"></p>
+<p>2，关于软件的基本页面<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%872.png"></p>
+<p>（关于软件的设置启动设置，5.1版本默认只有一步撤销动作，可以设置最大10步撤销动作，6.1版本有128步撤销动作）<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%873.png"><br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%874.png"></p>
+<p>3软件的使用<br>开始建立软件库<br>首先主页打开库管理<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%875.png"><br>开始新建库<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%876.png"><br>选择保存库的路径  然后点ok<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%877.png"><br>然后选择第三个    然后点ok<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%878.png"><br>选择常用单元     然后点ok<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%879.png"><br>到此为止已经建立了库<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8710.png"><br>然后开始新建图层<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8717.png"><br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8718.png"><br>但是建立完库后发现，库的右边全部都是空白的。<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8719.png"><br>这个时候，我们要进行关联库。</p>
+<p>4关联库<br>我们先导入库这里用中芯国际的库来举例子<br><a target="_blank" rel="noopener" href="https://wwwe.lanzouq.com/iGWxZ1e1q41i">中芯国际库的下载链接</a><br>密码:btxs</p>
+<p>我们把中芯国际的库和其他的库的库统一放在一起<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8711.png"></p>
+<p>（提醒一下这里是查看库的保存路径）<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8712.png"><br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8713.png"></p>
+<p>然后我们返回到软件的主页<br>点击这里关联库<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8714.png"><br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8715.png"></p>
+<p>然后开始关联库<br>上面是自己的库<br>下面选择要关联的<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8716.png"><br>这样我们就和中芯国际的库关联好了<br>然后我们重新打开刚刚的图层就会发现图层已经有了<br><img src="/img/cadence%E8%BD%AF%E4%BB%B6%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C1/%E5%9B%BE%E7%89%8720.png"><br>下篇我们教大家如何绘制元器件</p>
+<p><a target="_blank" rel="noopener" href="https://7gz7xs-my.sharepoint.com/:w:/g/personal/admin_orillais_tech/EWSyGi14FVRKoRilUVj3rCkBIyPevZSzpMRO6B2KpDVAHQ?e=Sc7v0X">参考的文档</a></p>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+            <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2020 - 2024 Binging
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;HiW
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo </a> &amp;
+            <a target="_blank" rel="noopener" href="https://gitee.com/KSweb/hexo-theme-particlex">binging hexo</a>
+        </div>
+        
+    </div>
+   
+</footer>
+
+        </div>
+        
+        <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
+            </div>
+        </transition>
+        
+    </div>
+    <script src="/js/main.js"></script>
+    
+    
+
+
+
+
+    
+</body>
+</html>
